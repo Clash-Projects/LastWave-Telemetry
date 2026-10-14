@@ -102,6 +102,7 @@ func main() {
 	startTime := time.Now()
 	bucket := telemetry.NewBucket(60 * time.Second)
 	limiter := NewIPRateLimiter()
+	geoResolver := telemetry.NewGeoResolver()
 
 	// Background ticker for 60-second sync window
 	ticker := time.NewTicker(60 * time.Second)
@@ -186,6 +187,17 @@ func main() {
 			req.Lng = req.Longitude
 		}
 
+		// Automatic Server-Side IP-to-Location Resolution:
+		// If client does not specify city or coordinates, resolve automatically from clientIP
+		if req.City == "" && req.Lat == 0 && req.Lng == 0 && clientIP != "" {
+			if loc, ok := geoResolver.Resolve(clientIP, r.Header); ok {
+				req.City = loc.City
+				req.Country = loc.Country
+				req.Lat = loc.Lat
+				req.Lng = loc.Lng
+			}
+		}
+
 		if req.Lat != 0 || req.Lng != 0 || req.City != "" {
 			bucket.RecordDynamicIPPing(req.IP, req.City, req.Country, req.Lat, req.Lng, req.SongID, req.Title, req.Artist, req.CoverURL)
 		} else {
@@ -197,8 +209,10 @@ func main() {
 		_ = json.NewEncoder(w).Encode(map[string]interface{}{
 			"status":    "recorded_in_ram",
 			"ephemeral": true,
-			"ip_node":   req.IP,
 			"city":      req.City,
+			"country":   req.Country,
+			"lat":       req.Lat,
+			"lng":       req.Lng,
 		})
 	}))
 
