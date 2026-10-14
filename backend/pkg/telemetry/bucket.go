@@ -76,9 +76,14 @@ func (b *Bucket) ResetWindow() {
 	defer b.mu.Unlock()
 
 	b.lastSync = time.Now()
+	cleanRegions := make([]Region, 0, len(b.regions))
 	for i := range b.regions {
 		b.regions[i].ActiveListeners = 0
+		if !b.regions[i].IsClientIP {
+			cleanRegions = append(cleanRegions, b.regions[i])
+		}
 	}
+	b.regions = cleanRegions
 }
 
 // RecordPing accepts an anonymous stream pulse.
