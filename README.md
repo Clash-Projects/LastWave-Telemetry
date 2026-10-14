@@ -60,6 +60,14 @@ Once running, access the dashboard at:
 - **Telemetry API:** `http://localhost:8080/api/live-map`
 - **Health Check:** `http://localhost:8080/api/health`
 
+### Production Endpoints
+
+The service is deployed live on AWS Lightsail with automatic SSL and server-side IP resolution:
+- **Dashboard:** `https://telemetry.clashprojects.qd.je/`
+- **Ingress:** `https://telemetry.clashprojects.qd.je/api/telemetry/ping`
+- **Live Map:** `https://telemetry.clashprojects.qd.je/api/live-map`
+- **Health Check:** `https://telemetry.clashprojects.qd.je/api/health`
+
 ### 2. Run Tests
 
 ```bash
