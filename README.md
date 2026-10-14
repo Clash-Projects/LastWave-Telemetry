@@ -43,14 +43,14 @@ LastWave Live ingests real-time telemetry across all official LastWave client im
 The backend is a self-contained Go service that serves both the JSON telemetry API and the embedded web dashboard:
 
 ```bash
-cd lastwave-live/backend
+cd backend
 go run ./cmd/server
 ```
 
 Or build a standalone binary:
 
 ```bash
-cd lastwave-live/backend
+cd backend
 go build -o server ./cmd/server
 ./server
 ```
@@ -63,7 +63,7 @@ Once running, access the dashboard at:
 ### 2. Run Tests
 
 ```bash
-cd lastwave-live/backend
+cd backend
 go test -v ./pkg/telemetry/...
 ```
 
