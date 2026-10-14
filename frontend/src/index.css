@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Base Reset & Fonts */
+body {
+  background-color: #050505;
+  color: #FAFAFA;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for Sleek Monochrome Aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525B;
+}
+
+/* Vector Map Container Styles */
+.map-svg-container {
+  background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #050505 100%);
+  cursor: grab;
+  user-select: none;
+}
+.map-svg-container:active {
+  cursor: grabbing;
+}
+
+/* Vector Continent Styling */
+.continent-path {
+  fill: #141414;
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 0.8;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.continent-path:hover {
+  fill: #1b1b1b;
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+/* Graticule Grid Lines */
+.graticule-line {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 0.5;
+  stroke-dasharray: 2 4;
+}
+.graticule-major {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 0.75;
+}
+
+/* Glowing Pulsing SVG Nodes */
+.node-group {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.node-group:hover {
+  transform: scale(1.15);
+}
+.node-pulse-1 {
+  animation: svg-pulse 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  transform-origin: center;
+}
+.node-pulse-2 {
+  animation: svg-pulse 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation-delay: 1.2s;
+  transform-origin: center;
+}
+@keyframes svg-pulse {
+  0% {
+    r: 3;
+    opacity: 0.9;
+    stroke-width: 1.5;
+  }
+  70% {
+    r: 16;
+    opacity: 0.3;
+    stroke-width: 0.8;
+  }
+  100% {
+    r: 22;
+    opacity: 0;
+    stroke-width: 0;
+  }
+}
+
+/* Desaturated Album Art */
+.monochrome-art {
+  filter: grayscale(100%) contrast(110%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.group:hover .monochrome-art,
+.monochrome-art:hover {
+  filter: grayscale(20%) contrast(100%);
+  transform: scale(1.04);
+}

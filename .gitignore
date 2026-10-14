@@ -1,0 +1,34 @@
+# Binaries and executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/backend/server
+/backend/server.exe
+
+# Go build and test artifacts
+*.test
+*.out
+vendor/
+
+# Node.js dependencies and build outputs
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and local configurations
+.env
+.env.*
+*.log
+
+# OS & IDE caches
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

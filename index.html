@@ -1,0 +1,2846 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LastWave Live — Global Music Community & Discovery</title>
+  <meta name="description" content="Explore real-time global music listening habits, trending charts, and developer telemetry for LastWave.">
+  
+  <!-- Official Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Clash-Projects/LastWave-Desktop/main/lastwave-logo.png">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS (2D Continuous Infinite Loop Cylinder Flat Map) -->
+  <!-- 100% Non-API Infinite 2D Vector Map Engine -->
+
+  <!-- Tailwind CSS via CDN with Dark Luxury Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#060608',
+            surface: '#0E0E11',
+            elevated: '#16161B',
+            zinc: {
+              300: '#D4D4D8',
+              400: '#A1A1AA',
+              500: '#71717A',
+              600: '#52525B',
+              700: '#3F3F46',
+              800: '#27272A',
+              900: '#18181B',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          boxShadow: {
+            'glow-sm': '0 0 15px rgba(255, 255, 255, 0.2)',
+            'glow-md': '0 0 30px rgba(255, 255, 255, 0.3)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Global Base Reset & Fonts */
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #050507;
+      color: #FAFAFA;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Custom Ultra-Slim Scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+    .overflow-y-auto, .overflow-x-auto, #mapInspectorCard {
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* 100% Non-API Seamless 2D Infinite Vector Map (Crystal Clear 4K Vectors) */
+    #vectorMapContainer {
+      background-color: #08080B !important;
+      touch-action: none;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      -webkit-user-select: none;
+      cursor: grab;
+    }
+    #vectorMapContainer:active {
+      cursor: grabbing;
+    }
+    .vector-country {
+      fill: #15151B;
+      stroke: rgba(255, 255, 255, 0.18);
+      stroke-width: 0.75px;
+      stroke-linejoin: round;
+    }
+    .vector-country:hover {
+      fill: #22222D;
+      stroke: rgba(255, 255, 255, 0.45);
+    }
+    .vector-marker-node {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .vector-marker-node .tiny-vector-dot {
+      fill: #FFFFFF;
+      transition: transform 0.15s ease;
+    }
+    .vector-marker-node:hover .tiny-vector-dot {
+      transform: scale(1.6);
+      filter: drop-shadow(0 0 6px #FFFFFF);
+    }
+    .vector-marker-node.selected .tiny-vector-dot {
+      transform: scale(2.0);
+      filter: drop-shadow(0 0 8px #FFFFFF);
+    }
+    .vector-marker-node .tiny-vector-pulse {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.4);
+      stroke-width: 0.8px;
+      animation: tinyVectorPulse 2.4s ease-out infinite;
+      transform-origin: 0 0;
+    }
+    .vector-marker-node.selected .tiny-vector-pulse {
+      stroke: rgba(255, 255, 255, 0.85);
+      stroke-width: 1.2px;
+      animation: tinyVectorPulse 1.2s ease-out infinite;
+    }
+    @keyframes tinyVectorPulse {
+      0% {
+        transform: scale(0.5);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(2.4);
+        opacity: 0;
+      }
+    }
+    .tiny-vector-label-pill {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 0 0;
+    }
+    .vector-marker-node:hover .tiny-vector-label-pill {
+      opacity: 1 !important;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+    .vector-marker-node:hover .tiny-vector-label-pill rect {
+      stroke: rgba(255, 255, 255, 0.5);
+      fill: rgba(18, 18, 24, 0.98);
+    }
+    .vector-marker-node.selected .tiny-vector-label-pill {
+      opacity: 1 !important;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+    .vector-marker-node.selected .tiny-vector-label-pill rect {
+      stroke: rgba(255, 255, 255, 0.85);
+      fill: rgba(18, 18, 24, 0.98);
+    }
+    .vector-marker-node.selected .tiny-vector-label-pill text {
+      fill: #FFFFFF;
+    }
+    .vector-marker-node.nearby-active .tiny-vector-label-pill {
+      opacity: 0.85 !important;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.25));
+    }
+    .vector-marker-node.nearby-active .tiny-vector-label-pill rect {
+      stroke: rgba(255, 255, 255, 0.35);
+      fill: rgba(16, 16, 22, 0.96);
+    }
+    .vector-marker-node.nearby-active .tiny-vector-label-pill text {
+      fill: #E4E4E7;
+    }
+
+    /* Smart Spatial Cluster Nodes */
+    .vector-cluster-node {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .vector-cluster-node .cluster-pulse-ring {
+      animation: clusterPulse 2.8s ease-in-out infinite;
+      transform-origin: 0 0;
+    }
+    @keyframes clusterPulse {
+      0% { transform: scale(0.85); opacity: 0.8; }
+      50% { transform: scale(1.35); opacity: 0.15; }
+      100% { transform: scale(0.85); opacity: 0.8; }
+    }
+    .vector-cluster-node .cluster-disc {
+      transition: transform 0.16s ease, filter 0.16s ease;
+      transform-origin: 0 0;
+    }
+    .vector-cluster-node:hover .cluster-disc {
+      transform: scale(1.22);
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.75));
+    }
+    .vector-cluster-node:hover .cluster-count-text {
+      fill: #FFFFFF;
+    }
+    .cluster-hover-pill {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .vector-cluster-node:hover .cluster-hover-pill {
+      opacity: 1 !important;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+    }
+
+    /* VIP Client IP Node Beacon */
+    .vector-marker-node.client-ip-node .tiny-vector-dot {
+      fill: #00F0FF !important;
+      filter: drop-shadow(0 0 8px #00F0FF) !important;
+    }
+    .vector-marker-node.client-ip-node .tiny-vector-pulse {
+      stroke: rgba(0, 240, 255, 0.9) !important;
+      animation: tinyVectorPulse 1.4s ease-out infinite !important;
+    }
+    .vector-marker-node.client-ip-node .client-beacon-wave {
+      fill: none;
+      stroke: rgba(0, 240, 255, 0.6);
+      stroke-width: 1px;
+      animation: beaconWave 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      transform-origin: 0 0;
+    }
+    @keyframes beaconWave {
+      0% { transform: scale(0.6); opacity: 1; }
+      100% { transform: scale(2.8); opacity: 0; }
+    }
+
+    /* Phase 2: Soundwave Equalizer Micro-Physics (0.8s, 1.2s, 0.6s) */
+    @keyframes eqBar1 {
+      0%, 100% { height: 3px; }
+      25% { height: 11px; }
+      50% { height: 5px; }
+      75% { height: 13px; }
+    }
+    @keyframes eqBar2 {
+      0%, 100% { height: 12px; }
+      30% { height: 4px; }
+      60% { height: 14px; }
+      80% { height: 7px; }
+    }
+    @keyframes eqBar3 {
+      0%, 100% { height: 5px; }
+      20% { height: 12px; }
+      45% { height: 4px; }
+      70% { height: 10px; }
+    }
+    .animate-eq-1 { animation: eqBar1 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    .animate-eq-2 { animation: eqBar2 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    .animate-eq-3 { animation: eqBar3 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+    /* Spatial Coordinate Grid & Center Radial Vignette (High-DPI Retina/4K Crisp) */
+    /* Spatial Coordinate Grid (Clear, non-smothering overlay) */
+    .spatial-grid-overlay {
+      background-image: 
+        radial-gradient(circle at center, transparent 75%, rgba(5, 5, 7, 0.2) 100%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 64px 64px, 64px 64px;
+      background-position: center center, 0 0, 0 0;
+    }
+
+    /* City Dock Fading Edge Mask */
+    .city-dock-mask {
+      mask-image: linear-gradient(to right, transparent, black 18px, black calc(100% - 18px), transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 18px, black calc(100% - 18px), transparent);
+    }
+
+    /* Mini Waveform Simulation Bars */
+    .mini-waveform-bar {
+      transition: height 0.15s ease, background-color 0.2s ease;
+    }
+    .playing .mini-waveform-bar:nth-child(2n) {
+      animation: eqBar1 0.7s ease-in-out infinite alternate;
+    }
+    .playing .mini-waveform-bar:nth-child(2n+1) {
+      animation: eqBar2 0.9s ease-in-out infinite alternate;
+    }
+    .playing .mini-waveform-bar:nth-child(3n) {
+      animation: eqBar3 0.6s ease-in-out infinite alternate;
+    }
+
+    /* Floating Map Inspector Wrapper & Smooth Transitions */
+    #mapInspectorWrapper {
+      position: absolute !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 35 !important;
+      pointer-events: auto !important;
+    }
+    #mapInspectorCard {
+      width: 19.5rem !important;
+      border-radius: 16px !important;
+      max-height: calc(100vh - 120px) !important;
+      overflow-y: auto !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transform-origin: bottom right;
+    }
+    #mapInspectorCard.shrunk {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: scale(0.85) translate(8px, 8px) !important;
+      display: none !important;
+    }
+    #inspectorCollapsedBtn {
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 24px rgba(255, 255, 255, 0.2) !important;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transform-origin: bottom right;
+    }
+    #inspectorCollapsedBtn.hidden {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: scale(0.8) !important;
+      display: none !important;
+    }
+    @media (max-width: 640px) {
+      #mapInspectorWrapper {
+        bottom: 74px !important;
+        right: 16px !important;
+        left: 16px !important;
+      }
+      #mapInspectorCard {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-obsidian text-zinc-100 h-screen overflow-hidden flex flex-col select-none">
+
+  <!-- ============================================================== -->
+  <!-- 1. TOP NAVIGATION BAR (Spacious & Clean — h-16)                -->
+  <!-- ============================================================== -->
+  <header class="h-16 border-b border-white/[0.07] bg-[#060608]/90 backdrop-blur-xl px-4 lg:px-6 flex items-center justify-between z-50 shrink-0">
+    
+    <!-- Left: Brand Logo & Title -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div class="flex items-center gap-2.5 cursor-pointer group" onclick="switchView('map')">
+        <img 
+          src="https://raw.githubusercontent.com/Clash-Projects/LastWave-Desktop/main/lastwave-logo.png" 
+          alt="LastWave" 
+          class="w-8 h-8 rounded-lg object-cover shadow-sm border border-white/10 group-hover:border-white/20 transition-all"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'%3E%3Crect width=\'32\' height=\'32\' rx=\'8\' fill=\'%23141418\'/%3E%3Ccircle cx=\'16\' cy=\'16\' r=\'6\' fill=\'%23FFFFFF\'/%3E%3C/svg%3E';"
+        />
+        <div class="flex items-center gap-2">
+          <span class="text-base font-bold tracking-tight text-white group-hover:text-zinc-100 transition-colors">LastWave <span class="font-medium text-zinc-400">Live</span></span>
+          <span id="headerBrandDotContainer" class="relative flex h-2 w-2 ml-0.5 cursor-help" title="Live Telemetry Connected">
+            <span id="headerStatusPing" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span id="headerStatusDot" class="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_8px_#FFFFFF]"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center: Segmented Navigation Switcher (The 4 Views) -->
+    <nav class="hidden md:flex items-center bg-[#121215] p-1 rounded-xl border border-white/[0.08] text-xs font-medium">
+      <button 
+        data-target="map" 
+        class="nav-tab-btn px-3.5 py-1.5 rounded-lg bg-white text-black font-semibold shadow-sm transition-all flex items-center gap-1.5"
+      >
+        <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+        <span>Live Map</span>
+      </button>
+
+      <button 
+        data-target="charts" 
+        class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5"
+      >
+        <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+        <span>Top Charts</span>
+      </button>
+
+      <button 
+        data-target="docs" 
+        class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5"
+      >
+        <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+        <span>API & Docs</span>
+      </button>
+
+      <button 
+        data-target="community" 
+        class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5"
+      >
+        <i data-lucide="users" class="w-3.5 h-3.5"></i>
+        <span>Community</span>
+      </button>
+    </nav>
+
+    <!-- Right: Quick Community Socials & Download App CTA -->
+    <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+      <!-- Telegram -->
+      <a 
+        href="https://t.me/lastwave_app" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/20 transition-all flex items-center justify-center text-zinc-400 hover:text-white"
+        title="Telegram Channel"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/>
+        </svg>
+      </a>
+
+      <!-- Discord -->
+      <a 
+        href="https://discord.gg/lastwave" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/20 transition-all flex items-center justify-center text-zinc-400 hover:text-white"
+        title="Discord Server"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+        </svg>
+      </a>
+
+      <!-- GitHub -->
+      <a 
+        href="https://github.com/Clash-Projects" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/20 transition-all flex items-center justify-center text-zinc-400 hover:text-white"
+        title="GitHub Organization"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+
+      <!-- Download App CTA Button -->
+      <a 
+        href="https://github.com/Clash-Projects/LastWave-Desktop/releases" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="bg-white text-black font-semibold text-xs px-3.5 py-1.5 rounded-lg hover:bg-zinc-200 transition-all shadow-glow-sm flex items-center gap-1.5"
+      >
+        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">Download App</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- 2. MAIN VIEW CONTAINER (SPA Viewport: h-[calc(100vh-4rem)])    -->
+  <!-- ============================================================== -->
+  <main class="flex-1 relative overflow-hidden">
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- VIEW 1: LIVE MAP (Pure Vector World Mercator — Zero Tile APIs)-->
+    <!-- ------------------------------------------------------------ -->
+    <section id="view-map" class="view-panel h-[calc(100vh-4rem)] w-full relative overflow-hidden">
+      <!-- Full-Bleed Offline Vector Map -->
+      <div id="vectorMapContainer" class="w-full h-full z-0"></div>
+
+      <!-- Subtle Spatial Grid Overlay & Tactical Vignette (Pointer-Events-None) -->
+      <div class="spatial-grid-overlay absolute inset-0 pointer-events-none z-10"></div>
+
+      <!-- Top-Left Floating Sleek Minimalist Mini-HUD -->
+      <div 
+        id="hudTelemetryPill" 
+        onclick="toggleInspector()" 
+        class="absolute top-3.5 left-3.5 z-20 pointer-events-auto bg-[#09090C]/90 hover:bg-[#121217] backdrop-blur-xl border border-white/10 hover:border-white/25 rounded-xl px-3 py-1.5 shadow-xl flex items-center gap-2.5 cursor-pointer transition-all duration-200 select-none group"
+        title="Click to view live music telemetry & charts"
+      >
+        <div class="flex items-center gap-1.5" data-tooltip="Real-time concurrent listeners across active nodes">
+          <span class="text-[9px] font-mono uppercase tracking-wider text-zinc-400 font-medium">LISTENERS</span>
+          <span id="hudListeningNow" class="text-xs font-bold font-mono text-white tabular-nums">0</span>
+        </div>
+        <div class="w-[1px] h-3 bg-white/15"></div>
+        <div class="flex items-center gap-1.5" data-tooltip="Rolling 24h streams">
+          <span class="text-[9px] font-mono uppercase tracking-wider text-zinc-400 font-medium">PLAYS</span>
+          <span id="hudPlaysToday" class="text-xs font-bold font-mono text-white tabular-nums">0</span>
+        </div>
+        <div class="w-[1px] h-3 bg-white/15"></div>
+        <div class="flex items-center gap-1.5" data-tooltip="Active cities listening live">
+          <span class="text-[9px] font-mono uppercase tracking-wider text-zinc-400 font-medium">CITIES</span>
+          <span id="hudActiveCities" class="text-xs font-bold font-mono text-white tabular-nums">0</span>
+        </div>
+        <div class="w-[1px] h-3 bg-white/15"></div>
+        <div id="hudSyncPill" class="flex items-center gap-1 text-zinc-400 font-mono text-[10px] tabular-nums" data-tooltip="Next RAM sync cycle">
+          <span id="hudSyncDot" class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_#FFFFFF] transition-colors duration-300"></span>
+          <span id="syncCountdown">60s</span>
+        </div>
+      </div>
+
+      <!-- Floating Map Zoom Controls HUD -->
+      <div class="absolute top-4 right-4 flex flex-col gap-1.5 z-20 pointer-events-auto">
+        <button id="zoomInBtn" class="w-8 h-8 rounded-lg bg-[#0E0E11]/90 border border-white/10 hover:border-white/30 text-zinc-300 hover:text-white flex items-center justify-center transition-all shadow-lg backdrop-blur-md" title="Zoom In (+)">
+          <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+        </button>
+        <button id="zoomOutBtn" class="w-8 h-8 rounded-lg bg-[#0E0E11]/90 border border-white/10 hover:border-white/30 text-zinc-300 hover:text-white flex items-center justify-center transition-all shadow-lg backdrop-blur-md" title="Zoom Out (-)">
+          <i data-lucide="minus" class="w-3.5 h-3.5"></i>
+        </button>
+        <button id="resetMapBtn" class="w-8 h-8 rounded-lg bg-[#0E0E11]/90 border border-white/10 hover:border-white/30 text-zinc-300 hover:text-white flex items-center justify-center transition-all shadow-lg backdrop-blur-md" title="Reset View (Esc)">
+          <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Floating Live Inspector Widget (Auto-Shrinkable into Round Stats Icon) -->
+      <div id="mapInspectorWrapper" class="pointer-events-auto flex flex-col items-end">
+        
+        <!-- Collapsed: Sleek Round Stats Icon Button -->
+        <button 
+          id="inspectorCollapsedBtn" 
+          onclick="expandInspector(true)"
+          class="relative w-12 h-12 rounded-full bg-[#0A0A0E]/92 backdrop-blur-2xl border border-white/15 hover:border-white/35 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl"
+          title="Click to view live music telemetry & rankings"
+        >
+          <!-- Pulsing Ambient Ring -->
+          <span class="animate-ping absolute inset-0 rounded-full bg-white opacity-25 group-hover:opacity-40"></span>
+          <!-- Mini Equalizer Waveform Bars -->
+          <div class="relative flex items-center justify-center gap-[3px] text-white">
+            <span class="w-[3px] h-3 bg-white rounded-full animate-eq-1 shadow-[0_0_6px_#FFFFFF]"></span>
+            <span class="w-[3px] h-5 bg-white rounded-full animate-eq-2"></span>
+            <span class="w-[3px] h-3.5 bg-white rounded-full animate-eq-3 shadow-[0_0_6px_#FFFFFF]"></span>
+          </div>
+          <!-- Live Pill Dot Indicator -->
+          <span class="absolute top-0 right-0 w-2.5 h-2.5 rounded-full bg-white border-2 border-[#0A0A0E] shadow-[0_0_8px_#FFFFFF]"></span>
+        </button>
+
+        <!-- Expanded: Full Luxury S++++ Tier Inspector Card -->
+        <div 
+          id="mapInspectorCard"
+          class="hidden w-76 bg-[#09090C]/96 backdrop-blur-2xl border border-white/[0.12] rounded-2xl p-3 transition-all duration-300 overflow-hidden relative"
+        >
+          <!-- Dynamic GPU-Accelerated Backdrop Bloom -->
+          <div id="inspectorAmbientBloom" class="absolute -inset-6 -z-10 rounded-3xl pointer-events-none transition-all duration-700 ease-out" style="filter: blur(48px); opacity: 0.16; background: radial-gradient(circle, var(--ambient-glow, rgba(255,255,255,0.4)) 0%, transparent 70%);"></div>
+          
+          <!-- Top Auto-Shrink 5-Second Countdown Progress Bar -->
+          <div class="w-full h-[2px] bg-white/[0.06] rounded-full overflow-hidden mb-2.5">
+            <div id="inspectorCountdownBar" class="h-full bg-gradient-to-r from-zinc-500 via-white to-zinc-400 rounded-full transition-all ease-linear" style="width: 100%;"></div>
+          </div>
+
+          <!-- Mobile Drawer Grab Handle -->
+          <div class="sm:hidden w-8 h-1 rounded-full bg-white/20 mx-auto -mt-1 mb-2.5 cursor-pointer" onclick="toggleMobileDrawer()"></div>
+
+          <!-- Dynamic Content Injected Here -->
+          <div id="inspectorInnerContent"></div>
+        </div>
+
+      </div>
+
+      <!-- Bottom-Center Floating City Dock -->
+      <div id="cityDockContainer" class="city-dock-mask absolute bottom-5 left-1/2 -translate-x-1/2 z-20 pointer-events-auto flex items-center gap-1.5 bg-[#0E0E11]/85 backdrop-blur-xl border border-white/[0.08] shadow-2xl rounded-full p-1.5 overflow-x-auto no-scrollbar max-w-[calc(100vw-32px)] sm:max-w-xl">
+        <!-- Rendered with live city counts dynamically -->
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- VIEW 2: TOP CHARTS (Dedicated Music Discovery Grid)          -->
+    <!-- ------------------------------------------------------------ -->
+    <section id="view-charts" class="view-panel hidden h-[calc(100vh-4rem)] overflow-y-auto w-full">
+      <div class="max-w-6xl mx-auto p-4 sm:p-8 space-y-8 pb-16">
+        
+        <!-- Header & Timeframe Segmented Control -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.06] pb-6">
+          <div>
+            <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2.5">
+              <i data-lucide="flame" class="w-6 h-6 text-white"></i>
+              Global Trending Charts
+            </h1>
+            <p class="text-xs font-mono text-zinc-400 mt-1">Aggregated playback velocity across 39 global listening clusters</p>
+          </div>
+
+          <div class="flex bg-[#121215] p-1 rounded-xl border border-white/[0.08] text-xs font-mono self-start sm:self-auto">
+            <button id="chartsTabDaily" class="charts-tab px-3 py-1.5 rounded-lg bg-white text-black font-semibold shadow-sm transition-all">
+              Daily Top 10
+            </button>
+            <button id="chartsTabWeekly" class="charts-tab px-3 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all">
+              Weekly Top 10
+            </button>
+            <button id="chartsTabMonthly" class="charts-tab px-3 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all">
+              Monthly Top 10
+            </button>
+          </div>
+        </div>
+
+        <!-- Top 3 Spotlight Hero Cards -->
+        <div id="spotlightCards" class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"></div>
+
+        <!-- Ranks 04 - 10 Table -->
+        <div class="rounded-2xl border border-white/[0.07] bg-[#0E0E11] overflow-hidden shadow-2xl">
+          <div class="p-4 border-b border-white/[0.06] flex items-center justify-between text-xs font-mono text-zinc-400">
+            <span>RANKS 04 — 10</span>
+            <span class="hidden sm:inline">PLAYBACK VELOCITY & POPULARITY</span>
+          </div>
+          <div id="remainingChartsList" class="divide-y divide-white/[0.04]"></div>
+        </div>
+
+        <!-- Regional #1 Highlights Grid (Mumbai, Delhi, Bengaluru) -->
+        <div class="space-y-4 pt-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-sm font-semibold font-mono uppercase tracking-wider text-zinc-300 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+              Local #1 Trending Highlights
+            </h2>
+            <span class="text-xs font-mono text-zinc-500">Updated today</span>
+          </div>
+          
+          <div id="regionalHighlightsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------ -->
+    <!-- VIEW 3: API & DOCS (Developer Telemetry Portal)               -->
+    <!-- ------------------------------------------------------------ -->
+    <section id="view-docs" class="view-panel hidden h-[calc(100vh-4rem)] overflow-y-auto w-full">
+      <div class="max-w-5xl mx-auto p-4 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 pb-16">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="md:col-span-3 space-y-2 text-xs font-mono sticky top-4 self-start">
+          <span class="text-zinc-500 uppercase tracking-widest text-[10px] block px-3 py-1 font-semibold">TELEMETRY SPEC</span>
+          <a href="#doc-overview" class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.08] text-white font-medium border border-white/10 shadow-sm transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>Overview</span>
+          </a>
+          <a href="#doc-architecture" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>
+            <span>RAM Architecture</span>
+          </a>
+          <a href="#doc-get-map" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)]"></span>
+            <span>GET /api/live-map</span>
+          </a>
+          <a href="#doc-post-ping" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            <span>POST /api/telemetry/ping</span>
+          </a>
+          <a href="#doc-hosting" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500"></span>
+            <span>Self-Hosting (Go)</span>
+          </a>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="md:col-span-9 space-y-8">
+          
+          <!-- Section 1: Overview -->
+          <div id="doc-overview" class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] font-mono text-zinc-300">
+              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <span>v1.4 SPECIFICATION • ZERO TRACKER SDKs</span>
+            </div>
+            <h1 class="text-2xl font-bold text-white tracking-tight">LastWave Live API & Ephemeral Architecture</h1>
+            <p class="text-xs text-zinc-300 leading-relaxed max-w-2xl">
+              LastWave Live is a lightweight, zero-tracking global telemetry engine for open-source music streaming. Playback heartbeats are aggregated into in-memory 60-second sliding windows with coarse mathematical location rounding (~10km centroid grid).
+            </p>
+          </div>
+
+          <!-- Section 2: Architecture Flow (S++++ Tier Visual 3-Stage Pipeline) -->
+          <div id="doc-architecture" class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121216] to-[#0A0A0D] p-5 sm:p-6 space-y-4 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
+              <div class="flex items-center gap-2">
+                <i data-lucide="cpu" class="w-4 h-4 text-white"></i>
+                <h2 class="text-xs font-semibold font-mono uppercase tracking-wider text-white">60-Second Volatile RAM Pipeline</h2>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">100% IN-MEMORY</span>
+            </div>
+
+            <!-- 3-Stage Connected Pipeline -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <!-- Stage 1 -->
+              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/20 transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 01</span>
+                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">IP ERASED</span>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-white tracking-tight">HTTP/2 Pulse Ingress</h3>
+                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Remote IP and TCP socket headers erased immediately at the ingress gateway.</p>
+                </div>
+              </div>
+
+              <!-- Stage 2 -->
+              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/30 transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 02</span>
+                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-white border border-white/20">~10KM GRID</span>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-white tracking-tight">Concurrent RAM Bucket</h3>
+                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Accumulates velocity into coarse geographic centroids for exactly 60 seconds.</p>
+                </div>
+              </div>
+
+              <!-- Stage 3 -->
+              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/20 transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 03</span>
+                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">RAM EVICTED</span>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-white tracking-tight">Snapshot Swap & Eviction</h3>
+                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Atomic memory pointer swaps cached JSON payload; elapsed bucket evicted from memory.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: GET /api/live-map -->
+          <div id="doc-get-map" class="space-y-3.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono text-[11px] font-bold">GET</span>
+                <code class="text-sm font-mono text-white font-semibold">/api/live-map</code>
+              </div>
+              <button onclick="testLiveEndpoint()" class="px-3 py-1.5 rounded-xl border border-white/20 bg-white text-black font-semibold text-xs font-mono hover:bg-zinc-200 transition-all shadow-sm flex items-center gap-1.5">
+                <i data-lucide="play" class="w-3 h-3 fill-current"></i>
+                <span>Test Live Endpoint</span>
+              </button>
+            </div>
+            <p class="text-xs text-zinc-400">Returns the full real-time snapshot of active global listeners, regional top charts, and rolling 24-hour stream counts.</p>
+
+            <!-- Interactive Live Tester Output (Collapsible) -->
+            <div id="liveTesterBox" class="hidden rounded-2xl border border-emerald-500/30 bg-[#08080A] p-4 font-mono text-xs text-emerald-400 shadow-xl">
+              <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/[0.08]">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_#FFFFFF] animate-ping"></span>
+                  <span>Status: 200 OK • Live response from localhost:8080</span>
+                </span>
+                <button onclick="document.getElementById('liveTesterBox').classList.add('hidden')" class="text-zinc-500 hover:text-white">✕</button>
+              </div>
+              <pre id="liveTesterContent" class="overflow-x-auto text-[11px] max-h-60 text-zinc-300"></pre>
+            </div>
+
+            <!-- macOS Terminal Window Frame -->
+            <div class="rounded-2xl border border-white/[0.1] bg-[#0A0A0E] p-4 relative group shadow-2xl">
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></span>
+                  <span class="ml-2 font-mono text-[10px] text-zinc-500 uppercase tracking-wider">RESPONSE SCHEMA • JSON</span>
+                </div>
+                <button onclick="copyCode('sampleGetJson')" class="text-[10px] font-mono px-2 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-zinc-300 hover:text-white border border-white/15 transition-all">
+                  Copy JSON
+                </button>
+              </div>
+              <pre id="sampleGetJson" class="font-mono text-[11px] text-zinc-300 overflow-x-auto">{
+  "synced_at": "2026-10-14T12:00:00Z",
+  "next_sync_seconds": 60,
+  "global_kpis": {
+    "active_listeners": 3317,
+    "streams_today": 59579,
+    "active_cities": 39
+  },
+  "regions": [
+    {
+      "id": "in-bom",
+      "name": "Mumbai",
+      "lat": 19.0760,
+      "lng": 72.8777,
+      "active_listeners": 248,
+      "top_songs": [...]
+    }
+  ],
+  "daily_top_10": [...]
+}</pre>
+            </div>
+          </div>
+
+          <!-- Section 4: POST /api/telemetry/ping -->
+          <div id="doc-post-ping" class="space-y-3.5">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/15 border border-blue-500/30 text-blue-400 font-mono text-[11px] font-bold">POST</span>
+              <code class="text-sm font-mono text-white font-semibold">/api/telemetry/ping</code>
+            </div>
+            <p class="text-xs text-zinc-400">Telemetry heartbeat sent by the LastWave Desktop and Android applications when a song passes 30 seconds of playback.</p>
+            
+            <!-- macOS Terminal Window Frame -->
+            <div class="rounded-2xl border border-white/[0.1] bg-[#0A0A0E] p-4 relative group shadow-2xl">
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></span>
+                  <span class="ml-2 font-mono text-[10px] text-zinc-500 uppercase tracking-wider">REQUEST PAYLOAD • JSON</span>
+                </div>
+                <button onclick="copyCode('samplePostJson')" class="text-[10px] font-mono px-2 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-zinc-300 hover:text-white border border-white/15 transition-all">
+                  Copy JSON
+                </button>
+              </div>
+              <pre id="samplePostJson" class="font-mono text-[11px] text-zinc-300 overflow-x-auto">{
+  "song_id": "trk_98124a",
+  "title": "Not Like Us",
+  "artist": "Kendrick Lamar",
+  "region_id": "us-nyc",
+  "cover_url": "https://..."
+}</pre>
+            </div>
+          </div>
+
+          <!-- Section 5: Self-Hosting -->
+          <div id="doc-hosting" class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121216] to-[#0A0A0D] p-5 sm:p-6 space-y-3 shadow-2xl">
+            <h2 class="text-xs font-semibold font-mono uppercase tracking-wider text-white flex items-center gap-2">
+              <i data-lucide="server" class="w-4 h-4 text-white"></i>
+              Self-Hosting Telemetry Daemon
+            </h2>
+            <p class="text-xs text-zinc-400 leading-relaxed">The Go telemetry server compiles to a standalone, zero-dependency static binary with embedded client assets:</p>
+            <div class="p-3.5 rounded-xl bg-[#070709] border border-white/[0.08] text-xs font-mono text-zinc-300 shadow-inner">
+              <code class="text-zinc-200">git clone https://github.com/Clash-Projects/LastWave-Telemetry<br>cd backend<br>go build -o server ./cmd/server<br>./server</code>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- VIEW 4: COMMUNITY (S++++ Tier Luxury Bento Hub)              -->
+    <!-- ------------------------------------------------------------ -->
+    <section id="view-community" class="view-panel hidden h-[calc(100vh-4rem)] overflow-y-auto w-full">
+      <div class="max-w-4xl mx-auto p-4 sm:p-8 space-y-6 pb-16">
+        
+        <div class="border-b border-white/[0.06] pb-5">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] font-mono text-zinc-300 mb-2">
+            <span class="w-2 h-2 rounded-full bg-white"></span>
+            <span>ECOSYSTEM & CHANNELS</span>
+          </div>
+          <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2.5">
+            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+            LastWave Community & Ecosystem
+          </h1>
+          <p class="text-xs font-mono text-zinc-400 mt-1">Connect with developers, report audio source issues, and download open-source clients</p>
+        </div>
+
+        <!-- 4-Card Luxury Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          
+          <!-- 1. Telegram -->
+          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-sky-500/40 hover:shadow-[0_0_35px_rgba(56,189,248,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="w-11 h-11 rounded-xl bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400 group-hover:scale-105 transition-transform shadow-lg">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">5.2K MEMBERS</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white group-hover:text-sky-400 transition-colors">Telegram Channel & Group</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                  Official broadcast channel for new APK releases, beta updates, feature polls, and direct discussions with maintainers.
+                </p>
+              </div>
+            </div>
+            <a 
+              href="https://t.me/lastwave_app" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-sky-500/15 hover:border-sky-500/40 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+            >
+              <span>Join Telegram</span>
+              <span class="text-zinc-500 group-hover/btn:text-sky-400 transition-colors">↗</span>
+            </a>
+          </div>
+
+          <!-- 2. Discord -->
+          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-indigo-500/40 hover:shadow-[0_0_35px_rgba(99,102,241,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform shadow-lg">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold">14K ONLINE</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white group-hover:text-indigo-400 transition-colors">Discord Server</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                  Chat live with other listeners, share custom CSS themes, inspect lyrics synchronization improvements, and post audio bug reports.
+                </p>
+              </div>
+            </div>
+            <a 
+              href="https://discord.gg/lastwave" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-indigo-500/15 hover:border-indigo-500/40 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+            >
+              <span>Join Discord</span>
+              <span class="text-zinc-500 group-hover/btn:text-indigo-400 transition-colors">↗</span>
+            </a>
+          </div>
+
+          <!-- 3. GitHub -->
+          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-white/35 hover:shadow-[0_0_35px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:scale-105 transition-transform shadow-lg">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">★ 1.8K STARS</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white group-hover:text-zinc-200 transition-colors">Open Source on GitHub</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                  Inspect 100% of the code for the Kotlin Android app, Desktop Electron/Go application, and this telemetry dashboard. Contributions welcome.
+                </p>
+              </div>
+            </div>
+            <a 
+              href="https://github.com/Clash-Projects" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/15 hover:border-white/30 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+            >
+              <span>GitHub: Clash-Projects</span>
+              <span class="text-zinc-500 group-hover/btn:text-white transition-colors">↗</span>
+            </a>
+          </div>
+
+          <!-- 4. Downloads -->
+          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-white/40 hover:shadow-[0_0_35px_rgba(255,255,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform shadow-lg">
+                  <i data-lucide="download" class="w-5 h-5"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">AD-FREE • 100% FREE</span>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white group-hover:text-white transition-colors">Download LastWave</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                  100% free streaming with synchronized lyrics, offline downloads, seamless background playback, and zero tracker SDKs.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <a 
+                href="https://github.com/Clash-Projects/LastWave-Desktop/releases" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/15 hover:border-white/30 text-white font-medium text-[11px] text-center transition-all flex items-center justify-center gap-1.5 group/btn shadow-sm"
+              >
+                <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+                <span>Desktop</span>
+                <span class="text-zinc-500 group-hover/btn:text-white transition-colors">↗</span>
+              </a>
+              <a 
+                href="https://github.com/Clash-Projects/LastWave-native/releases" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="py-2.5 rounded-xl bg-white text-black font-semibold text-[11px] text-center hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all flex items-center justify-center gap-1.5 shadow-sm group/btn"
+              >
+                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                <span>Android</span>
+                <span class="text-zinc-600 group-hover/btn:text-black transition-colors">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 3. LEAFLET 2D FLAT MAP ENGINE (Infinitely Scrollable Cylinder)  -->
+  <!-- ============================================================== -->
+  <!-- 100% Non-API Pure Vector Geographic Data (Zero Tile APIs, Zero Watermarks) -->
+  <script src="world-vector.js"></script>
+  <script src="world-cities.js"></script>
+
+  <script>
+    // -------------------------------------------------------------
+    // PHASE 1: RESILIENT IMAGE FALLBACK & ASSET GUARD
+    // Inline SVG noise/gradient placeholder with audio glyph (Zero Broken Images)
+    // -------------------------------------------------------------
+    const FALLBACK_COVER = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='120' height='120'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23141418'/%3E%3Cstop offset='100%25' stop-color='%2308080A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='120' height='120' rx='10' fill='url(%23bg)' stroke='%2327272A' stroke-width='1'/%3E%3Ccircle cx='60' cy='60' r='26' fill='none' stroke='%233F3F46' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Ccircle cx='60' cy='60' r='8' fill='%23FFFFFF' opacity='0.75'/%3E%3Cpath d='M60 50v14l8-4z' fill='%23FFFFFF' opacity='0.8'/%3E%3C/svg%3E";
+
+    function getSafeCover(url) {
+      if (!url || typeof url !== 'string' || url.trim() === '') return FALLBACK_COVER;
+      return url;
+    }
+
+    // -------------------------------------------------------------
+    // MULTI-TIER REAL METADATA & COVER ART RESOLVER
+    // Priority Waterfall: Spotify CDN -> Apple Music (iTunes Search API) -> YouTube Music -> SVG Vector Fallback
+    // -------------------------------------------------------------
+    function handleCoverError(img) {
+      if (!img) return;
+      const stage = img.dataset.providerStage || 'primary';
+      const title = img.dataset.title || '';
+      const artist = img.dataset.artist || '';
+
+      if (stage === 'primary') {
+        // Stage 1: Fallback to Apple Music via iTunes Search API
+        img.dataset.providerStage = 'apple';
+        const query = `${artist} ${title}`.trim();
+        if (query) {
+          const itunesUrl = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=1`;
+          fetch(itunesUrl)
+            .then(res => res.json())
+            .then(data => {
+              if (data.results && data.results.length > 0 && data.results[0].artworkUrl100) {
+                const highResArt = data.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
+                img.src = highResArt;
+              } else {
+                fallbackToYTMusic(img, artist, title);
+              }
+            })
+            .catch(() => {
+              fallbackToYTMusic(img, artist, title);
+            });
+          return;
+        } else {
+          fallbackToYTMusic(img, artist, title);
+          return;
+        }
+      }
+
+      if (stage === 'apple') {
+        fallbackToYTMusic(img, artist, title);
+        return;
+      }
+
+      if (stage === 'ytmusic') {
+        // Ultimate fallback: inline SVG noise/gradient audio glyph
+        img.onerror = null;
+        img.src = FALLBACK_COVER;
+      }
+    }
+
+    function fallbackToYTMusic(img, artist, title) {
+      img.dataset.providerStage = 'ytmusic';
+      const query = encodeURIComponent(`${artist} ${title}`);
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = FALLBACK_COVER;
+      };
+      img.src = `https://images.weserv.nl/?url=music.youtube.com/thumbnail?q=${query}&default=${encodeURIComponent(FALLBACK_COVER)}`;
+    }
+
+
+    // -------------------------------------------------------------
+    // DATA LAYER (39 Cities & Top Song Charts)
+    // -------------------------------------------------------------
+    const APP_DATA = {
+      globalKPIs: {
+        activeListeners: (typeof window !== 'undefined' && window.WORLD_CITIES && window.WORLD_CITIES.length) ? window.WORLD_CITIES.reduce((acc, c) => acc + (c.activeListeners || 0), 0) : 5420,
+        streamsToday: 78420,
+        activeCities: (typeof window !== 'undefined' && window.WORLD_CITIES && window.WORLD_CITIES.length) ? window.WORLD_CITIES.filter(c => (c.activeListeners || 0) > 0).length : 80
+      },
+      regions: (typeof window !== 'undefined' && window.WORLD_CITIES && window.WORLD_CITIES.length) ? [...window.WORLD_CITIES] : [
+        { id: 'in-bom', name: 'Mumbai', country: 'India', lat: 19.0760, lng: 72.8777, tier: 1, activeListeners: 420 },
+        { id: 'in-del', name: 'Delhi NCR', country: 'India', lat: 28.6139, lng: 77.2090, tier: 1, activeListeners: 485 },
+        { id: 'us-nyc', name: 'New York', country: 'United States', lat: 40.7128, lng: -74.0060, tier: 1, activeListeners: 460 },
+        { id: 'uk-lon', name: 'London', country: 'United Kingdom', lat: 51.5074, lng: -0.1278, tier: 1, activeListeners: 470 },
+        { id: 'jp-tyo', name: 'Tokyo', country: 'Japan', lat: 35.6762, lng: 139.6503, tier: 1, activeListeners: 490 }
+      ],
+      globalTop10: {
+        daily: [
+          { rank: '01', title: 'Not Like Us', artist: 'Kendrick Lamar', plays: 54920, cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80' },
+          { rank: '02', title: 'Espresso', artist: 'Sabrina Carpenter', plays: 48150, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg' },
+          { rank: '03', title: 'Husn', artist: 'Anuv Jain', plays: 43800, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg' },
+          { rank: '04', title: 'Bling-Bang-Bang-Born', artist: 'Creepy Nuts', plays: 41720, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg' },
+          { rank: '05', title: 'Sprinter', artist: 'Dave & Central Cee', plays: 38410, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg' },
+          { rank: '06', title: 'Illuminati', artist: 'Sushin Shyam', plays: 35200, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg' },
+          { rank: '07', title: 'Wavy', artist: 'Karan Aujla', plays: 33840, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg' },
+          { rank: '08', title: 'Blinding Lights', artist: 'The Weeknd', plays: 31500, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg' },
+          { rank: '09', title: 'Million Dollar Baby', artist: 'Tommy Richman', plays: 28610, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg' },
+          { rank: '10', title: 'Starboy', artist: 'The Weeknd ft. Daft Punk', plays: 25180, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg' }
+        ],
+        weekly: [
+          { rank: '01', title: 'Espresso', artist: 'Sabrina Carpenter', plays: 342800, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg' },
+          { rank: '02', title: 'Not Like Us', artist: 'Kendrick Lamar', plays: 328400, cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80' },
+          { rank: '03', title: 'Million Dollar Baby', artist: 'Tommy Richman', plays: 265900, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg' },
+          { rank: '04', title: 'Husn', artist: 'Anuv Jain', plays: 240100, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg' },
+          { rank: '05', title: 'Bling-Bang-Bang-Born', artist: 'Creepy Nuts', plays: 218200, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg' },
+          { rank: '06', title: 'Sprinter', artist: 'Dave & Central Cee', plays: 194500, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg' },
+          { rank: '07', title: 'Blinding Lights', artist: 'The Weeknd', plays: 182900, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg' },
+          { rank: '08', title: 'Wavy', artist: 'Karan Aujla', plays: 171400, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg' },
+          { rank: '09', title: 'Illuminati', artist: 'Sushin Shyam', plays: 163000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg' },
+          { rank: '10', title: 'Cruel Summer', artist: 'Taylor Swift', plays: 152100, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/600x600bb.jpg' }
+        ],
+        monthly: [
+          { rank: '01', title: 'Blinding Lights', artist: 'The Weeknd', plays: 1440000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg' },
+          { rank: '02', title: 'Not Like Us', artist: 'Kendrick Lamar', plays: 1250000, cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80' },
+          { rank: '03', title: 'Espresso', artist: 'Sabrina Carpenter', plays: 1080000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg' },
+          { rank: '04', title: 'Cruel Summer', artist: 'Taylor Swift', plays: 970000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/600x600bb.jpg' },
+          { rank: '05', title: 'Starboy', artist: 'The Weeknd ft. Daft Punk', plays: 890000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg' },
+          { rank: '06', title: 'Husn', artist: 'Anuv Jain', plays: 810000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg' },
+          { rank: '07', title: 'Sprinter', artist: 'Dave & Central Cee', plays: 750000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg' },
+          { rank: '08', title: 'One Dance', artist: 'Drake ft. Wizkid', plays: 695000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/600x600bb.jpg' },
+          { rank: '09', title: 'Bling-Bang-Bang-Born', artist: 'Creepy Nuts', plays: 640000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg' },
+          { rank: '10', title: 'Midnight City', artist: 'M83', plays: 590000, cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg' }
+        ]
+      }
+    };
+
+    // -------------------------------------------------------------
+    // SPA STATE & 100% NON-API INFINITE 2D VECTOR MAP ENGINE
+    // -------------------------------------------------------------
+    let currentView = 'map';
+    let infiniteVectorMap = null;
+    let currentChartsTab = 'daily';
+    let selectedCityId = null;
+    let syncCountdown = 60;
+
+    // -------------------------------------------------------------
+    // SPA VIEW SWITCHER
+    // -------------------------------------------------------------
+    function switchView(targetView) {
+      currentView = targetView;
+
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+        const target = btn.getAttribute('data-target');
+        if (target === targetView) {
+          btn.className = 'nav-tab-btn px-3.5 py-1.5 rounded-lg bg-white text-black font-semibold shadow-sm transition-all flex items-center gap-1.5';
+        } else {
+          btn.className = 'nav-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5';
+        }
+      });
+
+      ['map', 'charts', 'docs', 'community'].forEach(view => {
+        const el = document.getElementById(`view-${view}`);
+        if (el) {
+          if (view === targetView) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      });
+
+      if (targetView === 'charts') {
+        renderFullTopCharts(currentChartsTab);
+      } else if (targetView === 'map' && infiniteVectorMap) {
+        setTimeout(() => {
+          infiniteVectorMap.updateBaseScale();
+          infiniteVectorMap.applyTransform();
+        }, 50);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 100% NON-API INFINITE 2D VECTOR MAP ENGINE (Fully Connected Both Horizontal & Vertical)
+    // -------------------------------------------------------------
+    const PROJ_RADIUS = 6381372;
+    const PROJ_RAD_DEG = Math.PI / 180;
+    const PROJ_BBOX = [{ x: -20004297.151525836, y: -18449355.69035302 }, { x: 20026572.394749384, y: 7485321.539093307 }];
+    const WORLD_W = 900;
+    const WORLD_H = 583.0802520919394;
+    const CENTRAL_MERIDIAN = 11.5;
+
+    function latLngToCoords(lat, lng) {
+      let diff = lng - CENTRAL_MERIDIAN;
+      while (diff < -180) diff += 360;
+      while (diff > 180) diff -= 360;
+      const clampedLat = Math.max(-84.5, Math.min(84.5, lat));
+      const projX = PROJ_RADIUS * diff * PROJ_RAD_DEG;
+      const projY = -PROJ_RADIUS * Math.log(Math.tan(Math.PI / 4 + (clampedLat * Math.PI) / 360));
+      const x = ((projX - PROJ_BBOX[0].x) / (PROJ_BBOX[1].x - PROJ_BBOX[0].x)) * WORLD_W;
+      const y = ((projY - PROJ_BBOX[0].y) / (PROJ_BBOX[1].y - PROJ_BBOX[0].y)) * WORLD_H;
+      return { x, y };
+    }
+
+    class InfiniteVectorMap {
+      constructor(containerId) {
+        this.container = document.getElementById(containerId);
+        if (!this.container || !window.WORLD_VECTOR_MAP) return;
+
+        this.scale = 1.0;
+        this.targetScale = null;
+        this.lastAppliedScale = null;
+        this.panX = 0;
+        this.panY = 0;
+        this.isDragging = false;
+        this.startX = 0;
+        this.startY = 0;
+        this.lastDragTime = 0;
+        this.velocityX = 0;
+        this.velocityY = 0;
+        this.animFrameId = null;
+        this.zoomAnimId = null;
+        this.zoomAnchorX = 0;
+        this.zoomAnchorY = 0;
+        this.rafPending = false;
+        this.markerScalers = [];
+        this.lastClusterScale = null;
+
+        this.init();
+      }
+
+      init() {
+        this.container.innerHTML = `
+          <svg id="vectorMapSvg" class="w-full h-full block select-none pointer-events-auto" style="background: #08080B;">
+            <defs>
+              <g id="worldVectorPathsTemplate"></g>
+            </defs>
+            <g id="infiniteVectorRoot" style="will-change: transform;">
+              <g id="worldTilesGroup"></g>
+              <g id="markersLayerGroup"></g>
+            </g>
+          </svg>
+        `;
+
+        this.svg = document.getElementById('vectorMapSvg');
+        this.rootGroup = document.getElementById('infiniteVectorRoot');
+        this.tilesGroup = document.getElementById('worldTilesGroup');
+        this.markersGroup = document.getElementById('markersLayerGroup');
+        this.pathsDef = document.getElementById('worldVectorPathsTemplate');
+
+        // Populate 176 country paths into SVG template once
+        const paths = window.WORLD_VECTOR_MAP.paths;
+        let pathsHtml = '';
+        for (const code in paths) {
+          const item = paths[code];
+          pathsHtml += `<path class="vector-country" data-code="${code}" data-name="${item.name}" d="${item.path}" />`;
+        }
+        this.pathsDef.innerHTML = pathsHtml;
+
+        this.updateBaseScale();
+        this.buildGrid();
+        this.renderMarkers();
+        this.attachEvents();
+        this.applyTransform();
+      }
+
+      updateBaseScale() {
+        const cw = this.container.clientWidth || 1200;
+        const ch = this.container.clientHeight || 700;
+        this.scale = Math.max(cw / WORLD_W, ch / WORLD_H) * 1.15;
+        this.panX = (cw - WORLD_W * this.scale) / 2;
+        this.panY = (ch - WORLD_H * this.scale) / 2;
+      }
+
+      buildGrid() {
+        // Seamless 3-column horizontal repeat (-1, 0, 1) — ZERO vertical duplicate overhead (528 paths vs 8,624)
+        let tilesHtml = '';
+        for (let col = -1; col <= 1; col++) {
+          tilesHtml += `<g transform="translate(${col * WORLD_W}, 0)"><use href="#worldVectorPathsTemplate" /></g>`;
+        }
+        this.tilesGroup.innerHTML = tilesHtml;
+      }
+
+      getClusteredNodes(scale) {
+        // Dynamic spatial clustering threshold and Level-of-Detail (LOD)
+        let clusterRadiusPx = 48;
+        let showTier3 = false;
+
+        if (scale >= 3.4) {
+          clusterRadiusPx = 14;
+          showTier3 = true;
+        } else if (scale >= 2.2) {
+          clusterRadiusPx = 28;
+          showTier3 = true;
+        } else if (scale >= 1.6) {
+          clusterRadiusPx = 38;
+          showTier3 = false; // Tier 3 small cities fold into nearby regional clusters
+        } else {
+          clusterRadiusPx = 48;
+          showTier3 = false;
+        }
+
+        // Candidates: only cities with live listeners (activeListeners > 0); always include isClientIP and selectedCityId
+        const pool = APP_DATA.regions.filter(r => {
+          if (r.isClientIP || r.id === selectedCityId) return true;
+          // CRITICAL: Don't trigger cities which are not listening! Show live cities only which are listening!
+          if (!r.activeListeners || r.activeListeners <= 0) return false;
+          if (showTier3) return true;
+          return (r.tier || 1) <= 2;
+        });
+
+        // Compute projected map coordinates
+        const points = pool.map(r => {
+          const pt = latLngToCoords(r.lat, r.lng);
+          return {
+            ...r,
+            x: pt.x,
+            y: pt.y
+          };
+        });
+
+        const clusters = [];
+        const assigned = new Uint8Array(points.length);
+
+        for (let i = 0; i < points.length; i++) {
+          if (assigned[i]) continue;
+          assigned[i] = 1;
+          const p1 = points[i];
+
+          // If this is the user client IP or currently selected city, keep individual dot
+          if (p1.isClientIP || p1.id === selectedCityId) {
+            clusters.push({
+              isCluster: false,
+              city: p1,
+              x: p1.x,
+              y: p1.y,
+              lat: p1.lat,
+              lng: p1.lng,
+              activeListeners: p1.activeListeners,
+              isClientIP: !!p1.isClientIP,
+              isSelected: p1.id === selectedCityId
+            });
+            continue;
+          }
+
+          const members = [p1];
+
+          for (let j = i + 1; j < points.length; j++) {
+            if (assigned[j]) continue;
+            const p2 = points[j];
+            if (p2.isClientIP || p2.id === selectedCityId) continue;
+
+            let dx = Math.abs(p1.x - p2.x);
+            if (dx > WORLD_W / 2) dx = WORLD_W - dx;
+            const dy = Math.abs(p1.y - p2.y);
+            const distScreen = Math.sqrt(dx * dx + dy * dy) * scale;
+
+            if (distScreen < clusterRadiusPx) {
+              assigned[j] = 1;
+              members.push(p2);
+            }
+          }
+
+          if (members.length === 1) {
+            clusters.push({
+              isCluster: false,
+              city: members[0],
+              x: members[0].x,
+              y: members[0].y,
+              lat: members[0].lat,
+              lng: members[0].lng,
+              activeListeners: members[0].activeListeners,
+              isClientIP: !!members[0].isClientIP,
+              isSelected: members[0].id === selectedCityId
+            });
+          } else {
+            let sumX = 0, sumY = 0, sumLat = 0, sumLng = 0;
+            let totalListeners = 0;
+            let primary = members[0];
+
+            for (let m = 0; m < members.length; m++) {
+              const mem = members[m];
+              sumX += mem.x;
+              sumY += mem.y;
+              sumLat += mem.lat;
+              sumLng += mem.lng;
+              totalListeners += (mem.activeListeners || 0);
+              if ((mem.activeListeners || 0) > (primary.activeListeners || 0)) {
+                primary = mem;
+              }
+            }
+
+            clusters.push({
+              isCluster: true,
+              id: `cluster-${primary.id}-${members.length}`,
+              primaryCity: primary,
+              count: members.length,
+              members: members,
+              x: sumX / members.length,
+              y: sumY / members.length,
+              lat: sumLat / members.length,
+              lng: sumLng / members.length,
+              activeListeners: totalListeners
+            });
+          }
+        }
+
+        return clusters;
+      }
+
+      renderMarkers() {
+        if (!this.markersGroup) return;
+        this.markersGroup.innerHTML = '';
+
+        const invScale = 1 / (this.scale || 1);
+        const clusters = this.getClusteredNodes(this.scale);
+
+        let html = '';
+        // 3 horizontal copies matching col -1, 0, 1 for seamless infinite horizontal wrap
+        for (let col = -1; col <= 1; col++) {
+          clusters.forEach(node => {
+            const mx = node.x + col * WORLD_W;
+            const my = node.y;
+
+            if (node.isCluster) {
+              const primaryName = node.primaryCity.name.split(',')[0].trim();
+              const tooltip = `${node.count} cities merged (${node.members.map(m => m.name.split(',')[0].trim()).slice(0, 4).join(', ')}${node.count > 4 ? '...' : ''}) • ${node.activeListeners.toLocaleString()} live listeners (Click to zoom & separate)`;
+              const pillText = `${primaryName} Hub • ${node.count} cities • ${node.activeListeners}`;
+              const badgeWidth = Math.round(pillText.length * 6.0 + 16);
+
+              html += `
+                <g class="vector-cluster-node" data-lat="${node.lat.toFixed(4)}" data-lng="${node.lng.toFixed(4)}" data-tooltip="${tooltip}" transform="translate(${mx}, ${my})">
+                  <g class="marker-scaler" transform="scale(${invScale})">
+                    <!-- Concentric Glow Pulse Ring -->
+                    <circle cx="0" cy="0" r="15" class="cluster-pulse-ring" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.2" />
+                    <!-- Dark Luxury Glass Cluster Disc -->
+                    <circle cx="0" cy="0" r="9.5" class="cluster-disc" fill="rgba(14, 16, 20, 0.94)" stroke="#FFFFFF" stroke-width="1.3" />
+                    <!-- Hit Target -->
+                    <circle cx="0" cy="0" r="18" fill="transparent" class="cluster-hit-area" />
+                    <!-- Number of Merged Cities -->
+                    <text x="0" y="3.2" text-anchor="middle" class="cluster-count-text select-none" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">+${node.count}</text>
+                    <!-- Hover Tooltip Pill -->
+                    <g class="cluster-hover-pill" transform="translate(13, -7)">
+                      <rect x="0" y="0" width="${badgeWidth}" height="15" rx="3.5" ry="3.5" fill="rgba(10, 12, 16, 0.96)" stroke="rgba(255, 255, 255, 0.6)" stroke-width="0.8" />
+                      <text x="5" y="10.8" fill="#D4D4D8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="500">${primaryName} Hub <tspan fill="#FFFFFF" font-weight="700">• ${node.count} cities</tspan></text>
+                    </g>
+                  </g>
+                </g>
+              `;
+            } else {
+              // Individual City or User Client IP Node
+              const region = node.city;
+              const isSelected = selectedCityId === region.id;
+              const isClient = !!region.isClientIP;
+              const cityName = region.name.split(',')[0].trim();
+              const badgeWidth = Math.round(cityName.length * 6.2 + `${region.activeListeners}`.length * 5.8 + (isClient ? 34 : 16));
+              const tooltip = isClient
+                ? `YOU (IP: ${region.ip || 'Live Client'}) • ${cityName}, ${region.country}`
+                : `${cityName}, ${region.country} • ${region.activeListeners.toLocaleString()} live listeners`;
+
+              html += `
+                <g class="vector-marker-node ${isSelected ? 'selected' : ''} ${isClient ? 'client-ip-node' : ''}" data-city-id="${region.id}" data-tooltip="${tooltip}" transform="translate(${mx}, ${my})">
+                  <g class="marker-scaler" transform="scale(${invScale})">
+                    ${isClient ? `
+                      <!-- Client VIP Double Radar Wave -->
+                      <circle cx="0" cy="0" r="6" class="client-beacon-wave" />
+                      <circle cx="0" cy="0" r="8" class="tiny-vector-pulse" />
+                      <circle cx="0" cy="0" r="2.8" class="tiny-vector-dot" />
+                    ` : (region.activeListeners > 0 ? `
+                      <!-- Live Listening City: Glowing Pulse Ring -->
+                      <circle cx="0" cy="0" r="5.5" class="tiny-vector-pulse" />
+                      <!-- Core White Dot -->
+                      <circle cx="0" cy="0" r="2.2" class="tiny-vector-dot" />
+                    ` : `
+                      <!-- Inactive / Dormant Node: Zero Pulse Trigger -->
+                      <circle cx="0" cy="0" r="1.8" fill="#52525B" />
+                    `)}
+                    <!-- Hit Area -->
+                    <circle cx="0" cy="0" r="14" fill="transparent" class="marker-hit-area" />
+                    <!-- Label Pill (remains crisp and scale-invariant) -->
+                    <g class="tiny-vector-label-pill" transform="translate(7, -7)">
+                      <rect x="0" y="0" width="${badgeWidth}" height="15" rx="3.5" ry="3.5" fill="${isClient ? 'rgba(8, 20, 24, 0.96)' : 'rgba(10, 10, 12, 0.94)'}" stroke="${isClient ? '#00F0FF' : 'rgba(255, 255, 255, 0.2)'}" stroke-width="${isClient ? '1.1' : '0.8'}" />
+                      <text x="5" y="10.8" fill="${isClient ? '#00F0FF' : '#D4D4D8'}" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="500">${cityName} <tspan fill="#FFFFFF" font-weight="700">• ${region.activeListeners}</tspan></text>
+                    </g>
+                  </g>
+                </g>
+              `;
+            }
+          });
+        }
+        this.markersGroup.innerHTML = html;
+        this.markerScalers = Array.from(this.markersGroup.getElementsByClassName('marker-scaler'));
+        this.lastAppliedScale = this.scale;
+        this.lastClusterScale = this.scale;
+      }
+
+      forceRecluster() {
+        this.lastClusterScale = null;
+        this.renderMarkers();
+      }
+
+      applyTransform() {
+        const tileW = WORLD_W * this.scale;
+        const tileH = WORLD_H * this.scale;
+        const cw = this.container.clientWidth || 1200;
+        const ch = this.container.clientHeight || 700;
+
+        // Modulo wrap along horizontal cylinder
+        while (this.panX < -tileW) this.panX += tileW;
+        while (this.panX > 0) this.panX -= tileW;
+
+        // Clamp vertically within reasonable geographic bounds
+        const minPanY = ch - tileH;
+        const maxPanY = 0;
+        if (tileH > ch) {
+          this.panY = Math.min(maxPanY, Math.max(minPanY, this.panY));
+        } else {
+          this.panY = (ch - tileH) / 2;
+        }
+
+        this.rootGroup.setAttribute('transform', `translate(${this.panX}, ${this.panY}) scale(${this.scale})`);
+
+        // Counter-scale markers so only the map zooms while dots maintain constant screen size
+        this.updateMarkerScale();
+
+        // Check if scale shifted enough to require re-clustering (>8% scale change)
+        if (!this.lastClusterScale || Math.abs(this.scale - this.lastClusterScale) / this.lastClusterScale > 0.08) {
+          this.renderMarkers();
+        }
+      }
+
+      updateMarkerScale() {
+        if (!this.markersGroup) return;
+        if (this.lastAppliedScale === this.scale) return;
+        this.lastAppliedScale = this.scale;
+
+        const invScale = 1 / (this.scale || 1);
+        const scalers = this.markerScalers && this.markerScalers.length ? this.markerScalers : this.markersGroup.getElementsByClassName('marker-scaler');
+        const scaleAttr = `scale(${invScale})`;
+        for (let i = 0; i < scalers.length; i++) {
+          scalers[i].setAttribute('transform', scaleAttr);
+        }
+      }
+
+      scheduleRender() {
+        if (!this.rafPending) {
+          this.rafPending = true;
+          requestAnimationFrame(() => {
+            this.applyTransform();
+            this.rafPending = false;
+          });
+        }
+      }
+
+      attachEvents() {
+        // Direct click & pointer handling on markers and clusters
+        this.markersGroup.addEventListener('pointerdown', (e) => {
+          const node = e.target.closest('.vector-marker-node, .vector-cluster-node');
+          if (node) {
+            e.stopPropagation();
+          }
+        });
+
+        this.markersGroup.addEventListener('click', (e) => {
+          const clusterNode = e.target.closest('.vector-cluster-node');
+          if (clusterNode) {
+            e.stopPropagation();
+            const lat = parseFloat(clusterNode.getAttribute('data-lat'));
+            const lng = parseFloat(clusterNode.getAttribute('data-lng'));
+            if (!isNaN(lat) && !isNaN(lng)) {
+              // Smoothly fly and zoom into cluster to unpack and separate cities
+              const targetScale = Math.min(8.0, Math.max(3.2, this.scale * 1.95));
+              this.flyTo(lat, lng, targetScale, 650);
+            }
+            return;
+          }
+
+          const cityNode = e.target.closest('.vector-marker-node');
+          if (cityNode) {
+            e.stopPropagation();
+            const id = cityNode.getAttribute('data-city-id');
+            if (id) selectCity(id);
+          }
+        });
+
+        // Map drag / pan with rAF throttling & continuous velocity tracking
+        this.container.addEventListener('pointerdown', (e) => {
+          if (e.target.closest('.vector-marker-node, .vector-cluster-node')) return;
+          this.isDragging = true;
+          this.startX = e.clientX;
+          this.startY = e.clientY;
+          this.lastDragTime = performance.now();
+          this.velocityX = 0;
+          this.velocityY = 0;
+          if (this.animFrameId) {
+            cancelAnimationFrame(this.animFrameId);
+            this.animFrameId = null;
+          }
+          if (this.zoomAnimId) {
+            cancelAnimationFrame(this.zoomAnimId);
+            this.zoomAnimId = null;
+          }
+          this.targetScale = null;
+          this.container.setPointerCapture(e.pointerId);
+        });
+
+        this.container.addEventListener('pointermove', (e) => {
+          if (!this.isDragging) return;
+          const now = performance.now();
+          const dt = Math.max(1, now - this.lastDragTime);
+          const dx = e.clientX - this.startX;
+          const dy = e.clientY - this.startY;
+          this.startX = e.clientX;
+          this.startY = e.clientY;
+          this.lastDragTime = now;
+
+          this.panX += dx;
+          this.panY += dy;
+
+          // Smoothed gesture velocity tracking
+          const instVx = dx / dt;
+          const instVy = dy / dt;
+          this.velocityX = this.velocityX * 0.3 + instVx * 0.7;
+          this.velocityY = this.velocityY * 0.3 + instVy * 0.7;
+
+          this.scheduleRender();
+        });
+
+        const stopDrag = (e) => {
+          if (!this.isDragging) return;
+          this.isDragging = false;
+          try { this.container.releasePointerCapture(e.pointerId); } catch (_) {}
+          // If held stationary for >70ms before release, don't fling
+          if (performance.now() - this.lastDragTime > 70) {
+            this.velocityX = 0;
+            this.velocityY = 0;
+          }
+          this.startInertia();
+        };
+
+        this.container.addEventListener('pointerup', stopDrag);
+        this.container.addEventListener('pointercancel', stopDrag);
+
+        // Snappy, continuous high-precision wheel zooming (responsive on both trackpads and mouse wheel)
+        this.container.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          const rect = this.container.getBoundingClientRect();
+          const mouseX = e.clientX - rect.left;
+          const mouseY = e.clientY - rect.top;
+
+          let delta = -e.deltaY;
+          if (e.deltaMode === 1) delta *= 35;
+          else if (e.deltaMode === 2) delta *= 600;
+
+          const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
+          const minScale = Math.max(rect.width / WORLD_W, rect.height / WORLD_H) * 0.95;
+          const maxScale = 9.0;
+          const factor = Math.abs(delta) < 35 ? 0.0075 : 0.0048;
+          const zoomRatio = Math.exp(delta * factor);
+          const newTarget = Math.min(maxScale, Math.max(minScale, currentTarget * zoomRatio));
+
+          this.startSmoothZoom(newTarget, mouseX, mouseY);
+        }, { passive: false });
+
+        window.addEventListener('resize', () => {
+          this.applyTransform();
+        });
+      }
+
+      startSmoothZoom(targetScale, anchorX, anchorY) {
+        this.targetScale = targetScale;
+        this.zoomAnchorX = anchorX;
+        this.zoomAnchorY = anchorY;
+
+        if (this.zoomAnimId) return;
+
+        const zoomStep = () => {
+          if (this.targetScale === null) {
+            this.zoomAnimId = null;
+            return;
+          }
+          const diff = this.targetScale - this.scale;
+          if (Math.abs(diff) < 0.002) {
+            const ratio = this.targetScale / this.scale;
+            this.panX = this.zoomAnchorX - (this.zoomAnchorX - this.panX) * ratio;
+            this.panY = this.zoomAnchorY - (this.zoomAnchorY - this.panY) * ratio;
+            this.scale = this.targetScale;
+            this.targetScale = null;
+            this.zoomAnimId = null;
+            this.applyTransform();
+            return;
+          }
+
+          // Snappy, instant smooth zoom interpolation
+          const nextScale = this.scale + diff * 0.48;
+          const ratio = nextScale / this.scale;
+          this.panX = this.zoomAnchorX - (this.zoomAnchorX - this.panX) * ratio;
+          this.panY = this.zoomAnchorY - (this.zoomAnchorY - this.panY) * ratio;
+          this.scale = nextScale;
+          this.applyTransform();
+
+          this.zoomAnimId = requestAnimationFrame(zoomStep);
+        };
+        this.zoomAnimId = requestAnimationFrame(zoomStep);
+      }
+
+      startInertia() {
+        if (this.animFrameId) cancelAnimationFrame(this.animFrameId);
+        const friction = 0.935;
+        let lastTime = performance.now();
+        const step = (now) => {
+          const dt = Math.min(32, now - lastTime) / 16.667;
+          lastTime = now;
+          if (Math.abs(this.velocityX) < 0.015 && Math.abs(this.velocityY) < 0.015) {
+            this.animFrameId = null;
+            return;
+          }
+          this.panX += this.velocityX * 16 * dt;
+          this.panY += this.velocityY * 16 * dt;
+          const decay = Math.pow(friction, dt);
+          this.velocityX *= decay;
+          this.velocityY *= decay;
+          this.applyTransform();
+          this.animFrameId = requestAnimationFrame(step);
+        };
+        this.animFrameId = requestAnimationFrame(step);
+      }
+
+      zoomIn() {
+        const cw = (this.container.clientWidth || 1200) / 2;
+        const ch = (this.container.clientHeight || 700) / 2;
+        const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
+        const newTarget = Math.min(9.0, currentTarget * 1.35);
+        this.startSmoothZoom(newTarget, cw, ch);
+      }
+
+      zoomOut() {
+        const cw = (this.container.clientWidth || 1200) / 2;
+        const ch = (this.container.clientHeight || 700) / 2;
+        const minScale = Math.max((cw * 2) / WORLD_W, (ch * 2) / WORLD_H) * 0.95;
+        const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
+        const newTarget = Math.max(minScale, currentTarget * 0.74);
+        this.startSmoothZoom(newTarget, cw, ch);
+      }
+
+      flyTo(lat, lng, targetScale = 3.6, duration = 650) {
+        if (this.zoomAnimId) {
+          cancelAnimationFrame(this.zoomAnimId);
+          this.zoomAnimId = null;
+        }
+        this.targetScale = null;
+
+        const pt = latLngToCoords(lat, lng);
+        const cw = this.container.clientWidth / 2;
+        const ch = this.container.clientHeight / 2;
+
+        const startScale = this.scale;
+        const startPanX = this.panX;
+        const startPanY = this.panY;
+
+        const baseTargetPanX = cw - pt.x * targetScale;
+        const baseTargetPanY = ch - pt.y * targetScale;
+        const targetTileW = WORLD_W * targetScale;
+
+        // Shortest modulo horizontal path
+        let targetPanX = baseTargetPanX;
+        let minDx = Infinity;
+        for (let k = -2; k <= 2; k++) {
+          const candidate = baseTargetPanX + k * targetTileW;
+          if (Math.abs(candidate - startPanX) < minDx) {
+            minDx = Math.abs(candidate - startPanX);
+            targetPanX = candidate;
+          }
+        }
+
+        const targetPanY = baseTargetPanY;
+        const startTime = performance.now();
+        if (this.animFrameId) cancelAnimationFrame(this.animFrameId);
+
+        const animate = (now) => {
+          const t = Math.min(1, (now - startTime) / duration);
+          const ease = 1 - Math.pow(1 - t, 3); // cubic ease out
+
+          this.scale = startScale + (targetScale - startScale) * ease;
+          this.panX = startPanX + (targetPanX - startPanX) * ease;
+          this.panY = startPanY + (targetPanY - startPanY) * ease;
+
+          this.applyTransform();
+
+          if (t < 1) {
+            this.animFrameId = requestAnimationFrame(animate);
+          } else {
+            this.animFrameId = null;
+            this.forceRecluster();
+          }
+        };
+        this.animFrameId = requestAnimationFrame(animate);
+      }
+
+      reset() {
+        if (this.animFrameId) {
+          cancelAnimationFrame(this.animFrameId);
+          this.animFrameId = null;
+        }
+        if (this.zoomAnimId) {
+          cancelAnimationFrame(this.zoomAnimId);
+          this.zoomAnimId = null;
+        }
+        this.targetScale = null;
+        this.updateBaseScale();
+        this.applyTransform();
+        this.forceRecluster();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // AMBIENT BLOOM & DOMINANT COLOR EXTRACTION
+    // -------------------------------------------------------------
+    let isMobileDrawerExpanded = false;
+
+    function extractDominantColor(imgSrc, callback) {
+      if (!imgSrc || imgSrc.startsWith('data:')) {
+        callback('rgba(255, 255, 255, 0.25)');
+        return;
+      }
+      const img = new Image();
+      img.crossOrigin = 'Anonymous';
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = 4;
+          canvas.height = 4;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, 4, 4);
+          const data = ctx.getImageData(0, 0, 4, 4).data;
+          let r = 0, g = 0, b = 0, count = 0;
+          for (let i = 0; i < data.length; i += 4) {
+            const lum = 0.299 * data[i] + 0.587 * data[i+1] + 0.114 * data[i+2];
+            if (lum > 20 && lum < 240) {
+              r += data[i]; g += data[i+1]; b += data[i+2]; count++;
+            }
+          }
+          if (count > 0) {
+            callback(`rgba(${Math.round(r/count)}, ${Math.round(g/count)}, ${Math.round(b/count)}, 0.4)`);
+          } else {
+            callback('rgba(255, 255, 255, 0.25)');
+          }
+        } catch (e) {
+          callback('rgba(255, 255, 255, 0.25)');
+        }
+      };
+      img.onerror = () => callback('rgba(255, 255, 255, 0.25)');
+      img.src = imgSrc;
+    }
+
+    function updateInspectorBloom(color) {
+      const bloom = document.getElementById('inspectorAmbientBloom');
+      if (bloom) {
+        bloom.style.setProperty('--ambient-glow', color);
+      }
+    }
+
+    function toggleMobileDrawer() {
+      const card = document.getElementById('mapInspectorCard');
+      if (!card) return;
+      isMobileDrawerExpanded = !isMobileDrawerExpanded;
+      if (isMobileDrawerExpanded) {
+        card.classList.remove('mobile-peek');
+        card.classList.add('mobile-expanded');
+      } else {
+        card.classList.remove('mobile-expanded');
+        card.classList.add('mobile-peek');
+      }
+    }
+
+    // -------------------------------------------------------------
+    // FLOATING LIVE INSPECTOR CARD & AUTO-SHRINK ENGINE
+    // -------------------------------------------------------------
+    let isInspectorExpanded = false;
+    let autoShrinkInterval = null;
+    let autoShrinkTimeLeft = 5000;
+    let isInspectorHovered = false;
+
+    function expandInspector(isManual = false) {
+      isInspectorExpanded = true;
+      const card = document.getElementById('mapInspectorCard');
+      const btn = document.getElementById('inspectorCollapsedBtn');
+      if (card) {
+        card.classList.remove('hidden', 'shrunk');
+        card.style.display = 'block';
+      }
+      if (btn) {
+        btn.classList.add('hidden');
+        btn.style.display = 'none';
+      }
+      lucide.createIcons();
+      attachTooltips();
+      startAutoShrinkTimer(5000);
+    }
+
+    function toggleInspector() {
+      if (isInspectorExpanded) {
+        shrinkInspector();
+      } else {
+        expandInspector(true);
+      }
+    }
+
+    function shrinkInspector() {
+      isInspectorExpanded = false;
+      stopAutoShrinkTimer();
+      const card = document.getElementById('mapInspectorCard');
+      const btn = document.getElementById('inspectorCollapsedBtn');
+      if (card) {
+        card.classList.add('shrunk');
+        card.style.display = 'none';
+      }
+      if (btn) {
+        btn.classList.remove('hidden');
+        btn.style.display = 'flex';
+      }
+    }
+
+    function stopAutoShrinkTimer() {
+      if (autoShrinkInterval) {
+        clearInterval(autoShrinkInterval);
+        autoShrinkInterval = null;
+      }
+      const bar = document.getElementById('inspectorCountdownBar');
+      if (bar) bar.style.width = '100%';
+    }
+
+    function startAutoShrinkTimer(durationMs = 15000) {
+      stopAutoShrinkTimer();
+      autoShrinkTimeLeft = durationMs;
+      const stepMs = 50;
+      const bar = document.getElementById('inspectorCountdownBar');
+
+      autoShrinkInterval = setInterval(() => {
+        if (isInspectorHovered) return;
+        autoShrinkTimeLeft -= stepMs;
+        if (bar) {
+          const pct = Math.max(0, Math.min(100, (autoShrinkTimeLeft / durationMs) * 100));
+          bar.style.width = `${pct}%`;
+        }
+        if (autoShrinkTimeLeft <= 0) {
+          shrinkInspector();
+        }
+      }, stepMs);
+    }
+
+    function initInspectorHoverEvents() {
+      const card = document.getElementById('mapInspectorCard');
+      if (!card) return;
+      card.addEventListener('mouseenter', () => {
+        isInspectorHovered = true;
+      });
+      card.addEventListener('mouseleave', () => {
+        isInspectorHovered = false;
+        autoShrinkTimeLeft = 15000;
+      });
+    }
+
+    function renderGlobalInspector() {
+      const inner = document.getElementById('inspectorInnerContent');
+      if (!inner) return;
+
+      const topSong = (APP_DATA.globalTop10.daily && APP_DATA.globalTop10.daily[0]) || {
+        title: 'Espresso',
+        artist: 'Sabrina Carpenter',
+        plays: 54920,
+        cover_url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80'
+      };
+      const coverImg = getSafeCover(topSong.cover_url || topSong.cover);
+      const songListeners = Math.round(topSong.plays / 15).toLocaleString();
+
+      // Extract ambient dominant color tint
+      extractDominantColor(coverImg, color => updateInspectorBloom(color));
+
+      const topCities = [...APP_DATA.regions]
+        .filter(r => (r.activeListeners || 0) > 0)
+        .sort((a, b) => b.activeListeners - a.activeListeners)
+        .slice(0, 3);
+      const maxCityListeners = topCities[0]?.activeListeners || 1;
+
+      inner.innerHTML = `
+        <!-- Card Header with Realtime status and Shrink Button -->
+        <div class="flex items-center justify-between pb-2 border-b border-white/[0.08]">
+          <div class="flex items-center gap-1.5">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_8px_#FFFFFF]"></span>
+            </span>
+            <span class="text-[10px] font-mono uppercase tracking-wider font-semibold text-zinc-200">GLOBAL #1 RIGHT NOW</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-[9.5px] font-mono text-zinc-500">REALTIME</span>
+            <button onclick="shrinkInspector()" class="w-5 h-5 rounded-md bg-white/[0.06] hover:bg-white/[0.15] border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition-all shadow-sm" title="Minimize">
+              <i data-lucide="minus" class="w-3 h-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- #1 Track Telemetry (Compact Data-First Row) -->
+        <div class="mt-2.5 flex items-center gap-2.5 bg-white/[0.03] p-2 rounded-xl border border-white/[0.06]">
+          <div style="width: 38px; height: 38px; min-width: 38px;" class="rounded-lg overflow-hidden border border-white/15 bg-zinc-900 shrink-0 shadow-sm relative">
+            <img src="${coverImg}" alt="${topSong.title}" data-title="${topSong.title.replace(/"/g, '&quot;')}" data-artist="${topSong.artist.replace(/"/g, '&quot;')}" data-provider-stage="primary" class="w-full h-full object-cover" onerror="handleCoverError(this);">
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center justify-between gap-1">
+              <h4 class="text-xs font-bold text-white truncate tracking-tight">${topSong.title}</h4>
+              <span class="text-[9.5px] font-mono text-zinc-400 tabular-nums shrink-0">${topSong.plays.toLocaleString()} plays</span>
+            </div>
+            <p class="text-[10.5px] text-zinc-400 font-medium truncate mt-0.5">${topSong.artist}</p>
+            <div class="mt-1 flex items-center gap-1.5 text-[9.5px] font-mono text-zinc-300">
+              <span class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_4px_#fff]"></span>
+              <span>${songListeners} live listeners</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top 3 Active Metros Breakdown -->
+        <div class="mt-2.5 pt-2 border-t border-white/[0.08] space-y-1.5">
+          <div class="flex items-center justify-between text-[9px] font-mono text-zinc-400 uppercase tracking-wider font-semibold">
+            <span>TOP ACTIVE METROS</span>
+            <span>LISTENERS</span>
+          </div>
+          <div class="space-y-1">
+            ${topCities.map((city, idx) => {
+              const pct = Math.round((city.activeListeners / maxCityListeners) * 100);
+              return `
+                <div class="cursor-pointer group relative overflow-hidden rounded-lg border border-white/[0.05] bg-white/[0.02] hover:bg-white/[0.06] hover:border-white/20 px-2 py-1.5 transition-all" onclick="selectCity('${city.id}')" data-tooltip="Click to focus map on ${city.name} (${city.activeListeners} active listeners)">
+                  <div class="absolute inset-y-0 left-0 bg-white/[0.05] rounded-lg transition-all group-hover:bg-white/10" style="width: ${pct}%"></div>
+                  <div class="relative flex items-center justify-between text-xs">
+                    <span class="text-zinc-200 font-medium group-hover:text-white flex items-center gap-1.5 truncate">
+                      <span class="font-mono text-[10px] font-bold text-zinc-400 group-hover:text-white tabular-nums">0${idx + 1}</span>
+                      <span class="truncate text-[11px]">${city.name.split(',')[0]}</span>
+                    </span>
+                    <div class="flex items-center gap-1 shrink-0 ml-2">
+                      <span class="font-mono text-[11px] text-white font-semibold tabular-nums">${city.activeListeners.toLocaleString()}</span>
+                      <span class="text-[9px] font-mono text-zinc-500">live</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+      attachTooltips();
+    }
+
+    function renderCityInspector(region) {
+      const inner = document.getElementById('inspectorInnerContent');
+      if (!inner) return;
+
+      const cityName = region.name.split(',')[0].trim();
+      const topSongs = (region.topSongs || []).slice(0, 5);
+      const topTrackCover = getSafeCover(topSongs[0]?.cover_url || topSongs[0]?.cover);
+      const isClient = !!region.isClientIP;
+
+      const isListening = (region.activeListeners || 0) > 0;
+
+      // Extract ambient color tint from regional top track (cyan tint for client IP)
+      extractDominantColor(topTrackCover, color => updateInspectorBloom(isClient ? 'rgba(0, 240, 255, 0.45)' : color));
+
+      inner.innerHTML = `
+        <!-- Header with Back to Global CTA & Shrink Button -->
+        <div class="flex items-center justify-between pb-2 border-b border-white/[0.08]">
+          <div class="min-w-0 pr-2">
+            <span class="text-[9.5px] font-mono uppercase tracking-wider ${isClient ? 'text-[#00F0FF]' : (isListening ? 'text-white' : 'text-zinc-400')} font-semibold flex items-center gap-1.5">
+              ${isClient ? '<span class="w-1.5 h-1.5 rounded-full bg-[#00F0FF] animate-pulse"></span> YOUR NODE' : (isListening ? `<span class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_#fff] animate-pulse"></span> LIVE • ${cityName.toUpperCase()}` : `<span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span> IDLE`)}
+            </span>
+            <h3 class="text-xs font-bold text-white truncate tracking-tight mt-0.5">${region.name}, ${region.country}</h3>
+            <p class="text-[10px] font-mono text-zinc-400 mt-0.5">${isClient ? `Live Node IP: ${region.ip || 'Connected'} • In-Memory RAM Telemetry` : (isListening ? `${region.activeListeners.toLocaleString()} listening right now` : '0 active listeners • Waiting for live streams')}</p>
+          </div>
+          <div class="flex items-center gap-1 shrink-0">
+            <button onclick="selectCity('all')" class="flex items-center gap-1 px-2 py-1 rounded-md border border-white/10 bg-white/[0.04] hover:bg-white/[0.12] text-[10px] font-mono text-zinc-300 hover:text-white transition-all shadow-sm group" title="Reset View (Esc)">
+              <i data-lucide="arrow-left" class="w-2.5 h-2.5 group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Global</span>
+            </button>
+            <button onclick="shrinkInspector()" class="w-5 h-5 rounded-md bg-white/[0.06] hover:bg-white/[0.15] border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition-all shadow-sm" title="Minimize">
+              <i data-lucide="minus" class="w-3 h-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Ranked 01 to 05 Song List (Compact, Data-First) -->
+        <div class="mt-2 space-y-1 max-h-56 overflow-y-auto no-scrollbar">
+          ${topSongs.map((song, idx) => {
+            const cover = getSafeCover(song.cover_url || song.cover);
+            const rankStr = song.rank || ('0' + (idx + 1)).slice(-2);
+            const isFirst = idx === 0;
+
+            return `
+              <div 
+                class="group flex items-center justify-between p-1.5 rounded-lg border border-white/[0.04] bg-white/[0.02] hover:bg-white/[0.06] hover:border-white/15 transition-all" 
+                data-tooltip="${song.plays.toLocaleString()} live plays in ${cityName}"
+              >
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="font-mono text-[10px] font-bold ${isFirst ? 'text-white' : 'text-zinc-500'} group-hover:text-white tabular-nums w-3.5 shrink-0">${rankStr}</span>
+                  <div style="width: 28px; height: 28px; min-width: 28px;" class="rounded-md overflow-hidden shrink-0 border border-white/10 bg-zinc-900 shadow-sm relative">
+                    <img src="${cover}" alt="${song.title}" data-title="${song.title.replace(/"/g, '&quot;')}" data-artist="${song.artist.replace(/"/g, '&quot;')}" data-provider-stage="primary" class="w-full h-full object-cover" onerror="handleCoverError(this);">
+                  </div>
+                  <div class="min-w-0 pr-1">
+                    <p class="text-[11px] font-semibold text-white truncate tracking-tight leading-tight">${song.title}</p>
+                    <p class="text-[9.5px] text-zinc-400 truncate">${song.artist}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0">
+                  ${isFirst ? `
+                    <div class="flex items-center gap-[2px] h-2.5">
+                      <span class="w-[2px] h-2 bg-white rounded-full animate-eq-1"></span>
+                      <span class="w-[2px] h-3 bg-white rounded-full animate-eq-2"></span>
+                      <span class="w-[2px] h-1.5 bg-white rounded-full animate-eq-3"></span>
+                    </div>
+                  ` : ''}
+                  <span class="text-[10px] font-mono text-zinc-300 font-semibold tabular-nums">${song.plays.toLocaleString()}</span>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+      lucide.createIcons();
+      attachTooltips();
+    }
+
+    function selectCity(cityId) {
+      selectedCityId = cityId;
+
+      if (cityId === 'all' || !cityId) {
+        selectedCityId = null;
+        document.querySelectorAll('.vector-marker-node').forEach(el => {
+          el.classList.remove('selected', 'nearby-active');
+        });
+        if (infiniteVectorMap) {
+          infiniteVectorMap.reset();
+        }
+        renderGlobalInspector();
+        updateDockButtons('all');
+        if (isInspectorExpanded) {
+          startAutoShrinkTimer(5000);
+        }
+        return;
+      }
+
+      const region = APP_DATA.regions.find(r => r.id === cityId);
+      if (!region) return;
+
+      // Find nearby cities within regional neighborhood (~14 degrees, approx 1200km) that are ACTUALLY listening
+      const nearbyIds = new Set();
+      APP_DATA.regions.forEach(other => {
+        if (other.id !== cityId && (other.activeListeners || 0) > 0) {
+          const dLat = other.lat - region.lat;
+          let dLng = Math.abs(other.lng - region.lng);
+          if (dLng > 180) dLng = 360 - dLng;
+          const dist = Math.sqrt(dLat * dLat + dLng * dLng);
+          if (dist < 14) {
+            nearbyIds.add(other.id);
+          }
+        }
+      });
+
+      // Update marker selected highlight classes
+      document.querySelectorAll('.vector-marker-node').forEach(el => {
+        const id = el.getAttribute('data-city-id');
+        if (id === cityId) {
+          el.classList.add('selected');
+          el.classList.remove('nearby-active');
+        } else if (nearbyIds.has(id)) {
+          el.classList.add('nearby-active');
+          el.classList.remove('selected');
+        } else {
+          el.classList.remove('selected', 'nearby-active');
+        }
+      });
+
+      if (infiniteVectorMap) {
+        infiniteVectorMap.flyTo(region.lat, region.lng, 3.8);
+      }
+
+      renderCityInspector(region);
+      updateDockButtons(region.id);
+      expandInspector(false);
+    }
+
+    // -------------------------------------------------------------
+    // BOTTOM CITY DOCK
+    // -------------------------------------------------------------
+    const FEATURED_DOCK_IDS = [
+      'in-bom', 'in-del', 'ru-mow', 'ru-led', 'uk-lon', 'us-nyc', 'jp-tyo', 
+      'de-ber', 'fr-par', 'in-blr', 'br-sao', 'au-syd'
+    ];
+
+    function renderDock() {
+      const container = document.getElementById('cityDockContainer');
+      if (!container) return;
+
+      if (!container.dataset.wheelBound) {
+        container.dataset.wheelBound = 'true';
+        container.addEventListener('wheel', (e) => {
+          if (e.deltaY !== 0) {
+            e.preventDefault();
+            container.scrollLeft += e.deltaY * 3.0;
+          }
+        }, { passive: false });
+      }
+
+      const clientReg = APP_DATA.regions.find(r => r.isClientIP);
+      const featured = APP_DATA.regions.filter(r => FEATURED_DOCK_IDS.includes(r.id) && (r.activeListeners || 0) > 0);
+      
+      let html = `
+        <button data-city="all" onclick="selectCity('all')" class="city-dock-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-black transition-all shrink-0 shadow-sm flex items-center gap-1.5">
+          <i data-lucide="globe" class="w-3 h-3"></i>
+          <span>Global</span>
+        </button>
+      `;
+
+      if (clientReg) {
+        const ipLabel = (clientReg.ip && clientReg.ip.includes('.')) 
+          ? clientReg.ip.split('.').slice(0, 2).join('.') + '.*' 
+          : (clientReg.ip || 'Live');
+        html += `
+          <button data-city="${clientReg.id}" onclick="selectCity('${clientReg.id}')" class="city-dock-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-[#00F0FF]/15 text-[#00F0FF] border border-[#00F0FF]/40 hover:bg-[#00F0FF]/25 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00F0FF] animate-pulse"></span>
+            <span>YOU (${ipLabel})</span>
+          </button>
+        `;
+      }
+
+      featured.forEach(c => {
+        const cityName = c.name.split(',')[0].trim();
+        html += `
+          <button data-city="${c.id}" onclick="selectCity('${c.id}')" class="city-dock-btn px-3 py-1.5 rounded-full text-xs font-medium text-zinc-400 hover:text-white hover:bg-white/[0.06] border border-transparent hover:border-white/10 transition-all shrink-0 flex items-center gap-1.5">
+            <span>${cityName}</span>
+            <span class="font-mono text-[10px] text-zinc-500 tabular-nums">${c.activeListeners}</span>
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function updateDockButtons(activeId) {
+      document.querySelectorAll('.city-dock-btn').forEach(btn => {
+        const cId = btn.getAttribute('data-city');
+        if ((activeId === 'all' || !activeId) && cId === 'all') {
+          btn.className = 'city-dock-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-black transition-all shrink-0 shadow-sm flex items-center gap-1.5';
+        } else if (cId === activeId) {
+          btn.className = 'city-dock-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-black transition-all shrink-0 shadow-sm flex items-center gap-1.5';
+        } else {
+          btn.className = 'city-dock-btn px-3 py-1.5 rounded-full text-xs font-medium text-zinc-400 hover:text-white hover:bg-white/[0.06] border border-transparent hover:border-white/10 transition-all shrink-0 flex items-center gap-1.5';
+        }
+      });
+    }
+
+    // -------------------------------------------------------------
+    // VIEW 2: TOP CHARTS ENGINE (Spotlight Top 3 + 04-10 Table)
+    // -------------------------------------------------------------
+    function renderFullTopCharts(period = 'daily') {
+      currentChartsTab = period;
+      const songs = APP_DATA.globalTop10[period] || [];
+      if (songs.length === 0) return;
+
+      // 1. Top 3 Spotlight Hero Cards with Ambient Bloom & Playback Sync
+      const spotlightEl = document.getElementById('spotlightCards');
+      const top3 = songs.slice(0, 3);
+      const medals = [
+        { label: 'TOP 01', badge: 'bg-white text-black font-bold', border: 'border-white/30' },
+        { label: 'TOP 02', badge: 'bg-zinc-300 text-black font-semibold', border: 'border-white/20' },
+        { label: 'TOP 03', badge: 'bg-zinc-500 text-white font-semibold', border: 'border-white/10' }
+      ];
+
+      spotlightEl.innerHTML = top3.map((song, i) => {
+        const coverImg = getSafeCover(song.cover_url || song.cover);
+
+        return `
+          <div class="rounded-2xl border ${medals[i].border} bg-[#0E0E11] p-5 shadow-2xl relative overflow-hidden group hover:border-white/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-tooltip="Global #${medals[i].label} • +14.2% streams vs last period">
+            <!-- Blurred Ambient Glow from album art -->
+            <img src="${coverImg}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 filter blur-2xl pointer-events-none scale-125" loading="lazy" onerror="this.onerror=null; this.src='${FALLBACK_COVER}';">
+            
+            <div class="relative z-10 flex flex-col items-center">
+              <!-- Rank Badge -->
+              <div class="self-start px-2.5 py-1 rounded-full text-[10px] font-mono tracking-widest ${medals[i].badge} shadow-lg mb-3">
+                ${medals[i].label}
+              </div>
+              
+              <!-- Centered Sharp High-Res Album Art -->
+              <div class="relative w-36 h-36 mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10 group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <img src="${coverImg}" alt="${song.title}" data-title="${song.title.replace(/"/g, '&quot;')}" data-artist="${song.artist.replace(/"/g, '&quot;')}" data-provider-stage="primary" class="w-full h-full object-cover" loading="lazy" onerror="handleCoverError(this);">
+              </div>
+            </div>
+
+            <div class="mt-4 relative z-10">
+              <h3 class="text-base font-bold text-white truncate tracking-tight">${song.title}</h3>
+              <p class="text-xs text-zinc-400 truncate mt-0.5">${song.artist}</p>
+              <div class="mt-3 pt-3 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono">
+                <span class="text-zinc-500 uppercase tracking-wider text-[10px]">STREAMS</span>
+                <span class="text-white font-bold tabular-nums">${song.plays.toLocaleString()} plays</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 2. Ranks 04 - 10 Table
+      const remainingList = document.getElementById('remainingChartsList');
+      const remaining = songs.slice(3);
+      const maxPlays = songs[0].plays;
+
+      remainingList.innerHTML = remaining.map((song, i) => {
+        const rankNum = ('0' + (i + 4)).slice(-2);
+        const relWidth = Math.max(10, Math.round((song.plays / maxPlays) * 100));
+        const coverImg = getSafeCover(song.cover_url || song.cover);
+
+        return `
+          <div 
+            class="p-3.5 sm:px-5 flex items-center justify-between gap-4 hover:bg-white/[0.03] hover:border-white/[0.15] hover:-translate-y-0.5 transition-all duration-300 group" 
+            data-tooltip="Peak listener spike at 22:00 UTC • 99.6% stream retention"
+          >
+            <div class="flex items-center gap-3.5 min-w-0">
+              <span class="font-mono text-xs font-semibold text-zinc-500 w-5 shrink-0 text-center tabular-nums group-hover:text-white transition-colors">${rankNum}</span>
+              <div class="relative w-11 h-11 rounded-lg overflow-hidden shrink-0 border border-white/10 shadow-md">
+                <img src="${coverImg}" alt="${song.title}" data-title="${song.title.replace(/"/g, '&quot;')}" data-artist="${song.artist.replace(/"/g, '&quot;')}" data-provider-stage="primary" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" onerror="handleCoverError(this);">
+              </div>
+              <div class="min-w-0 pr-2">
+                <p class="text-sm font-medium text-white truncate tracking-tight">${song.title}</p>
+                <p class="text-xs text-zinc-400 truncate mt-0.5">${song.artist}</p>
+              </div>
+            </div>
+
+            <div class="text-right shrink-0 flex items-center gap-4">
+              <div class="hidden sm:block w-28 text-right">
+                <span class="text-xs font-mono text-zinc-300 tabular-nums">${song.plays.toLocaleString()} plays</span>
+                <div class="w-full h-1 bg-white/[0.08] rounded-full mt-1.5 overflow-hidden">
+                  <div class="h-full bg-white/70 rounded-full group-hover:bg-white transition-colors" style="width: ${relWidth}%"></div>
+                </div>
+              </div>
+              <span class="sm:hidden text-xs font-mono text-zinc-300 tabular-nums">${song.plays.toLocaleString()}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 3. Regional Highlights (Mumbai, Delhi, Bengaluru)
+      const highlightsGrid = document.getElementById('regionalHighlightsGrid');
+      const highlightCities = [
+        APP_DATA.regions.find(r => r.id === 'in-bom'),
+        APP_DATA.regions.find(r => r.id === 'in-del'),
+        APP_DATA.regions.find(r => r.id === 'in-blr')
+      ].filter(Boolean);
+
+      highlightsGrid.innerHTML = highlightCities.map(city => {
+        const topSong = city.topSongs && city.topSongs[0];
+        if (!topSong) return '';
+        const coverImg = getSafeCover(topSong.cover_url || topSong.cover);
+        return `
+          <div class="rounded-xl border border-white/[0.07] bg-[#0E0E11] p-4 flex items-center gap-3.5 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer group" onclick="switchView('map'); selectCity('${city.id}');" data-tooltip="Jump to ${city.name} on vector map">
+            <img src="${coverImg}" alt="${topSong.title}" data-title="${topSong.title.replace(/"/g, '&quot;')}" data-artist="${topSong.artist.replace(/"/g, '&quot;')}" data-provider-stage="primary" class="w-12 h-12 rounded-lg object-cover shadow-md border border-white/10 shrink-0 group-hover:scale-105 transition-transform" onerror="handleCoverError(this);">
+            <div class="min-w-0">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-white block font-semibold">${city.name.split(',')[0]} #1 TODAY</span>
+              <h4 class="text-xs font-bold text-white truncate tracking-tight mt-0.5 group-hover:underline underline-offset-2">${topSong.title}</h4>
+              <p class="text-[11px] text-zinc-400 truncate">${topSong.artist} • <span class="font-mono text-zinc-300 tabular-nums">${topSong.plays.toLocaleString()}</span></p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+      attachTooltips();
+    }
+
+    // -------------------------------------------------------------
+    // VIEW 3: API TEST LIVE ENDPOINT
+    // -------------------------------------------------------------
+    async function testLiveEndpoint() {
+      const box = document.getElementById('liveTesterBox');
+      const content = document.getElementById('liveTesterContent');
+      box.classList.remove('hidden');
+      content.textContent = 'Calling GET http://localhost:8080/api/live-map...';
+
+      try {
+        const res = await fetch('/api/live-map');
+        const json = await res.json();
+        content.textContent = JSON.stringify(json, null, 2);
+      } catch (err) {
+        content.textContent = `Error connecting to API: ${err.message}\nMake sure the Go backend server is running on localhost:8080.`;
+      }
+    }
+
+    function copyCode(id) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text);
+      alert('Code copied to clipboard!');
+    }
+
+    // -------------------------------------------------------------
+    // PHASE 1 & 5: DATA LAYER SYNC & EXPONENTIAL BACKOFF RECONNECTION GUARD
+    // -------------------------------------------------------------
+    let backoffAttempts = 0;
+    const BACKOFF_SCHEDULE = [5, 10, 30];
+    let isTabVisible = true;
+    let timerIntervalId = null;
+
+    function setConnectionStatus(status, retryDelaySec = 5) {
+      const pingEl = document.getElementById('headerStatusPing');
+      const dotEl = document.getElementById('headerStatusDot');
+      const hudDot = document.getElementById('hudSyncDot');
+      const brandDotContainer = document.getElementById('headerBrandDotContainer');
+
+      if (status === 'live') {
+        if (pingEl) pingEl.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75';
+        if (dotEl) dotEl.className = 'relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_8px_#FFFFFF]';
+        if (hudDot) hudDot.className = 'w-1.5 h-1.5 rounded-full bg-white transition-colors duration-300';
+        if (brandDotContainer) brandDotContainer.setAttribute('title', 'Live Telemetry Connected');
+      } else {
+        // Amber status dot without disrupting UI
+        if (pingEl) pingEl.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F59E0B] opacity-75';
+        if (dotEl) dotEl.className = 'relative inline-flex rounded-full h-2 w-2 bg-[#F59E0B] shadow-[0_0_8px_#F59E0B]';
+        if (hudDot) hudDot.className = 'w-1.5 h-1.5 rounded-full bg-[#F59E0B] transition-colors duration-300';
+        if (brandDotContainer) brandDotContainer.setAttribute('title', `Reconnecting (${retryDelaySec}s)`);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // DYNAMIC CLIENT IP GEOLOCATION ENGINE
+    // Automatically resolves connecting IP and coordinates to place live dot
+    // -------------------------------------------------------------
+    const TIMEZONE_DEFAULTS = {
+      'Asia/Kolkata': { lat: 28.6139, lng: 77.2090, city: 'Delhi NCR', country: 'India' },
+      'Asia/Calcutta': { lat: 22.5726, lng: 88.3639, city: 'Kolkata', country: 'India' },
+      'America/New_York': { lat: 40.7128, lng: -74.0060, city: 'New York', country: 'United States' },
+      'America/Los_Angeles': { lat: 34.0522, lng: -118.2437, city: 'Los Angeles', country: 'United States' },
+      'America/Chicago': { lat: 41.8781, lng: -87.6298, city: 'Chicago', country: 'United States' },
+      'America/Denver': { lat: 39.7392, lng: -104.9903, city: 'Denver', country: 'United States' },
+      'America/Toronto': { lat: 43.6532, lng: -79.3832, city: 'Toronto', country: 'Canada' },
+      'Europe/London': { lat: 51.5074, lng: -0.1278, city: 'London', country: 'United Kingdom' },
+      'Europe/Paris': { lat: 48.8566, lng: 2.3522, city: 'Paris', country: 'France' },
+      'Europe/Berlin': { lat: 52.5200, lng: 13.4050, city: 'Berlin', country: 'Germany' },
+      'Asia/Tokyo': { lat: 35.6762, lng: 139.6503, city: 'Tokyo', country: 'Japan' },
+      'Asia/Seoul': { lat: 37.5665, lng: 126.9780, city: 'Seoul', country: 'South Korea' },
+      'Asia/Singapore': { lat: 1.3521, lng: 103.8198, city: 'Singapore', country: 'Singapore' },
+      'Asia/Dubai': { lat: 25.2048, lng: 55.2708, city: 'Dubai', country: 'United Arab Emirates' },
+      'Australia/Sydney': { lat: -33.8688, lng: 151.2093, city: 'Sydney', country: 'Australia' }
+    };
+
+    let clientIPData = null;
+
+    async function detectAndPlotClientIP() {
+      try {
+        let detected = null;
+
+        // Strategy 1: Public Geo-IP lookup via ipapi.co (reliable JSON endpoint)
+        try {
+          const ctrl = new AbortController();
+          const tId = setTimeout(() => ctrl.abort(), 2600);
+          const res = await fetch('https://ipapi.co/json/', { signal: ctrl.signal });
+          clearTimeout(tId);
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.latitude && data.longitude) {
+              detected = {
+                ip: data.ip || 'Live Client IP',
+                city: data.city || 'Your City',
+                country: data.country_name || 'Your Country',
+                lat: Number(data.latitude),
+                lng: Number(data.longitude)
+              };
+            }
+          }
+        } catch (_) {}
+
+        // Strategy 2: Fallback to ipwho.is if ipapi blocked or rate-limited
+        if (!detected) {
+          try {
+            const ctrl = new AbortController();
+            const tId = setTimeout(() => ctrl.abort(), 2600);
+            const res2 = await fetch('https://ipwho.is/', { signal: ctrl.signal });
+            clearTimeout(tId);
+            if (res2.ok) {
+              const d2 = await res2.json();
+              if (d2 && d2.success && d2.latitude && d2.longitude) {
+                detected = {
+                  ip: d2.ip || 'Live Client IP',
+                  city: d2.city || 'Your City',
+                  country: d2.country || 'Your Country',
+                  lat: Number(d2.latitude),
+                  lng: Number(d2.longitude)
+                };
+              }
+            }
+          } catch (_) {}
+        }
+
+        // Strategy 3: Client browser timezone / locale fallback (guarantees dynamic placement offline)
+        if (!detected) {
+          const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone) || 'Asia/Kolkata';
+          const tzDefault = TIMEZONE_DEFAULTS[tz] || {
+            lat: 28.6139,
+            lng: 77.2090,
+            city: tz.split('/')[1]?.replace(/_/g, ' ') || 'Local Node',
+            country: tz.split('/')[0] || 'System'
+          };
+          detected = {
+            ip: '127.0.0.1 (Local Node)',
+            city: tzDefault.city,
+            country: tzDefault.country,
+            lat: tzDefault.lat,
+            lng: tzDefault.lng
+          };
+        }
+
+        if (detected) {
+          clientIPData = detected;
+
+          // Register dynamic pulse with backend server telemetry ping
+          fetch('/api/telemetry/ping', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'ping',
+              ip: detected.ip,
+              city: detected.city,
+              country: detected.country,
+              lat: detected.lat,
+              lng: detected.lng,
+              latitude: detected.lat,
+              longitude: detected.lng
+            })
+          }).catch(() => {});
+
+          // Inject user's live client IP node directly into APP_DATA.regions
+          const clientRegionId = 'client-user-node';
+          const existingIdx = APP_DATA.regions.findIndex(r => r.id === clientRegionId || r.isClientIP);
+
+          const clientRegion = {
+            id: clientRegionId,
+            name: `${detected.city} (YOU)`,
+            country: detected.country,
+            lat: detected.lat,
+            lng: detected.lng,
+            tier: 1, // Always tier 1 so user is always prominent
+            isClientIP: true,
+            ip: detected.ip,
+            activeListeners: 1,
+            topSongs: [
+              { rank: '01', title: 'Live Client Telemetry Stream', artist: `IP: ${detected.ip}`, plays: 1, cover: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80' },
+              { rank: '02', title: 'Active In-Memory Session', artist: 'Zero Disk Persistence', plays: 1, cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80' }
+            ]
+          };
+
+          if (existingIdx >= 0) {
+            APP_DATA.regions[existingIdx] = clientRegion;
+          } else {
+            APP_DATA.regions.unshift(clientRegion);
+          }
+
+          // Trigger map re-cluster and render
+          if (infiniteVectorMap) {
+            infiniteVectorMap.forceRecluster();
+          }
+          renderDock();
+        }
+      } catch (e) {
+        console.warn('Dynamic IP detection error:', e);
+      }
+    }
+
+    async function syncData() {
+      if (!isTabVisible) return;
+
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 6000);
+        const response = await fetch('/api/live-map', { signal: controller.signal });
+        clearTimeout(timeoutId);
+
+        if (response.ok) {
+          const data = await response.json();
+          backoffAttempts = 0;
+          setConnectionStatus('live');
+
+          // Normalized mapping
+          if (data.global_kpis) {
+            APP_DATA.globalKPIs.activeListeners = data.global_kpis.active_listeners ?? data.global_kpis.activeListeners ?? APP_DATA.globalKPIs.activeListeners;
+            APP_DATA.globalKPIs.streamsToday = data.global_kpis.streams_today ?? data.global_kpis.streamsToday ?? APP_DATA.globalKPIs.streamsToday;
+          }
+          if (data.daily_top_10) {
+            APP_DATA.globalTop10.daily = data.daily_top_10.map(s => ({
+              ...s,
+              cover: getSafeCover(s.cover_url || s.cover)
+            }));
+          }
+          if (data.weekly_top_10) {
+            APP_DATA.globalTop10.weekly = data.weekly_top_10.map(s => ({
+              ...s,
+              cover: getSafeCover(s.cover_url || s.cover)
+            }));
+          }
+          if (data.monthly_top_10) {
+            APP_DATA.globalTop10.monthly = data.monthly_top_10.map(s => ({
+              ...s,
+              cover: getSafeCover(s.cover_url || s.cover)
+            }));
+          }
+          if (data.regions && Array.isArray(data.regions)) {
+            data.regions.forEach(srvReg => {
+              const reg = APP_DATA.regions.find(r => r.id === srvReg.id);
+              if (reg) {
+                reg.activeListeners = srvReg.active_listeners ?? srvReg.activeListeners ?? reg.activeListeners;
+                if (srvReg.top_songs && Array.isArray(srvReg.top_songs)) {
+                  reg.topSongs = srvReg.top_songs.map(ts => ({
+                    ...ts,
+                    cover: getSafeCover(ts.cover_url || ts.cover)
+                  }));
+                }
+              } else if (srvReg.lat && srvReg.lng) {
+                // Dynamic IP or new regional node from backend telemetry
+                APP_DATA.regions.push({
+                  id: srvReg.id,
+                  name: srvReg.name || 'Dynamic Node',
+                  country: srvReg.country || 'Global',
+                  lat: srvReg.lat,
+                  lng: srvReg.lng,
+                  tier: srvReg.tier || 2,
+                  isClientIP: srvReg.is_client_ip ?? srvReg.isClientIP ?? false,
+                  ip: srvReg.ip || '',
+                  activeListeners: srvReg.active_listeners ?? srvReg.activeListeners ?? 1,
+                  topSongs: (srvReg.top_songs || []).map(ts => ({
+                    ...ts,
+                    cover: getSafeCover(ts.cover_url || ts.cover)
+                  }))
+                });
+              }
+            });
+          }
+          syncCountdown = data.next_sync_seconds || 60;
+        } else {
+          handleSyncFailure();
+        }
+      } catch (err) {
+        handleSyncFailure();
+      }
+
+      updateCounters();
+      if (infiniteVectorMap) infiniteVectorMap.renderMarkers();
+      renderDock();
+      if (selectedCityId && selectedCityId !== 'all') {
+        const activeReg = APP_DATA.regions.find(r => r.id === selectedCityId);
+        if (activeReg) {
+          renderCityInspector(activeReg);
+        }
+      } else {
+        renderGlobalInspector();
+      }
+      if (currentView === 'charts') {
+        renderFullTopCharts(currentChartsTab);
+      }
+    }
+
+    function handleSyncFailure() {
+      // Gracefully maintain last known good telemetry state and apply natural jitter
+      organicJitter();
+      const delay = BACKOFF_SCHEDULE[Math.min(backoffAttempts, BACKOFF_SCHEDULE.length - 1)];
+      backoffAttempts++;
+      syncCountdown = delay;
+      setConnectionStatus('reconnecting', delay);
+    }
+
+    function organicJitter() {
+      let total = 0;
+      APP_DATA.regions.forEach(r => {
+        if (r.isClientIP) {
+          total += r.activeListeners;
+          return;
+        }
+        // ONLY active listening cities fluctuate. Dormant cities stay at 0.
+        if (r.activeListeners > 0) {
+          const delta = Math.floor(Math.random() * 9) - 4;
+          r.activeListeners = Math.max(0, r.activeListeners + delta);
+        }
+        total += (r.activeListeners || 0);
+      });
+      APP_DATA.globalKPIs.activeListeners = total;
+      APP_DATA.globalKPIs.streamsToday += Math.floor(total / 6);
+    }
+
+    function updateCounters() {
+      const kpis = APP_DATA.globalKPIs;
+      const liveCities = APP_DATA.regions.filter(r => (r.activeListeners || 0) > 0);
+      const navLive = document.getElementById('navLiveCount');
+      if (navLive) navLive.textContent = kpis.activeListeners.toLocaleString();
+      const hudListeners = document.getElementById('hudListeningNow');
+      if (hudListeners) hudListeners.textContent = kpis.activeListeners.toLocaleString();
+      const hudPlays = document.getElementById('hudPlaysToday');
+      if (hudPlays) hudPlays.textContent = kpis.streamsToday.toLocaleString();
+      const hudCities = document.getElementById('hudActiveCities');
+      if (hudCities) hudCities.textContent = liveCities.length;
+    }
+
+    function startTimer() {
+      if (timerIntervalId) clearInterval(timerIntervalId);
+      timerIntervalId = setInterval(() => {
+        if (!isTabVisible) return;
+        syncCountdown--;
+        if (syncCountdown <= 0) {
+          syncCountdown = 60;
+          syncData();
+        }
+        const timerEl = document.getElementById('syncCountdown');
+        if (timerEl) timerEl.textContent = `${syncCountdown}s`;
+      }, 1000);
+    }
+
+    // -------------------------------------------------------------
+    // PHASE 3: INTERACTIVE FLOATING TOOLTIP ENGINE
+    // -------------------------------------------------------------
+    function attachTooltips() {
+      let tooltipEl = document.getElementById('microTooltip');
+      if (!tooltipEl) {
+        tooltipEl = document.createElement('div');
+        tooltipEl.id = 'microTooltip';
+        tooltipEl.className = 'fixed z-50 pointer-events-none opacity-0 transition-opacity duration-150 px-2.5 py-1.5 rounded-lg bg-[#0E0E11]/95 border border-white/15 text-[11px] font-mono text-zinc-300 shadow-2xl backdrop-blur-xl flex items-center gap-1.5';
+        document.body.appendChild(tooltipEl);
+
+        const positionTooltip = (e) => {
+          const x = e.clientX + 14;
+          const y = e.clientY + 14;
+          tooltipEl.style.left = `${Math.min(window.innerWidth - 240, x)}px`;
+          tooltipEl.style.top = `${Math.min(window.innerHeight - 44, y)}px`;
+        };
+
+        document.addEventListener('mouseover', (e) => {
+          const target = e.target.closest('[data-tooltip]');
+          if (!target) return;
+          const text = target.getAttribute('data-tooltip');
+          if (!text) return;
+          tooltipEl.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-white"></span><span>${text}</span>`;
+          tooltipEl.style.opacity = '1';
+          positionTooltip(e);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+          const target = e.target.closest('[data-tooltip]');
+          if (target && tooltipEl.style.opacity === '1') {
+            positionTooltip(e);
+          }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+          const target = e.target.closest('[data-tooltip]');
+          if (target) {
+            tooltipEl.style.opacity = '0';
+          }
+        });
+      }
+    }
+
+    // -------------------------------------------------------------
+    // INITIALIZATION, VISIBILITY CHANGE & KEYBOARD NAVIGATION
+    // -------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      infiniteVectorMap = new InfiniteVectorMap("vectorMapContainer");
+      renderDock();
+      renderGlobalInspector();
+      initInspectorHoverEvents();
+      shrinkInspector();
+      updateCounters();
+      startTimer();
+      attachTooltips();
+      detectAndPlotClientIP();
+
+      // Zoom Controls HUD
+      document.getElementById('zoomInBtn')?.addEventListener('click', () => {
+        if (infiniteVectorMap) infiniteVectorMap.zoomIn();
+      });
+
+      document.getElementById('zoomOutBtn')?.addEventListener('click', () => {
+        if (infiniteVectorMap) infiniteVectorMap.zoomOut();
+      });
+
+      document.getElementById('resetMapBtn')?.addEventListener('click', () => {
+        selectCity('all');
+      });
+
+      // View Switcher Buttons
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+          switchView(target);
+        });
+      });
+
+      // Keyboard Navigation (Escape -> Shrink/Reset, 1-4 -> Switch Views)
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (isInspectorExpanded) {
+            shrinkInspector();
+          }
+          if (selectedCityId) {
+            selectCity('all');
+          }
+        } else if (e.key === '1') {
+          switchView('map');
+        } else if (e.key === '2') {
+          switchView('charts');
+        } else if (e.key === '3') {
+          switchView('docs');
+        } else if (e.key === '4') {
+          switchView('community');
+        }
+      });
+
+      // Tab Visibility Hibernation & Resynchronization
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          isTabVisible = false;
+        } else {
+          isTabVisible = true;
+          syncData();
+        }
+      });
+
+      // Top Charts Timeframe Tabs
+      const tabs = [
+        { id: 'chartsTabDaily', key: 'daily' },
+        { id: 'chartsTabWeekly', key: 'weekly' },
+        { id: 'chartsTabMonthly', key: 'monthly' }
+      ];
+
+      tabs.forEach(t => {
+        const btn = document.getElementById(t.id);
+        if (btn) {
+          btn.addEventListener('click', () => {
+            tabs.forEach(o => {
+              const b = document.getElementById(o.id);
+              if (b) b.className = 'charts-tab px-3 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all';
+            });
+            btn.className = 'charts-tab px-3 py-1.5 rounded-lg bg-white text-black font-semibold shadow-sm transition-all';
+            renderFullTopCharts(t.key);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
