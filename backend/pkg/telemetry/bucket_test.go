@@ -94,3 +94,22 @@ func TestConcurrentPings(t *testing.T) {
 		t.Errorf("expected at least %d streams today, got %d", expectedIncrease, snap.GlobalKPIs.StreamsToday)
 	}
 }
+
+func TestProductionBucketCleanState(t *testing.T) {
+	t.Setenv("ENV", "production")
+	bucket := NewBucket(60 * time.Second)
+	snap := bucket.GetSnapshot()
+
+	if snap.GlobalKPIs.ActiveListeners != 0 {
+		t.Errorf("expected 0 active listeners in production, got %d", snap.GlobalKPIs.ActiveListeners)
+	}
+	if snap.GlobalKPIs.StreamsToday != 0 {
+		t.Errorf("expected 0 streams today in production, got %d", snap.GlobalKPIs.StreamsToday)
+	}
+	if snap.GlobalKPIs.PeakConcurrent != 0 {
+		t.Errorf("expected 0 peak concurrent in production, got %d", snap.GlobalKPIs.PeakConcurrent)
+	}
+	if len(snap.DailyTop10) != 0 {
+		t.Errorf("expected 0 daily top songs in production, got %d", len(snap.DailyTop10))
+	}
+}

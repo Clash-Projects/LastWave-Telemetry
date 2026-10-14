@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"os"
 	"strings"
 	"sync"
 	"time"
@@ -27,16 +28,39 @@ type Bucket struct {
 	rng            *rand.Rand
 }
 
-// NewBucket initializes a new ephemeral RAM bucket
+// NewBucket initializes a new ephemeral RAM bucket.
+// When ENV=production, all test data, mock streams, and simulated listeners are completely omitted.
 func NewBucket(window time.Duration) *Bucket {
 	if window <= 0 {
 		window = 60 * time.Second
 	}
 
-	b := &Bucket{
+	isProduction := os.Getenv("ENV") == "production"
+	regions := GetInitialRegions()
+
+	if isProduction {
+		// Clean production state: 0 fake listeners, 0 fake streams, 0 mock songs
+		for i := range regions {
+			regions[i].ActiveListeners = 0
+			regions[i].TopSongs = []Song{}
+		}
+		return &Bucket{
+			windowDuration: window,
+			lastSync:       time.Now(),
+			regions:        regions,
+			streamsToday:   0,
+			peakConcurrent: 0,
+			dailyTop10:     []Song{},
+			weeklyTop10:    []Song{},
+			monthlyTop10:   []Song{},
+			rng:            rand.New(rand.NewSource(time.Now().UnixNano())),
+		}
+	}
+
+	return &Bucket{
 		windowDuration: window,
 		lastSync:       time.Now(),
-		regions:        GetInitialRegions(),
+		regions:        regions,
 		streamsToday:   48910,
 		peakConcurrent: 2104,
 		dailyTop10:     GetGlobalTop10Daily(),
@@ -44,8 +68,17 @@ func NewBucket(window time.Duration) *Bucket {
 		monthlyTop10:   GetGlobalTop10Monthly(),
 		rng:            rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
+}
 
-	return b
+// ResetWindow rolls the ephemeral 60s window in production, clearing expired listeners
+func (b *Bucket) ResetWindow() {
+	b.mu.Lock()
+	defer b.mu.Unlock()
+
+	b.lastSync = time.Now()
+	for i := range b.regions {
+		b.regions[i].ActiveListeners = 0
+	}
 }
 
 // RecordPing accepts an anonymous stream pulse.

@@ -98,6 +98,7 @@ func main() {
 		port = "8080"
 	}
 
+	isProduction := os.Getenv("ENV") == "production"
 	startTime := time.Now()
 	bucket := telemetry.NewBucket(60 * time.Second)
 	limiter := NewIPRateLimiter()
@@ -109,7 +110,11 @@ func main() {
 		for {
 			select {
 			case <-ticker.C:
-				bucket.SimulateTick()
+				if isProduction {
+					bucket.ResetWindow()
+				} else {
+					bucket.SimulateTick()
+				}
 			case <-stopTicker:
 				ticker.Stop()
 				return
@@ -199,6 +204,11 @@ func main() {
 
 	// 3. Instant Simulation Trigger (for UI demoing)
 	mux.HandleFunc("/api/simulate-tick", enableCORS(func(w http.ResponseWriter, r *http.Request) {
+		if isProduction {
+			http.Error(w, "Simulation is disabled in production environment", http.StatusForbidden)
+			return
+		}
+
 		if r.Method != http.MethodPost {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
