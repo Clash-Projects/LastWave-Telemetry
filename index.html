@@ -637,186 +637,171 @@
 
     <!-- ------------------------------------------------------------ -->
     <!-- ------------------------------------------------------------ -->
-    <!-- VIEW 3: API & DOCS (Developer Telemetry Portal)               -->
+    <!-- ------------------------------------------------------------ -->
+    <!-- VIEW 3: API & DOCS (Clean Developer Reference)               -->
     <!-- ------------------------------------------------------------ -->
     <section id="view-docs" class="view-panel hidden h-[calc(100vh-4rem)] overflow-y-auto w-full">
-      <div class="max-w-5xl mx-auto p-4 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 pb-16">
+      <div class="max-w-5xl mx-auto p-4 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 pb-20">
         
         <!-- Left Sidebar Navigation -->
-        <aside class="md:col-span-3 space-y-2 text-xs font-mono sticky top-4 self-start">
-          <span class="text-zinc-500 uppercase tracking-widest text-[10px] block px-3 py-1 font-semibold">TELEMETRY SPEC</span>
-          <a href="#doc-overview" class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.08] text-white font-medium border border-white/10 shadow-sm transition-all">
+        <aside class="md:col-span-3 space-y-1.5 text-xs font-mono sticky top-4 self-start">
+          <span class="text-zinc-500 uppercase tracking-widest text-[10px] block px-3 py-1 font-semibold">API REFERENCE</span>
+          <a href="#doc-overview" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.08] text-white font-medium border border-white/10 transition-colors">
             <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
             <span>Overview</span>
           </a>
-          <a href="#doc-architecture" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
+          <a href="#doc-architecture" class="flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-colors">
             <span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>
-            <span>RAM Architecture</span>
+            <span>Architecture</span>
           </a>
-          <a href="#doc-get-map" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)]"></span>
+          <a href="#doc-get-map" class="flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
             <span>GET /api/live-map</span>
           </a>
-          <a href="#doc-post-ping" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+          <a href="#doc-post-ping" class="flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
             <span>POST /api/telemetry/ping</span>
           </a>
-          <a href="#doc-hosting" class="flex items-center gap-2 px-3 py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500"></span>
-            <span>Self-Hosting (Go)</span>
+          <a href="#doc-health" class="flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
+            <span>GET /api/health</span>
+          </a>
+          <a href="#doc-hosting" class="flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.04] transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>
+            <span>Self-Hosting</span>
           </a>
         </aside>
 
         <!-- Right Content Area -->
-        <div class="md:col-span-9 space-y-8">
+        <div class="md:col-span-9 space-y-10">
           
           <!-- Section 1: Overview -->
-          <div id="doc-overview" class="space-y-3">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] font-mono text-zinc-300">
-              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-              <span>v1.4 SPECIFICATION • ZERO TRACKER SDKs</span>
+          <div id="doc-overview" class="space-y-3 pb-6 border-b border-white/[0.08]">
+            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-white/[0.05] border border-white/10 text-[10px] font-mono text-zinc-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+              <span>TELEMETRY SPECIFICATION v1.0</span>
             </div>
-            <h1 class="text-2xl font-bold text-white tracking-tight">LastWave Live API & Ephemeral Architecture</h1>
-            <p class="text-xs text-zinc-300 leading-relaxed max-w-2xl">
-              LastWave Live is a lightweight, zero-tracking global telemetry engine for open-source music streaming. Playback heartbeats are aggregated into in-memory 60-second sliding windows with coarse mathematical location rounding (~10km centroid grid).
+            <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Telemetry Ingress & API Reference</h1>
+            <p class="text-xs text-zinc-400 leading-relaxed max-w-2xl font-sans">
+              LastWave Telemetry is an ephemeral, in-memory stream monitoring service. Playback events are anonymously mapped to coarse regional centroids (~10km approximation) and held in a 60-second rolling sliding window. No personal data, listening histories, or raw IP addresses are ever written to disk or persistent storage.
             </p>
           </div>
 
-          <!-- Section 2: Architecture Flow (S++++ Tier Visual 3-Stage Pipeline) -->
-          <div id="doc-architecture" class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121216] to-[#0A0A0D] p-5 sm:p-6 space-y-4 shadow-2xl relative overflow-hidden">
-            <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
-              <div class="flex items-center gap-2">
-                <i data-lucide="cpu" class="w-4 h-4 text-white"></i>
-                <h2 class="text-xs font-semibold font-mono uppercase tracking-wider text-white">60-Second Volatile RAM Pipeline</h2>
+          <!-- Section 2: Architecture Spec -->
+          <div id="doc-architecture" class="space-y-4">
+            <h2 class="text-sm font-semibold font-mono uppercase tracking-wider text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-zinc-400"></i>
+              Pipeline Architecture
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="p-4 rounded-xl border border-white/[0.08] bg-[#0C0D10] space-y-2">
+                <span class="text-[10px] font-mono text-zinc-500 font-bold block">01 / INGRESS</span>
+                <h3 class="text-xs font-semibold text-white">Coarse Resolution</h3>
+                <p class="text-[11px] text-zinc-400 leading-relaxed">Incoming IP is resolved to coarse city coordinates in RAM. Raw IP headers are discarded immediately after resolution.</p>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">100% IN-MEMORY</span>
-            </div>
-
-            <!-- 3-Stage Connected Pipeline -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <!-- Stage 1 -->
-              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/20 transition-all">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 01</span>
-                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">IP ERASED</span>
-                </div>
-                <div>
-                  <h3 class="text-xs font-bold text-white tracking-tight">HTTP/2 Pulse Ingress</h3>
-                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Remote IP and TCP socket headers erased immediately at the ingress gateway.</p>
-                </div>
+              <div class="p-4 rounded-xl border border-white/[0.08] bg-[#0C0D10] space-y-2">
+                <span class="text-[10px] font-mono text-zinc-500 font-bold block">02 / AGGREGATION</span>
+                <h3 class="text-xs font-semibold text-white">60s RAM Window</h3>
+                <p class="text-[11px] text-zinc-400 leading-relaxed">Thread-safe memory bucket aggregates active concurrent streams and increments regional velocity counters.</p>
               </div>
-
-              <!-- Stage 2 -->
-              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/30 transition-all">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 02</span>
-                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-white border border-white/20">~10KM GRID</span>
-                </div>
-                <div>
-                  <h3 class="text-xs font-bold text-white tracking-tight">Concurrent RAM Bucket</h3>
-                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Accumulates velocity into coarse geographic centroids for exactly 60 seconds.</p>
-                </div>
-              </div>
-
-              <!-- Stage 3 -->
-              <div class="p-3.5 rounded-xl border border-white/[0.08] bg-white/[0.02] flex flex-col justify-between space-y-2.5 group hover:border-white/20 transition-all">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-zinc-500 font-bold">STAGE 03</span>
-                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">RAM EVICTED</span>
-                </div>
-                <div>
-                  <h3 class="text-xs font-bold text-white tracking-tight">Snapshot Swap & Eviction</h3>
-                  <p class="text-[11px] text-zinc-400 mt-1 leading-snug">Atomic memory pointer swaps cached JSON payload; elapsed bucket evicted from memory.</p>
-                </div>
+              <div class="p-4 rounded-xl border border-white/[0.08] bg-[#0C0D10] space-y-2">
+                <span class="text-[10px] font-mono text-zinc-500 font-bold block">03 / EVICTION</span>
+                <h3 class="text-xs font-semibold text-white">Zero Persistence</h3>
+                <p class="text-[11px] text-zinc-400 leading-relaxed">No database writes or disk logging. Elapsed listener buckets and idle dynamic nodes expire automatically every 60 seconds.</p>
               </div>
             </div>
           </div>
 
           <!-- Section 3: GET /api/live-map -->
-          <div id="doc-get-map" class="space-y-3.5">
+          <div id="doc-get-map" class="space-y-3 pt-4 border-t border-white/[0.08]">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono text-[11px] font-bold">GET</span>
-                <code class="text-sm font-mono text-white font-semibold">/api/live-map</code>
+                <span class="px-2 py-0.5 rounded bg-white/10 text-white font-mono text-[11px] font-bold">GET</span>
+                <code class="text-sm font-mono text-white">/api/live-map</code>
               </div>
-              <button onclick="testLiveEndpoint()" class="px-3 py-1.5 rounded-xl border border-white/20 bg-white text-black font-semibold text-xs font-mono hover:bg-zinc-200 transition-all shadow-sm flex items-center gap-1.5">
+              <button onclick="testLiveEndpoint()" class="px-3 py-1 rounded-lg border border-white/20 bg-white text-black font-medium text-xs font-mono hover:bg-zinc-200 transition-colors flex items-center gap-1.5">
                 <i data-lucide="play" class="w-3 h-3 fill-current"></i>
-                <span>Test Live Endpoint</span>
+                <span>Test Live</span>
               </button>
             </div>
-            <p class="text-xs text-zinc-400">Returns the full real-time snapshot of active global listeners, regional top charts, and rolling 24-hour stream counts.</p>
+            <p class="text-xs text-zinc-400">Retrieves the current real-time snapshot of active global listeners, active centroids, and chart metrics.</p>
 
-            <!-- Interactive Live Tester Output (Collapsible) -->
-            <div id="liveTesterBox" class="hidden rounded-2xl border border-emerald-500/30 bg-[#08080A] p-4 font-mono text-xs text-emerald-400 shadow-xl">
+            <div id="liveTesterBox" class="hidden rounded-xl border border-white/20 bg-[#08080A] p-4 font-mono text-xs text-zinc-300">
               <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/[0.08]">
-                <span class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_#FFFFFF] animate-ping"></span>
-                  <span>Status: 200 OK • Live response from localhost:8080</span>
+                <span class="flex items-center gap-2 text-[11px] text-zinc-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>HTTP 200 OK • Live Map Endpoint</span>
                 </span>
                 <button onclick="document.getElementById('liveTesterBox').classList.add('hidden')" class="text-zinc-500 hover:text-white">✕</button>
               </div>
               <pre id="liveTesterContent" class="overflow-x-auto text-[11px] max-h-60 text-zinc-300"></pre>
             </div>
 
-            <!-- macOS Terminal Window Frame -->
-            <div class="rounded-2xl border border-white/[0.1] bg-[#0A0A0E] p-4 relative group shadow-2xl">
-              <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></span>
-                  <span class="ml-2 font-mono text-[10px] text-zinc-500 uppercase tracking-wider">RESPONSE SCHEMA • JSON</span>
-                </div>
-                <button onclick="copyCode('sampleGetJson')" class="text-[10px] font-mono px-2 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-zinc-300 hover:text-white border border-white/15 transition-all">
-                  Copy JSON
-                </button>
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4 space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>CURL REQUEST</span>
+                <button onclick="copyCode('curlGetMap')" class="hover:text-white transition-colors">Copy</button>
               </div>
-              <pre id="sampleGetJson" class="font-mono text-[11px] text-zinc-300 overflow-x-auto">{
-  "synced_at": "2026-10-14T12:00:00Z",
+              <pre id="curlGetMap" class="font-mono text-xs text-zinc-300 overflow-x-auto">curl -s https://telemetry.clashprojects.qd.je/api/live-map</pre>
+            </div>
+
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4 space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>RESPONSE SCHEMA (JSON)</span>
+                <button onclick="copyCode('sampleGetJson')" class="hover:text-white transition-colors">Copy</button>
+              </div>
+              <pre id="sampleGetJson" class="font-mono text-[11px] text-zinc-400 overflow-x-auto">{
+  "synced_at": "2026-10-14T18:00:00Z",
   "next_sync_seconds": 60,
   "global_kpis": {
     "active_listeners": 0,
     "streams_today": 0,
+    "peak_concurrent": 0,
     "active_regions": 0
   },
   "regions": [
     {
       "id": "in-bom",
       "name": "Mumbai",
+      "country": "India",
       "lat": 19.0760,
       "lng": 72.8777,
       "active_listeners": 0,
       "top_songs": []
     }
   ],
-  "daily_top_10": []
+  "daily_top_10": [],
+  "weekly_top_10": [],
+  "monthly_top_10": []
 }</pre>
             </div>
           </div>
 
           <!-- Section 4: POST /api/telemetry/ping -->
-          <div id="doc-post-ping" class="space-y-3.5">
+          <div id="doc-post-ping" class="space-y-3 pt-4 border-t border-white/[0.08]">
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/15 border border-blue-500/30 text-blue-400 font-mono text-[11px] font-bold">POST</span>
-              <code class="text-sm font-mono text-white font-semibold">/api/telemetry/ping</code>
+              <span class="px-2 py-0.5 rounded bg-white/10 text-white font-mono text-[11px] font-bold">POST</span>
+              <code class="text-sm font-mono text-white">/api/telemetry/ping</code>
             </div>
-            <p class="text-xs text-zinc-400">Telemetry heartbeat sent by the LastWave Desktop and Android applications when a song passes 30 seconds of playback.</p>
-            
-            <!-- macOS Terminal Window Frame -->
-            <div class="rounded-2xl border border-white/[0.1] bg-[#0A0A0E] p-4 relative group shadow-2xl">
-              <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></span>
-                  <span class="ml-2 font-mono text-[10px] text-zinc-500 uppercase tracking-wider">REQUEST PAYLOAD • JSON</span>
-                </div>
-                <button onclick="copyCode('samplePostJson')" class="text-[10px] font-mono px-2 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-zinc-300 hover:text-white border border-white/15 transition-all">
-                  Copy JSON
-                </button>
+            <p class="text-xs text-zinc-400">Anonymous heartbeat ping dispatched by LastWave client software when a track surpasses 30 seconds of playback. Rate limit: 10 requests / 60 seconds per IP.</p>
+
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4 space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>CURL REQUEST</span>
+                <button onclick="copyCode('curlPostPing')" class="hover:text-white transition-colors">Copy</button>
               </div>
-              <pre id="samplePostJson" class="font-mono text-[11px] text-zinc-300 overflow-x-auto">{
-  "song_id": "trk_example",
+              <pre id="curlPostPing" class="font-mono text-xs text-zinc-300 overflow-x-auto">curl -X POST https://telemetry.clashprojects.qd.je/api/telemetry/ping \
+  -H "Content-Type: application/json" \
+  -d '{"song_id":"trk_101","title":"Track Title","artist":"Artist Name","region_id":"in-bom"}'</pre>
+            </div>
+
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4 space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>PAYLOAD SCHEMA (JSON)</span>
+                <button onclick="copyCode('samplePostJson')" class="hover:text-white transition-colors">Copy</button>
+              </div>
+              <pre id="samplePostJson" class="font-mono text-[11px] text-zinc-400 overflow-x-auto">{
+  "song_id": "trk_101",
   "title": "Track Title",
   "artist": "Artist Name",
   "region_id": "in-bom",
@@ -825,15 +810,34 @@
             </div>
           </div>
 
-          <!-- Section 5: Self-Hosting -->
-          <div id="doc-hosting" class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121216] to-[#0A0A0D] p-5 sm:p-6 space-y-3 shadow-2xl">
-            <h2 class="text-xs font-semibold font-mono uppercase tracking-wider text-white flex items-center gap-2">
-              <i data-lucide="server" class="w-4 h-4 text-white"></i>
-              Self-Hosting Telemetry Daemon
+          <!-- Section 5: GET /api/health -->
+          <div id="doc-health" class="space-y-3 pt-4 border-t border-white/[0.08]">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-white/10 text-white font-mono text-[11px] font-bold">GET</span>
+              <code class="text-sm font-mono text-white">/api/health</code>
+            </div>
+            <p class="text-xs text-zinc-400">Health-check probe verifying HTTP gateway responsiveness and server uptime.</p>
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4">
+              <pre class="font-mono text-[11px] text-zinc-400">{ "status": "healthy", "uptime_seconds": 3600 }</pre>
+            </div>
+          </div>
+
+          <!-- Section 6: Self-Hosting -->
+          <div id="doc-hosting" class="space-y-3 pt-4 border-t border-white/[0.08]">
+            <h2 class="text-sm font-semibold font-mono uppercase tracking-wider text-white flex items-center gap-2">
+              <i data-lucide="terminal" class="w-4 h-4 text-zinc-400"></i>
+              Self-Hosting Daemon
             </h2>
-            <p class="text-xs text-zinc-400 leading-relaxed">The Go telemetry server compiles to a standalone, zero-dependency static binary with embedded client assets:</p>
-            <div class="p-3.5 rounded-xl bg-[#070709] border border-white/[0.08] text-xs font-mono text-zinc-300 shadow-inner">
-              <code class="text-zinc-200">git clone https://github.com/Clash-Projects/LastWave-Telemetry<br>cd backend<br>go build -o server ./cmd/server<br>./server</code>
+            <p class="text-xs text-zinc-400 leading-relaxed font-sans">The Go telemetry server compiles to a standalone binary with zero external dependencies:</p>
+            <div class="rounded-xl border border-white/[0.08] bg-[#08080A] p-4 space-y-2 font-mono text-xs text-zinc-300">
+              <div class="flex items-center justify-between text-[10px] text-zinc-500">
+                <span>BASH</span>
+                <button onclick="copyCode('selfHostCode')" class="hover:text-white transition-colors">Copy</button>
+              </div>
+              <pre id="selfHostCode" class="text-zinc-200">git clone https://github.com/Clash-Projects/LastWave-Telemetry.git
+cd LastWave-Telemetry/backend
+go build -o server ./cmd/server
+ENV=production PORT=8080 ./server</pre>
             </div>
           </div>
 
@@ -842,149 +846,124 @@
     </section>
 
     <!-- ------------------------------------------------------------ -->
-    <!-- VIEW 4: COMMUNITY (S++++ Tier Luxury Bento Hub)              -->
+    <!-- VIEW 4: COMMUNITY (Minimalist Official Channels Hub)         -->
     <!-- ------------------------------------------------------------ -->
     <section id="view-community" class="view-panel hidden h-[calc(100vh-4rem)] overflow-y-auto w-full">
-      <div class="max-w-4xl mx-auto p-4 sm:p-8 space-y-6 pb-16">
+      <div class="max-w-4xl mx-auto p-4 sm:p-8 space-y-6 pb-20">
         
-        <div class="border-b border-white/[0.06] pb-5">
-          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] font-mono text-zinc-300 mb-2">
-            <span class="w-2 h-2 rounded-full bg-white"></span>
-            <span>ECOSYSTEM & CHANNELS</span>
+        <div class="border-b border-white/[0.08] pb-5">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-white/[0.05] border border-white/10 text-[10px] font-mono text-zinc-400 mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>COMMUNITY & CHANNELS</span>
           </div>
-          <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2.5">
-            <i data-lucide="users" class="w-6 h-6 text-white"></i>
-            LastWave Community & Ecosystem
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2.5">
+            Ecosystem & Community
           </h1>
-          <p class="text-xs font-mono text-zinc-400 mt-1">Connect with developers, report audio source issues, and download open-source clients</p>
+          <p class="text-xs font-mono text-zinc-400 mt-1">Official communication hubs, discussion channels, and open-source software releases</p>
         </div>
 
-        <!-- 4-Card Luxury Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <!-- Minimal 4-Card Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           
           <!-- 1. Telegram -->
-          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-sky-500/40 hover:shadow-[0_0_35px_rgba(56,189,248,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
-            <div class="space-y-3">
+          <div class="rounded-xl border border-white/[0.08] bg-[#0C0D10] p-5 flex flex-col justify-between space-y-4 hover:border-white/25 transition-colors">
+            <div class="space-y-2.5">
               <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400 group-hover:scale-105 transition-transform shadow-lg">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/>
-                  </svg>
-                </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">5.2K MEMBERS</span>
+                <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider font-semibold">TELEGRAM</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 text-zinc-300">@clashprojects</span>
               </div>
-              <div>
-                <h3 class="text-base font-bold text-white group-hover:text-sky-400 transition-colors">Telegram Channel & Group</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
-                  Official broadcast channel for new APK releases, beta updates, feature polls, and direct discussions with maintainers.
-                </p>
-              </div>
+              <h3 class="text-sm font-semibold text-white">Official Telegram Channel</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                Official announcement channel for project updates, Android build releases, and feature progress directly from the developers.
+              </p>
             </div>
             <a 
-              href="https://t.me/lastwave_app" 
+              href="https://t.me/clashprojects" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-sky-500/15 hover:border-sky-500/40 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+              class="w-full py-2 px-3 rounded-lg border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] hover:text-white text-zinc-300 font-mono text-xs text-center transition-colors flex items-center justify-center gap-1.5"
             >
-              <span>Join Telegram</span>
-              <span class="text-zinc-500 group-hover/btn:text-sky-400 transition-colors">↗</span>
+              <span>t.me/clashprojects</span>
+              <span class="text-zinc-500">↗</span>
             </a>
           </div>
 
           <!-- 2. Discord -->
-          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-indigo-500/40 hover:shadow-[0_0_35px_rgba(99,102,241,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
-            <div class="space-y-3">
+          <div class="rounded-xl border border-white/[0.08] bg-[#0C0D10] p-5 flex flex-col justify-between space-y-4 hover:border-white/25 transition-colors">
+            <div class="space-y-2.5">
               <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform shadow-lg">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                  </svg>
-                </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold">14K ONLINE</span>
+                <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider font-semibold">DISCORD</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 text-zinc-300">COMMUNITY</span>
               </div>
-              <div>
-                <h3 class="text-base font-bold text-white group-hover:text-indigo-400 transition-colors">Discord Server</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
-                  Chat live with other listeners, share custom CSS themes, inspect lyrics synchronization improvements, and post audio bug reports.
-                </p>
-              </div>
+              <h3 class="text-sm font-semibold text-white">Community Discord Server</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                Discussion server for user feedback, audio engine testing, bug reports, and direct developer communication.
+              </p>
             </div>
             <a 
-              href="https://discord.gg/lastwave" 
+              href="https://discord.gg/TMCEPSUNk2" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-indigo-500/15 hover:border-indigo-500/40 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+              class="w-full py-2 px-3 rounded-lg border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] hover:text-white text-zinc-300 font-mono text-xs text-center transition-colors flex items-center justify-center gap-1.5"
             >
-              <span>Join Discord</span>
-              <span class="text-zinc-500 group-hover/btn:text-indigo-400 transition-colors">↗</span>
+              <span>discord.gg/TMCEPSUNk2</span>
+              <span class="text-zinc-500">↗</span>
             </a>
           </div>
 
           <!-- 3. GitHub -->
-          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-white/35 hover:shadow-[0_0_35px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
-            <div class="space-y-3">
+          <div class="rounded-xl border border-white/[0.08] bg-[#0C0D10] p-5 flex flex-col justify-between space-y-4 hover:border-white/25 transition-colors">
+            <div class="space-y-2.5">
               <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:scale-105 transition-transform shadow-lg">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                  </svg>
-                </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">★ 1.8K STARS</span>
+                <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider font-semibold">GITHUB</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 text-zinc-300">OPEN SOURCE</span>
               </div>
-              <div>
-                <h3 class="text-base font-bold text-white group-hover:text-zinc-200 transition-colors">Open Source on GitHub</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
-                  Inspect 100% of the code for the Kotlin Android app, Desktop Electron/Go application, and this telemetry dashboard. Contributions welcome.
-                </p>
-              </div>
+              <h3 class="text-sm font-semibold text-white">Clash-Projects Repositories</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                Full source code repositories for LastWave Native, Desktop application, and this standalone telemetry daemon.
+              </p>
             </div>
             <a 
               href="https://github.com/Clash-Projects" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="w-full py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/15 hover:border-white/30 hover:text-white text-zinc-200 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2 group/btn shadow-sm"
+              class="w-full py-2 px-3 rounded-lg border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] hover:text-white text-zinc-300 font-mono text-xs text-center transition-colors flex items-center justify-center gap-1.5"
             >
-              <span>GitHub: Clash-Projects</span>
-              <span class="text-zinc-500 group-hover/btn:text-white transition-colors">↗</span>
+              <span>github.com/Clash-Projects</span>
+              <span class="text-zinc-500">↗</span>
             </a>
           </div>
 
-          <!-- 4. Downloads -->
-          <div class="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-[#121217] to-[#0A0A0D] p-6 flex flex-col justify-between space-y-5 hover:border-white/40 hover:shadow-[0_0_35px_rgba(255,255,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
-            <div class="space-y-3">
+          <!-- 4. Client Software Downloads -->
+          <div class="rounded-xl border border-white/[0.08] bg-[#0C0D10] p-5 flex flex-col justify-between space-y-4 hover:border-white/25 transition-colors">
+            <div class="space-y-2.5">
               <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform shadow-lg">
-                  <i data-lucide="download" class="w-5 h-5"></i>
-                </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-semibold">AD-FREE • 100% FREE</span>
+                <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider font-semibold">CLIENT APPS</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 text-zinc-300">RELEASES</span>
               </div>
-              <div>
-                <h3 class="text-base font-bold text-white group-hover:text-white transition-colors">Download LastWave</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed mt-1">
-                  100% free streaming with synchronized lyrics, offline downloads, seamless background playback, and zero tracker SDKs.
-                </p>
-              </div>
+              <h3 class="text-sm font-semibold text-white">Download LastWave Clients</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                Open-source audio streaming clients with synchronized lyrics, local caching, background playback, and zero tracker SDKs.
+              </p>
             </div>
-            <div class="grid grid-cols-2 gap-2.5">
-              <a 
-                href="https://github.com/Clash-Projects/LastWave-Desktop/releases" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="py-2.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/15 hover:border-white/30 text-white font-medium text-[11px] text-center transition-all flex items-center justify-center gap-1.5 group/btn shadow-sm"
-              >
-                <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
-                <span>Desktop</span>
-                <span class="text-zinc-500 group-hover/btn:text-white transition-colors">↗</span>
-              </a>
+            <div class="grid grid-cols-2 gap-2">
               <a 
                 href="https://github.com/Clash-Projects/LastWave-native/releases" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="py-2.5 rounded-xl bg-white text-black font-semibold text-[11px] text-center hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all flex items-center justify-center gap-1.5 shadow-sm group/btn"
+                class="py-2 px-3 rounded-lg bg-white text-black font-semibold font-mono text-xs text-center hover:bg-zinc-200 transition-colors flex items-center justify-center gap-1"
               >
-                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
-                <span>Android</span>
-                <span class="text-zinc-600 group-hover/btn:text-black transition-colors">↗</span>
+                <span>Android (APK)</span>
+                <span>↗</span>
+              </a>
+              <a 
+                href="https://github.com/Clash-Projects/LastWave-Desktop/releases" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="py-2 px-3 rounded-lg border border-white/15 bg-white/[0.04] hover:bg-white/[0.1] text-zinc-200 font-mono text-xs text-center transition-colors flex items-center justify-center gap-1"
+              >
+                <span>Desktop</span>
+                <span class="text-zinc-500">↗</span>
               </a>
             </div>
           </div>
