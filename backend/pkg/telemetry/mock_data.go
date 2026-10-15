@@ -10,34 +10,26 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "BOM",
 			Lat: 19.076,
-			Lng: 72.8777,
-			CoarseCoord: "19.1° N, 72.9° E",
-			ActiveListeners: 420,
+			Lng: 73.0775,
+			CoarseCoord: "19.1° N, 73.1° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-bom-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bom-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bom-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bom-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bom-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
 			ID: "in-del",
-			Name: "Delhi NCR, DEL",
+			Name: "New Delhi (NCR), DEL",
 			Country: "India",
 			CountryCode: "DEL",
 			Lat: 28.6139,
 			Lng: 77.209,
 			CoarseCoord: "28.6° N, 77.2° E",
-			ActiveListeners: 485,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-del-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-del-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-del-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-del-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-del-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -48,12 +40,10 @@ func GetInitialRegions() []Region {
 			Lat: 12.9716,
 			Lng: 77.5946,
 			CoarseCoord: "13.0° N, 77.6° E",
-			ActiveListeners: 390,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-blr-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-blr-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-blr-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -64,14 +54,10 @@ func GetInitialRegions() []Region {
 			Lat: 17.385,
 			Lng: 78.4867,
 			CoarseCoord: "17.4° N, 78.5° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-hyd-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hyd-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-hyd-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hyd-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hyd-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -79,17 +65,13 @@ func GetInitialRegions() []Region {
 			Name: "Chennai, MAA",
 			Country: "India",
 			CountryCode: "MAA",
-			Lat: 13.0827,
-			Lng: 80.2707,
-			CoarseCoord: "13.1° N, 80.3° E",
-			ActiveListeners: 280,
+			Lat: 13.1199,
+			Lng: 80.0543,
+			CoarseCoord: "13.1° N, 80.1° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-maa-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-maa-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-maa-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-maa-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-maa-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -100,11 +82,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.5726,
 			Lng: 88.3639,
 			CoarseCoord: "22.6° N, 88.4° E",
-			ActiveListeners: 250,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-ccu-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ccu-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -115,11 +96,10 @@ func GetInitialRegions() []Region {
 			Lat: 18.5204,
 			Lng: 73.8567,
 			CoarseCoord: "18.5° N, 73.9° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-pnq-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pnq-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -130,11 +110,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.0225,
 			Lng: 72.5714,
 			CoarseCoord: "23.0° N, 72.6° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-amd-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-amd-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -145,14 +124,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.9124,
 			Lng: 75.7873,
 			CoarseCoord: "26.9° N, 75.8° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-jai-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-jai-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-jai-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-jai-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jai-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -163,14 +138,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.8467,
 			Lng: 80.9462,
 			CoarseCoord: "26.8° N, 80.9° E",
-			ActiveListeners: 270,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-lko-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-lko-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-lko-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-lko-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-lko-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -181,14 +152,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.7333,
 			Lng: 76.7794,
 			CoarseCoord: "30.7° N, 76.8° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-ixc-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixc-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixc-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ixc-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ixc-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -196,15 +163,13 @@ func GetInitialRegions() []Region {
 			Name: "Kochi, COK",
 			Country: "India",
 			CountryCode: "COK",
-			Lat: 9.9312,
-			Lng: 76.2673,
-			CoarseCoord: "9.9° N, 76.3° E",
-			ActiveListeners: 250,
+			Lat: 10.0052,
+			Lng: 76.4738,
+			CoarseCoord: "10.0° N, 76.5° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-cok-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-cok-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-cok-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -215,14 +180,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.7196,
 			Lng: 75.8577,
 			CoarseCoord: "22.7° N, 75.9° E",
-			ActiveListeners: 240,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-idr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-idr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-idr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-idr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-idr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -233,14 +194,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.2599,
 			Lng: 77.4126,
 			CoarseCoord: "23.3° N, 77.4° E",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-bho-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bho-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bho-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bho-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bho-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -251,14 +208,10 @@ func GetInitialRegions() []Region {
 			Lat: 21.1458,
 			Lng: 79.0882,
 			CoarseCoord: "21.1° N, 79.1° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-nag-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-nag-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-nag-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-nag-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nag-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -269,14 +222,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.5941,
 			Lng: 85.1376,
 			CoarseCoord: "25.6° N, 85.1° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-pat-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-pat-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-pat-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-pat-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pat-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -287,14 +236,10 @@ func GetInitialRegions() []Region {
 			Lat: 11.0168,
 			Lng: 76.9558,
 			CoarseCoord: "11.0° N, 77.0° E",
-			ActiveListeners: 175,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-cjb-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-cjb-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-cjb-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-cjb-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-cjb-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -302,17 +247,13 @@ func GetInitialRegions() []Region {
 			Name: "Visakhapatnam, VTG",
 			Country: "India",
 			CountryCode: "VTG",
-			Lat: 17.6868,
-			Lng: 83.2185,
-			CoarseCoord: "17.7° N, 83.2° E",
-			ActiveListeners: 185,
+			Lat: 17.8471,
+			Lng: 83.0772,
+			CoarseCoord: "17.8° N, 83.1° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-vtg-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vtg-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-vtg-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vtg-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vtg-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -323,14 +264,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.1445,
 			Lng: 91.7362,
 			CoarseCoord: "26.1° N, 91.7° E",
-			ActiveListeners: 170,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gau-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gau-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gau-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gau-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gau-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -341,14 +278,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.3176,
 			Lng: 82.9739,
 			CoarseCoord: "25.3° N, 83.0° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-vns-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-vns-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-vns-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-vns-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-vns-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -359,14 +292,10 @@ func GetInitialRegions() []Region {
 			Lat: 31.634,
 			Lng: 74.8723,
 			CoarseCoord: "31.6° N, 74.9° E",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-atq-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-atq-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-atq-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-atq-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-atq-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -377,14 +306,10 @@ func GetInitialRegions() []Region {
 			Lat: 20.2961,
 			Lng: 85.8245,
 			CoarseCoord: "20.3° N, 85.8° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-bbi-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bbi-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bbi-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bbi-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bbi-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -395,14 +320,10 @@ func GetInitialRegions() []Region {
 			Lat: 27.1767,
 			Lng: 78.0081,
 			CoarseCoord: "27.2° N, 78.0° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-agr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-agr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-agr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-agr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-agr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -411,13 +332,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "STV",
 			Lat: 21.1702,
-			Lng: 72.8311,
-			CoarseCoord: "21.2° N, 72.8° E",
-			ActiveListeners: 260,
+			Lng: 73.0109,
+			CoarseCoord: "21.2° N, 73.0° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-stv-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-stv-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -428,11 +348,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.3072,
 			Lng: 73.1812,
 			CoarseCoord: "22.3° N, 73.2° E",
-			ActiveListeners: 170,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-bdq-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bdq-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -443,25 +362,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.9975,
 			Lng: 73.7898,
 			CoarseCoord: "20.0° N, 73.8° E",
-			ActiveListeners: 140,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-nsk-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nsk-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "in-myq",
-			Name: "Mysore, MYQ",
-			Country: "India",
-			CountryCode: "MYQ",
-			Lat: 12.2958,
-			Lng: 76.6394,
-			CoarseCoord: "12.3° N, 76.6° E",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "in-myq-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 710, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -469,15 +373,13 @@ func GetInitialRegions() []Region {
 			Name: "Thiruvananthapuram, TRV",
 			Country: "India",
 			CountryCode: "TRV",
-			Lat: 8.5241,
-			Lng: 76.9366,
-			CoarseCoord: "8.5° N, 76.9° E",
-			ActiveListeners: 180,
+			Lat: 8.7978,
+			Lng: 77.0964,
+			CoarseCoord: "8.8° N, 77.1° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-trv-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-trv-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-trv-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -488,14 +390,10 @@ func GetInitialRegions() []Region {
 			Lat: 34.0837,
 			Lng: 74.7973,
 			CoarseCoord: "34.1° N, 74.8° E",
-			ActiveListeners: 135,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-sxr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-sxr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-sxr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-sxr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-sxr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -503,17 +401,13 @@ func GetInitialRegions() []Region {
 			Name: "Panaji (Goa), GOA",
 			Country: "India",
 			CountryCode: "GOA",
-			Lat: 15.4909,
-			Lng: 73.8278,
-			CoarseCoord: "15.5° N, 73.8° E",
-			ActiveListeners: 165,
+			Lat: 15.6545,
+			Lng: 74.1219,
+			CoarseCoord: "15.7° N, 74.1° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-goa-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-goa-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-goa-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-goa-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-goa-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -524,14 +418,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.3165,
 			Lng: 78.0322,
 			CoarseCoord: "30.3° N, 78.0° E",
-			ActiveListeners: 145,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ded-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ded-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ded-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ded-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ded-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -542,14 +432,10 @@ func GetInitialRegions() []Region {
 			Lat: 21.2514,
 			Lng: 81.6296,
 			CoarseCoord: "21.3° N, 81.6° E",
-			ActiveListeners: 150,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-rpr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-rpr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-rpr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-rpr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rpr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -560,42 +446,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.3441,
 			Lng: 85.3096,
 			CoarseCoord: "23.3° N, 85.3° E",
-			ActiveListeners: 165,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ixr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ixr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ixr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ixr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "in-slv",
-			Name: "Shimla, SLV",
-			Country: "India",
-			CountryCode: "SLV",
-			Lat: 31.1048,
-			Lng: 77.1734,
-			CoarseCoord: "31.1° N, 77.2° E",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "in-slv-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 640, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "in-vga",
-			Name: "Vijayawada, VGA",
-			Country: "India",
-			CountryCode: "VGA",
-			Lat: 16.5062,
-			Lng: 80.648,
-			CoarseCoord: "16.5° N, 80.6° E",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "in-vga-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 1040, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -609,7 +463,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mdu-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -617,14 +471,13 @@ func GetInitialRegions() []Region {
 			Name: "Karachi, KHI",
 			Country: "Pakistan",
 			CountryCode: "KHI",
-			Lat: 24.8607,
-			Lng: 67.0011,
-			CoarseCoord: "24.9° N, 67.0° E",
+			Lat: 25.1242,
+			Lng: 67.2451,
+			CoarseCoord: "25.1° N, 67.2° E",
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "pk-khi-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "pk-khi-01", Title: "Pasoori", Artist: "Ali Sethi x Shae Gill", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/dc/13/26/dc132644-8cb5-1779-11c5-8422fe5699ce/196626577826.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -638,7 +491,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "pk-lhe-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -652,7 +505,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pk-isb-01", Title: "Iraaday", Artist: "Abdul Hannan", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/dc/13/26/dc132644-8cb5-1779-11c5-8422fe5699ce/196626577826.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -666,7 +519,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "bd-dac-01", Title: "Ghum", Artist: "Shironamhin", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -675,12 +528,12 @@ func GetInitialRegions() []Region {
 			Country: "Sri Lanka",
 			CountryCode: "CMB",
 			Lat: 6.9271,
-			Lng: 79.8612,
-			CoarseCoord: "6.9° N, 79.9° E",
+			Lng: 80.3007,
+			CoarseCoord: "6.9° N, 80.3° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "lk-cmb-01", Title: "Manike Mage Hithe", Artist: "Yohani", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -694,7 +547,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "np-ktm-01", Title: "Hataarindai Bataasindai", Artist: "Sajjan Raj Vaidya", Plays: 1450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -702,15 +555,13 @@ func GetInitialRegions() []Region {
 			Name: "New York, NYC",
 			Country: "United States",
 			CountryCode: "NYC",
-			Lat: 40.7128,
-			Lng: -74.006,
-			CoarseCoord: "40.7° N, 74.0° W",
-			ActiveListeners: 460,
+			Lat: 40.9266,
+			Lng: -74.3427,
+			CoarseCoord: "40.9° N, 74.3° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-nyc-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 6100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-nyc-01", Title: "Empire State of Mind", Artist: "Jay-Z ft. Alicia Keys", Plays: 5400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-nyc-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 4950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -721,11 +572,10 @@ func GetInitialRegions() []Region {
 			Lat: 34.0522,
 			Lng: -118.2437,
 			CoarseCoord: "34.1° N, 118.2° W",
-			ActiveListeners: 440,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-lax-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 7200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-lax-01", Title: "Million Dollar Baby", Artist: "Tommy Richman", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -734,13 +584,12 @@ func GetInitialRegions() []Region {
 			Country: "United States",
 			CountryCode: "SFO",
 			Lat: 37.7749,
-			Lng: -122.4194,
-			CoarseCoord: "37.8° N, 122.4° W",
-			ActiveListeners: 350,
+			Lng: -122.2196,
+			CoarseCoord: "37.8° N, 122.2° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-sfo-01", Title: "Midnight City", Artist: "M83", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
-				{ID: "us-sfo-01", Title: "Starboy", Artist: "The Weeknd ft. Daft Punk", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -748,13 +597,13 @@ func GetInitialRegions() []Region {
 			Name: "Seattle, SEA",
 			Country: "United States",
 			CountryCode: "SEA",
-			Lat: 47.6062,
-			Lng: -122.3321,
-			CoarseCoord: "47.6° N, 122.3° W",
-			ActiveListeners: 330,
+			Lat: 47.6366,
+			Lng: -122.0763,
+			CoarseCoord: "47.6° N, 122.1° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-sea-01", Title: "Good Luck, Babe!", Artist: "Chappell Roan", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -762,13 +611,13 @@ func GetInitialRegions() []Region {
 			Name: "Chicago, CHI",
 			Country: "United States",
 			CountryCode: "CHI",
-			Lat: 41.8781,
-			Lng: -87.6298,
-			CoarseCoord: "41.9° N, 87.6° W",
-			ActiveListeners: 360,
+			Lat: 41.7143,
+			Lng: -88.0104,
+			CoarseCoord: "41.7° N, 88.0° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-chi-01", Title: "Carnival", Artist: "Kanye West & Ty Dolla $ign", Plays: 3800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -776,13 +625,13 @@ func GetInitialRegions() []Region {
 			Name: "Miami, MIA",
 			Country: "United States",
 			CountryCode: "MIA",
-			Lat: 25.7617,
-			Lng: -80.1918,
-			CoarseCoord: "25.8° N, 80.2° W",
-			ActiveListeners: 380,
+			Lat: 25.8273,
+			Lng: -80.605,
+			CoarseCoord: "25.8° N, 80.6° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-mia-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 4400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -793,38 +642,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.2672,
 			Lng: -97.7431,
 			CoarseCoord: "30.3° N, 97.7° W",
-			ActiveListeners: 240,
-			Tier: 2,
-			TopSongs: []Song{
-				{ID: "us-aus-01", Title: "A Bar Song (Tipsy)", Artist: "Shaboozey", Plays: 3600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "us-dfw",
-			Name: "Dallas, DFW",
-			Country: "United States",
-			CountryCode: "DFW",
-			Lat: 32.7767,
-			Lng: -96.797,
-			CoarseCoord: "32.8° N, 96.8° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-dfw-01", Title: "I Had Some Help", Artist: "Post Malone ft. Morgan Wallen", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "us-iah",
-			Name: "Houston, IAH",
-			Country: "United States",
-			CountryCode: "IAH",
-			Lat: 29.7604,
-			Lng: -95.3698,
-			CoarseCoord: "29.8° N, 95.4° W",
-			ActiveListeners: 0,
-			Tier: 2,
-			TopSongs: []Song{
-				{ID: "us-iah-01", Title: "Texas Hold 'Em", Artist: "Beyoncé", Plays: 4200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -835,10 +656,10 @@ func GetInitialRegions() []Region {
 			Lat: 33.749,
 			Lng: -84.388,
 			CoarseCoord: "33.7° N, 84.4° W",
-			ActiveListeners: 330,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-atl-01", Title: "Type Shit", Artist: "Future & Metro Boomin", Plays: 4500, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -847,12 +668,12 @@ func GetInitialRegions() []Region {
 			Country: "United States",
 			CountryCode: "BOS",
 			Lat: 42.3601,
-			Lng: -71.0589,
-			CoarseCoord: "42.4° N, 71.1° W",
-			ActiveListeners: 310,
+			Lng: -71.2587,
+			CoarseCoord: "42.4° N, 71.3° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-bos-01", Title: "Stick Season", Artist: "Noah Kahan", Plays: 3400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -863,10 +684,10 @@ func GetInitialRegions() []Region {
 			Lat: 39.7392,
 			Lng: -104.9903,
 			CoarseCoord: "39.7° N, 105.0° W",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-den-01", Title: "Sunflower", Artist: "Post Malone ft. Swae Lee", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -880,7 +701,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-phx-01", Title: "Million Dollar Baby", Artist: "Tommy Richman", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -891,10 +712,10 @@ func GetInitialRegions() []Region {
 			Lat: 39.9526,
 			Lng: -75.1652,
 			CoarseCoord: "40.0° N, 75.2° W",
-			ActiveListeners: 250,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-phl-01", Title: "Dreams and Nightmares", Artist: "Meek Mill", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -905,24 +726,10 @@ func GetInitialRegions() []Region {
 			Lat: 36.1699,
 			Lng: -115.1398,
 			CoarseCoord: "36.2° N, 115.1° W",
-			ActiveListeners: 240,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-las-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "us-dtw",
-			Name: "Detroit, DTW",
-			Country: "United States",
-			CountryCode: "DTW",
-			Lat: 42.3314,
-			Lng: -83.0458,
-			CoarseCoord: "42.3° N, 83.0° W",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "us-dtw-01", Title: "Houdini", Artist: "Eminem", Plays: 3200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -936,7 +743,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-bna-01", Title: "Last Night", Artist: "Morgan Wallen", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -950,7 +757,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-pdx-01", Title: "Birds of a Feather", Artist: "Billie Eilish", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -961,10 +768,10 @@ func GetInitialRegions() []Region {
 			Lat: 44.9778,
 			Lng: -93.265,
 			CoarseCoord: "45.0° N, 93.3° W",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-msp-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -975,10 +782,10 @@ func GetInitialRegions() []Region {
 			Lat: 38.9072,
 			Lng: -77.0369,
 			CoarseCoord: "38.9° N, 77.0° W",
-			ActiveListeners: 320,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-was-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 3400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -992,7 +799,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-slc-01", Title: "Believer", Artist: "Imagine Dragons", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1003,10 +810,10 @@ func GetInitialRegions() []Region {
 			Lat: 29.9511,
 			Lng: -90.0715,
 			CoarseCoord: "30.0° N, 90.1° W",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-msy-01", Title: "Do Whatcha Wanna", Artist: "Rebirth Brass Band", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1014,13 +821,13 @@ func GetInitialRegions() []Region {
 			Name: "Honolulu, HNL",
 			Country: "United States",
 			CountryCode: "HNL",
-			Lat: 21.3069,
-			Lng: -157.8583,
+			Lat: 21.323,
+			Lng: -157.8683,
 			CoarseCoord: "21.3° N, 157.9° W",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-hnl-01", Title: "Somewhere Over the Rainbow", Artist: "Israel Kamakawiwoʻole", Plays: 1950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1034,22 +841,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-anc-01", Title: "Northern Attitude", Artist: "Noah Kahan", Plays: 980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "ca-yyz",
-			Name: "Toronto, YYZ",
-			Country: "Canada",
-			CountryCode: "YYZ",
-			Lat: 43.6532,
-			Lng: -79.3832,
-			CoarseCoord: "43.7° N, 79.4° W",
-			ActiveListeners: 0,
-			Tier: 1,
-			TopSongs: []Song{
-				{ID: "ca-yyz-01", Title: "One Dance", Artist: "Drake ft. Wizkid", Plays: 4300, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/600x600bb.jpg"},
-				{ID: "ca-yyz-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1057,13 +849,13 @@ func GetInitialRegions() []Region {
 			Name: "Vancouver, YVR",
 			Country: "Canada",
 			CountryCode: "YVR",
-			Lat: 49.2827,
-			Lng: -123.1207,
-			CoarseCoord: "49.3° N, 123.1° W",
-			ActiveListeners: 320,
+			Lat: 49.3504,
+			Lng: -123.0608,
+			CoarseCoord: "49.4° N, 123.1° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ca-yvr-01", Title: "Starboy", Artist: "The Weeknd", Plays: 2950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1074,10 +866,10 @@ func GetInitialRegions() []Region {
 			Lat: 45.5017,
 			Lng: -73.5673,
 			CoarseCoord: "45.5° N, 73.6° W",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ca-yul-01", Title: "Stromae", Artist: "Papaoutai", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1088,10 +880,10 @@ func GetInitialRegions() []Region {
 			Lat: 51.0447,
 			Lng: -114.0719,
 			CoarseCoord: "51.0° N, 114.1° W",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-yyc-01", Title: "A Bar Song (Tipsy)", Artist: "Shaboozey", Plays: 1850, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1102,10 +894,10 @@ func GetInitialRegions() []Region {
 			Lat: 45.4215,
 			Lng: -75.6972,
 			CoarseCoord: "45.4° N, 75.7° W",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-yow-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 1650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1116,11 +908,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.4326,
 			Lng: -99.1332,
 			CoarseCoord: "19.4° N, 99.1° W",
-			ActiveListeners: 420,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "mx-mex-01", Title: "Ella Baila Sola", Artist: "Eslabon Armado, Peso Pluma", Plays: 5400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
-				{ID: "mx-mex-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 4800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -1134,7 +925,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mx-gdl-01", Title: "Lady Gaga", Artist: "Peso Pluma, Gabito Ballesteros", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1145,10 +936,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.6866,
 			Lng: -100.3161,
 			CoarseCoord: "25.7° N, 100.3° W",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mx-mty-01", Title: "QLONA", Artist: "KAROL G, Peso Pluma", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1157,12 +948,12 @@ func GetInitialRegions() []Region {
 			Country: "Mexico",
 			CountryCode: "CUN",
 			Lat: 21.1619,
-			Lng: -86.8515,
-			CoarseCoord: "21.2° N, 86.9° W",
+			Lng: -87.271,
+			CoarseCoord: "21.2° N, 87.3° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "mx-cun-01", Title: "Pepas", Artist: "Farruko", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1173,12 +964,10 @@ func GetInitialRegions() []Region {
 			Lat: 51.5074,
 			Lng: -0.1278,
 			CoarseCoord: "51.5° N, 0.1° W",
-			ActiveListeners: 470,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "uk-lon-01", Title: "Sprinter", Artist: "Dave & Central Cee", Plays: 5200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
-				{ID: "uk-lon-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "uk-lon-01", Title: "Prada", Artist: "cassö, RAYE, D-Block Europe", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1189,10 +978,10 @@ func GetInitialRegions() []Region {
 			Lat: 53.4808,
 			Lng: -2.2426,
 			CoarseCoord: "53.5° N, 2.2° W",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-man-01", Title: "Sprinter", Artist: "Dave & Central Cee", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1200,13 +989,13 @@ func GetInitialRegions() []Region {
 			Name: "Edinburgh, EDI",
 			Country: "United Kingdom",
 			CountryCode: "EDI",
-			Lat: 55.9533,
-			Lng: -3.1883,
-			CoarseCoord: "56.0° N, 3.2° W",
-			ActiveListeners: 220,
+			Lat: 55.8861,
+			Lng: -3.3959,
+			CoarseCoord: "55.9° N, 3.4° W",
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "uk-edi-01", Title: "Someone You Loved", Artist: "Lewis Capaldi", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1217,11 +1006,10 @@ func GetInitialRegions() []Region {
 			Lat: 48.8566,
 			Lng: 2.3522,
 			CoarseCoord: "48.9° N, 2.4° E",
-			ActiveListeners: 440,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "fr-par-01", Title: "Imagine", Artist: "Carbonne", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/13/27/90132717-36e6-912b-cba0-ecf4c65a045c/3617387346883.jpg/600x600bb.jpg"},
-				{ID: "fr-par-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 3600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -1232,10 +1020,10 @@ func GetInitialRegions() []Region {
 			Lat: 45.764,
 			Lng: 4.8357,
 			CoarseCoord: "45.8° N, 4.8° E",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-lys-01", Title: "Imagine", Artist: "Carbonne", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/13/27/90132717-36e6-912b-cba0-ecf4c65a045c/3617387346883.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1243,13 +1031,13 @@ func GetInitialRegions() []Region {
 			Name: "Marseille, MRS",
 			Country: "France",
 			CountryCode: "MRS",
-			Lat: 43.2965,
+			Lat: 43.6011,
 			Lng: 5.3698,
-			CoarseCoord: "43.3° N, 5.4° E",
+			CoarseCoord: "43.6° N, 5.4° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-mrs-01", Title: "Bande Organisée", Artist: "Jul", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/13/27/90132717-36e6-912b-cba0-ecf4c65a045c/3617387346883.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1260,11 +1048,10 @@ func GetInitialRegions() []Region {
 			Lat: 52.52,
 			Lng: 13.405,
 			CoarseCoord: "52.5° N, 13.4° E",
-			ActiveListeners: 380,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "de-ber-01", Title: "Zeit, dass sich was dreht", Artist: "$OHO BANI, Herbert Grönemeyer", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6b/ff/4d/6bff4d3b-6385-d601-52fe-7f240fcb7dd9/198391090123.jpg/600x600bb.jpg"},
-				{ID: "de-ber-01", Title: "Komet", Artist: "Udo Lindenberg x Apache 207", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1275,10 +1062,10 @@ func GetInitialRegions() []Region {
 			Lat: 48.1351,
 			Lng: 11.582,
 			CoarseCoord: "48.1° N, 11.6° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-muc-01", Title: "Komet", Artist: "Udo Lindenberg x Apache 207", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1289,10 +1076,10 @@ func GetInitialRegions() []Region {
 			Lat: 53.5511,
 			Lng: 9.9937,
 			CoarseCoord: "53.6° N, 10.0° E",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-ham-01", Title: "Zeit, dass sich was dreht", Artist: "$OHO BANI", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6b/ff/4d/6bff4d3b-6385-d601-52fe-7f240fcb7dd9/198391090123.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1303,11 +1090,10 @@ func GetInitialRegions() []Region {
 			Lat: 52.3676,
 			Lng: 4.9041,
 			CoarseCoord: "52.4° N, 4.9° E",
-			ActiveListeners: 330,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "nl-ams-01", Title: "Europapa", Artist: "Joost", Plays: 5900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/71/6a/d0/716ad0c7-1a41-fa60-6421-2cf77a28e75e/8720967005488.png/600x600bb.jpg"},
-				{ID: "nl-ams-01", Title: "Midnight City", Artist: "M83", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1318,10 +1104,10 @@ func GetInitialRegions() []Region {
 			Lat: 40.4168,
 			Lng: -3.7038,
 			CoarseCoord: "40.4° N, 3.7° W",
-			ActiveListeners: 340,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "es-mad-01", Title: "Potra Salvaje", Artist: "Isabel Aaiún", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/80/f4/bf/80f4bf54-8c85-2e6b-0774-7096d29482f3/198500276664.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1329,13 +1115,13 @@ func GetInitialRegions() []Region {
 			Name: "Barcelona, BCN",
 			Country: "Spain",
 			CountryCode: "BCN",
-			Lat: 41.3879,
-			Lng: 2.1699,
-			CoarseCoord: "41.4° N, 2.2° E",
-			ActiveListeners: 370,
+			Lat: 41.5515,
+			Lng: 1.9097,
+			CoarseCoord: "41.6° N, 1.9° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-bcn-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 3800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -1346,10 +1132,10 @@ func GetInitialRegions() []Region {
 			Lat: 41.9028,
 			Lng: 12.4964,
 			CoarseCoord: "41.9° N, 12.5° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "it-rom-01", Title: "Sesso e Samba", Artist: "Tony Effe, Gaia", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/09/b3/a409b307-eef4-7ca1-4f36-9a2c3a3286dc/24UM1IM29199.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1360,10 +1146,10 @@ func GetInitialRegions() []Region {
 			Lat: 45.4642,
 			Lng: 9.19,
 			CoarseCoord: "45.5° N, 9.2° E",
-			ActiveListeners: 360,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "it-mil-01", Title: "Sesso e Samba", Artist: "Tony Effe, Gaia", Plays: 5200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/09/b3/a409b307-eef4-7ca1-4f36-9a2c3a3286dc/24UM1IM29199.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1371,14 +1157,13 @@ func GetInitialRegions() []Region {
 			Name: "Stockholm, STO",
 			Country: "Sweden",
 			CountryCode: "STO",
-			Lat: 59.3293,
-			Lng: 18.0686,
-			CoarseCoord: "59.3° N, 18.1° E",
-			ActiveListeners: 290,
+			Lat: 59.385,
+			Lng: 17.7682,
+			CoarseCoord: "59.4° N, 17.8° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "se-sto-01", Title: "Bangarang", Artist: "Skrillex", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
-				{ID: "se-sto-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1389,10 +1174,10 @@ func GetInitialRegions() []Region {
 			Lat: 59.9139,
 			Lng: 10.7522,
 			CoarseCoord: "59.9° N, 10.8° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "no-osl-01", Title: "Faded", Artist: "Alan Walker", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1400,13 +1185,13 @@ func GetInitialRegions() []Region {
 			Name: "Copenhagen, CPH",
 			Country: "Denmark",
 			CountryCode: "CPH",
-			Lat: 55.6761,
-			Lng: 12.5683,
-			CoarseCoord: "55.7° N, 12.6° E",
-			ActiveListeners: 240,
+			Lat: 55.6448,
+			Lng: 12.2535,
+			CoarseCoord: "55.6° N, 12.3° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "dk-cph-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1414,13 +1199,13 @@ func GetInitialRegions() []Region {
 			Name: "Helsinki, HEL",
 			Country: "Finland",
 			CountryCode: "HEL",
-			Lat: 60.1699,
-			Lng: 24.9384,
-			CoarseCoord: "60.2° N, 24.9° E",
-			ActiveListeners: 210,
+			Lat: 60.3561,
+			Lng: 24.8017,
+			CoarseCoord: "60.4° N, 24.8° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fi-hel-01", Title: "Cha Cha Cha", Artist: "Käärijä", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/71/6a/d0/716ad0c7-1a41-fa60-6421-2cf77a28e75e/8720967005488.png/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1431,10 +1216,10 @@ func GetInitialRegions() []Region {
 			Lat: 48.2082,
 			Lng: 16.3738,
 			CoarseCoord: "48.2° N, 16.4° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "at-vie-01", Title: "Zeit, dass sich was dreht", Artist: "$OHO BANI", Plays: 2500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6b/ff/4d/6bff4d3b-6385-d601-52fe-7f240fcb7dd9/198391090123.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1445,10 +1230,10 @@ func GetInitialRegions() []Region {
 			Lat: 47.3769,
 			Lng: 8.5417,
 			CoarseCoord: "47.4° N, 8.5° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ch-zrh-01", Title: "Starboy", Artist: "The Weeknd ft. Daft Punk", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1459,10 +1244,10 @@ func GetInitialRegions() []Region {
 			Lat: 52.2297,
 			Lng: 21.0122,
 			CoarseCoord: "52.2° N, 21.0° E",
-			ActiveListeners: 280,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "pl-waw-01", Title: "Chyba że z Tobą", Artist: "MODELKI", Plays: 3600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1473,10 +1258,10 @@ func GetInitialRegions() []Region {
 			Lat: 50.0755,
 			Lng: 14.4378,
 			CoarseCoord: "50.1° N, 14.4° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cz-prg-01", Title: "Midnight City", Artist: "M83", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1487,10 +1272,10 @@ func GetInitialRegions() []Region {
 			Lat: 47.4979,
 			Lng: 19.0402,
 			CoarseCoord: "47.5° N, 19.0° E",
-			ActiveListeners: 240,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "hu-bud-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1498,13 +1283,13 @@ func GetInitialRegions() []Region {
 			Name: "Athens, ATH",
 			Country: "Greece",
 			CountryCode: "ATH",
-			Lat: 37.9838,
-			Lng: 23.7275,
-			CoarseCoord: "38.0° N, 23.7° E",
-			ActiveListeners: 250,
+			Lat: 38.1525,
+			Lng: 23.5477,
+			CoarseCoord: "38.2° N, 23.5° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "gr-ath-01", Title: "ZARI", Artist: "Marina Satti", Plays: 3400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/80/f4/bf/80f4bf54-8c85-2e6b-0774-7096d29482f3/198500276664.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1515,10 +1300,10 @@ func GetInitialRegions() []Region {
 			Lat: 38.7223,
 			Lng: -9.1393,
 			CoarseCoord: "38.7° N, 9.1° W",
-			ActiveListeners: 280,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pt-lis-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 2800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -1526,13 +1311,13 @@ func GetInitialRegions() []Region {
 			Name: "Dublin, DUB",
 			Country: "Ireland",
 			CountryCode: "DUB",
-			Lat: 53.3498,
-			Lng: -6.2603,
-			CoarseCoord: "53.3° N, 6.3° W",
-			ActiveListeners: 280,
+			Lat: 53.2782,
+			Lng: -6.4679,
+			CoarseCoord: "53.3° N, 6.5° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ie-dub-01", Title: "Take Me To Church", Artist: "Hozier", Plays: 3600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1543,10 +1328,10 @@ func GetInitialRegions() []Region {
 			Lat: 44.4268,
 			Lng: 26.1025,
 			CoarseCoord: "44.4° N, 26.1° E",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ro-otp-01", Title: "Stereo Love", Artist: "Edward Maya & Vika Jigulina", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1557,10 +1342,10 @@ func GetInitialRegions() []Region {
 			Lat: 50.4501,
 			Lng: 30.5234,
 			CoarseCoord: "50.5° N, 30.5° E",
-			ActiveListeners: 270,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ua-iev-01", Title: "Stefania", Artist: "Kalush Orchestra", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1571,12 +1356,10 @@ func GetInitialRegions() []Region {
 			Lat: 35.6762,
 			Lng: 139.6503,
 			CoarseCoord: "35.7° N, 139.7° E",
-			ActiveListeners: 490,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "jp-tyo-01", Title: "Bling-Bang-Bang-Born", Artist: "Creepy Nuts", Plays: 6800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg"},
-				{ID: "jp-tyo-01", Title: "Idol (アイドル)", Artist: "YOASOBI", Plays: 5900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
-				{ID: "jp-tyo-01", Title: "Specialz", Artist: "King Gnu", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1587,24 +1370,10 @@ func GetInitialRegions() []Region {
 			Lat: 34.6937,
 			Lng: 135.5023,
 			CoarseCoord: "34.7° N, 135.5° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-osa-01", Title: "Bling-Bang-Bang-Born", Artist: "Creepy Nuts", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "jp-uky",
-			Name: "Kyoto, UKY",
-			Country: "Japan",
-			CountryCode: "UKY",
-			Lat: 35.0116,
-			Lng: 135.7681,
-			CoarseCoord: "35.0° N, 135.8° E",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "jp-uky-01", Title: "Idol", Artist: "YOASOBI", Plays: 2300, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1615,12 +1384,10 @@ func GetInitialRegions() []Region {
 			Lat: 37.5665,
 			Lng: 126.978,
 			CoarseCoord: "37.6° N, 127.0° E",
-			ActiveListeners: 430,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "kr-sel-01", Title: "Supernova", Artist: "aespa", Plays: 6400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
-				{ID: "kr-sel-01", Title: "Magnetic", Artist: "ILLIT", Plays: 5600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/1b/c2/b81bc260-2e45-1db3-70f7-15ae71b764bb/cover.jpg/600x600bb.jpg"},
-				{ID: "kr-sel-01", Title: "How Sweet", Artist: "NewJeans", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d9/3d/bf/d93dbf5e-cfcf-db5b-ebdb-167812eb1034/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1628,13 +1395,13 @@ func GetInitialRegions() []Region {
 			Name: "Busan, PUS",
 			Country: "South Korea",
 			CountryCode: "PUS",
-			Lat: 35.1796,
-			Lng: 129.0756,
-			CoarseCoord: "35.2° N, 129.1° E",
+			Lat: 35.3795,
+			Lng: 128.8701,
+			CoarseCoord: "35.4° N, 128.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kr-pus-01", Title: "Supernova", Artist: "aespa", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1643,13 +1410,12 @@ func GetInitialRegions() []Region {
 			Country: "Singapore",
 			CountryCode: "SIN",
 			Lat: 1.3521,
-			Lng: 103.8198,
+			Lng: 103.8398,
 			CoarseCoord: "1.4° N, 103.8° E",
-			ActiveListeners: 360,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "sg-sin-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 4500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "sg-sin-01", Title: "Magnetic", Artist: "ILLIT", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/1b/c2/b81bc260-2e45-1db3-70f7-15ae71b764bb/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1660,10 +1426,10 @@ func GetInitialRegions() []Region {
 			Lat: 13.7563,
 			Lng: 100.5018,
 			CoarseCoord: "13.8° N, 100.5° E",
-			ActiveListeners: 370,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "th-bkk-01", Title: "Rockstar", Artist: "LISA", Plays: 6200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1671,13 +1437,13 @@ func GetInitialRegions() []Region {
 			Name: "Jakarta, JKT",
 			Country: "Indonesia",
 			CountryCode: "JKT",
-			Lat: -6.2088,
+			Lat: -6.328,
 			Lng: 106.8456,
-			CoarseCoord: "6.2° S, 106.8° E",
-			ActiveListeners: 390,
+			CoarseCoord: "6.3° S, 106.8° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "id-jkt-01", Title: "Sialan", Artist: "Juicy Luicy ft. Adrian Khalif", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1685,13 +1451,13 @@ func GetInitialRegions() []Region {
 			Name: "Surabaya, SUB",
 			Country: "Indonesia",
 			CountryCode: "SUB",
-			Lat: -7.2575,
-			Lng: 112.7521,
-			CoarseCoord: "7.3° S, 112.8° E",
+			Lat: -7.5003,
+			Lng: 112.5466,
+			CoarseCoord: "7.5° S, 112.5° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "id-sub-01", Title: "Sialan", Artist: "Juicy Luicy", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1699,13 +1465,13 @@ func GetInitialRegions() []Region {
 			Name: "Bali, DPS",
 			Country: "Indonesia",
 			CountryCode: "DPS",
-			Lat: -8.4095,
-			Lng: 115.1889,
-			CoarseCoord: "8.4° S, 115.2° E",
-			ActiveListeners: 180,
+			Lat: -8.3203,
+			Lng: 114.6774,
+			CoarseCoord: "8.3° S, 114.7° E",
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "id-dps-01", Title: "Midnight City", Artist: "M83", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1716,10 +1482,10 @@ func GetInitialRegions() []Region {
 			Lat: 3.139,
 			Lng: 101.6869,
 			CoarseCoord: "3.1° N, 101.7° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "my-kul-01", Title: "Alamak Raya Lagi!", Artist: "De Fam", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1727,14 +1493,13 @@ func GetInitialRegions() []Region {
 			Name: "Manila, MNL",
 			Country: "Philippines",
 			CountryCode: "MNL",
-			Lat: 14.5995,
-			Lng: 120.9842,
-			CoarseCoord: "14.6° N, 121.0° E",
-			ActiveListeners: 380,
+			Lat: 14.9341,
+			Lng: 121.184,
+			CoarseCoord: "14.9° N, 121.2° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ph-mnl-01", Title: "Pantropiko", Artist: "BINI", Plays: 5800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d9/3d/bf/d93dbf5e-cfcf-db5b-ebdb-167812eb1034/cover.jpg/600x600bb.jpg"},
-				{ID: "ph-mnl-01", Title: "Salamin, Salamin", Artist: "BINI", Plays: 5200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/1b/c2/b81bc260-2e45-1db3-70f7-15ae71b764bb/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1745,10 +1510,10 @@ func GetInitialRegions() []Region {
 			Lat: 10.8231,
 			Lng: 106.6297,
 			CoarseCoord: "10.8° N, 106.6° E",
-			ActiveListeners: 320,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "vn-sgn-01", Title: "Cắt Đôi Nỗi Sầu", Artist: "Tăng Duy Tân", Plays: 4200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1759,10 +1524,10 @@ func GetInitialRegions() []Region {
 			Lat: 21.0285,
 			Lng: 105.8542,
 			CoarseCoord: "21.0° N, 105.9° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "vn-han-01", Title: "Ngày Mai Người Ta Lấy Chồng", Artist: "Thành Đạt", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1771,12 +1536,12 @@ func GetInitialRegions() []Region {
 			Country: "Hong Kong",
 			CountryCode: "HKG",
 			Lat: 22.3193,
-			Lng: 114.1694,
+			Lng: 114.1894,
 			CoarseCoord: "22.3° N, 114.2° E",
-			ActiveListeners: 320,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "hk-hkg-01", Title: "Dear My Friend,", Artist: "Keung To", Plays: 3800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1784,13 +1549,13 @@ func GetInitialRegions() []Region {
 			Name: "Taipei, TPE",
 			Country: "Taiwan",
 			CountryCode: "TPE",
-			Lat: 25.033,
-			Lng: 121.5654,
-			CoarseCoord: "25.0° N, 121.6° E",
-			ActiveListeners: 310,
+			Lat: 24.6412,
+			Lng: 121.4082,
+			CoarseCoord: "24.6° N, 121.4° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "tw-tpe-01", Title: "Red Scarf", Artist: "WeiBird", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1801,24 +1566,10 @@ func GetInitialRegions() []Region {
 			Lat: 31.2304,
 			Lng: 121.4737,
 			CoarseCoord: "31.2° N, 121.5° E",
-			ActiveListeners: 450,
-			Tier: 1,
-			TopSongs: []Song{
-				{ID: "cn-sha-01", Title: "Lonely Warrior (孤勇者)", Artist: "Eason Chan", Plays: 5400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "cn-pek",
-			Name: "Beijing, PEK",
-			Country: "China",
-			CountryCode: "PEK",
-			Lat: 39.9042,
-			Lng: 116.4074,
-			CoarseCoord: "39.9° N, 116.4° E",
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-pek-01", Title: "Wu Ji (无羁)", Artist: "Xiao Zhan, Wang Yibo", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1832,7 +1583,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-ctu-01", Title: "Chengdu (成都)", Artist: "Zhao Lei", Plays: 3400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1840,15 +1591,13 @@ func GetInitialRegions() []Region {
 			Name: "Dubai, DXB",
 			Country: "United Arab Emirates",
 			CountryCode: "DXB",
-			Lat: 25.2048,
-			Lng: 55.2708,
-			CoarseCoord: "25.2° N, 55.3° E",
-			ActiveListeners: 360,
+			Lat: 24.9692,
+			Lng: 55.4891,
+			CoarseCoord: "25.0° N, 55.5° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ae-dxb-01", Title: "Clandestina", Artist: "FILV, Edmofo", Plays: 3840, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80"},
-				{ID: "ae-dxb-01", Title: "Habibi", Artist: "Ricky Rich, Dardan", Plays: 3110, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/ec/94/9cec947c-8345-16d1-c6f7-0dd1d527a412/190296404016.jpg/600x600bb.jpg"},
-				{ID: "ae-dxb-01", Title: "Calm Down", Artist: "Rema ft. Selena Gomez", Plays: 2470, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/59/ec/75/59ec75eb-42b0-bf6a-38c7-48013ca1b11e/24UM1IM36412.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1856,13 +1605,13 @@ func GetInitialRegions() []Region {
 			Name: "Abu Dhabi, AUH",
 			Country: "United Arab Emirates",
 			CountryCode: "AUH",
-			Lat: 24.4539,
-			Lng: 54.3773,
-			CoarseCoord: "24.5° N, 54.4° E",
+			Lat: 24.2199,
+			Lng: 54.6834,
+			CoarseCoord: "24.2° N, 54.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ae-auh-01", Title: "Habibi", Artist: "Ricky Rich", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/ec/94/9cec947c-8345-16d1-c6f7-0dd1d527a412/190296404016.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1873,10 +1622,10 @@ func GetInitialRegions() []Region {
 			Lat: 24.7136,
 			Lng: 46.6753,
 			CoarseCoord: "24.7° N, 46.7° E",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "sa-ruh-01", Title: "Albi Ya Salva", Artist: "Mohamed Ramadan", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1885,12 +1634,12 @@ func GetInitialRegions() []Region {
 			Country: "Saudi Arabia",
 			CountryCode: "JED",
 			Lat: 21.5433,
-			Lng: 39.1728,
-			CoarseCoord: "21.5° N, 39.2° E",
+			Lng: 39.5324,
+			CoarseCoord: "21.5° N, 39.5° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "sa-jed-01", Title: "Clandestina", Artist: "FILV", Plays: 2400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -1899,12 +1648,12 @@ func GetInitialRegions() []Region {
 			Country: "Qatar",
 			CountryCode: "DOH",
 			Lat: 25.2854,
-			Lng: 51.531,
-			CoarseCoord: "25.3° N, 51.5° E",
-			ActiveListeners: 210,
+			Lng: 51.2114,
+			CoarseCoord: "25.3° N, 51.2° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "qa-doh-01", Title: "Hayya Hayya", Artist: "Cardona, Davido, Aisha", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/59/ec/75/59ec75eb-42b0-bf6a-38c7-48013ca1b11e/24UM1IM36412.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1912,14 +1661,13 @@ func GetInitialRegions() []Region {
 			Name: "Istanbul, IST",
 			Country: "Turkey",
 			CountryCode: "IST",
-			Lat: 41.0082,
-			Lng: 28.9784,
-			CoarseCoord: "41.0° N, 29.0° E",
-			ActiveListeners: 410,
+			Lat: 40.8688,
+			Lng: 29.4853,
+			CoarseCoord: "40.9° N, 29.5° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "tr-ist-01", Title: "Ateşe Düştüm", Artist: "Mert Demir", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
-				{ID: "tr-ist-01", Title: "Antidepresan", Artist: "Mert Demir, Mabel Matiz", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1930,10 +1678,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.0444,
 			Lng: 31.2357,
 			CoarseCoord: "30.0° N, 31.2° E",
-			ActiveListeners: 380,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "eg-cai-01", Title: "El Bakht", Artist: "Wegz", Plays: 4500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1941,13 +1689,13 @@ func GetInitialRegions() []Region {
 			Name: "Casablanca, CAS",
 			Country: "Morocco",
 			CountryCode: "CAS",
-			Lat: 33.5731,
-			Lng: -7.5898,
-			CoarseCoord: "33.6° N, 7.6° W",
-			ActiveListeners: 250,
+			Lat: 33.4768,
+			Lng: -7.4521,
+			CoarseCoord: "33.5° N, 7.5° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ma-cas-01", Title: "Msalem", Artist: "ElGrandeToto", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1958,11 +1706,10 @@ func GetInitialRegions() []Region {
 			Lat: -23.5505,
 			Lng: -46.6333,
 			CoarseCoord: "23.6° S, 46.6° W",
-			ActiveListeners: 440,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "br-sao-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 5800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
-				{ID: "br-sao-01", Title: "Coração Partido", Artist: "Menos É Mais", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1970,13 +1717,13 @@ func GetInitialRegions() []Region {
 			Name: "Rio de Janeiro, RIO",
 			Country: "Brazil",
 			CountryCode: "RIO",
-			Lat: -22.9068,
-			Lng: -43.1729,
-			CoarseCoord: "22.9° S, 43.2° W",
-			ActiveListeners: 320,
+			Lat: -22.6472,
+			Lng: -43.2754,
+			CoarseCoord: "22.6° S, 43.3° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "br-rio-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -1984,14 +1731,13 @@ func GetInitialRegions() []Region {
 			Name: "Buenos Aires, BUE",
 			Country: "Argentina",
 			CountryCode: "BUE",
-			Lat: -34.6037,
-			Lng: -58.3816,
-			CoarseCoord: "34.6° S, 58.4° W",
-			ActiveListeners: 360,
+			Lat: -34.817,
+			Lng: -58.5314,
+			CoarseCoord: "34.8° S, 58.5° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ar-bue-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 5100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ar-bue-01", Title: "HOLA PERDIDA", Artist: "Luck Ra, KHEA", Plays: 4200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2002,10 +1748,10 @@ func GetInitialRegions() []Region {
 			Lat: 4.711,
 			Lng: -74.0721,
 			CoarseCoord: "4.7° N, 74.1° W",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "co-bog-01", Title: "Luna", Artist: "Feid, ATL Jacob", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2016,10 +1762,10 @@ func GetInitialRegions() []Region {
 			Lat: 6.2442,
 			Lng: -75.5812,
 			CoarseCoord: "6.2° N, 75.6° W",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "co-mde-01", Title: "Luna", Artist: "Feid", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2030,10 +1776,10 @@ func GetInitialRegions() []Region {
 			Lat: -33.4489,
 			Lng: -70.6693,
 			CoarseCoord: "33.4° S, 70.7° W",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cl-scl-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 6900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2041,13 +1787,13 @@ func GetInitialRegions() []Region {
 			Name: "Lima, LIM",
 			Country: "Peru",
 			CountryCode: "LIM",
-			Lat: -12.0464,
-			Lng: -77.0428,
-			CoarseCoord: "12.0° S, 77.0° W",
-			ActiveListeners: 310,
+			Lat: -11.9389,
+			Lng: -76.8525,
+			CoarseCoord: "11.9° S, 76.9° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "pe-lim-01", Title: "Gata Only", Artist: "FloyyMenor, Cris Mj", Plays: 4600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2055,14 +1801,13 @@ func GetInitialRegions() []Region {
 			Name: "Lagos, LOS",
 			Country: "Nigeria",
 			CountryCode: "LOS",
-			Lat: 6.5244,
-			Lng: 3.3792,
-			CoarseCoord: "6.5° N, 3.4° E",
-			ActiveListeners: 370,
+			Lat: 6.6549,
+			Lng: 3.3314,
+			CoarseCoord: "6.7° N, 3.3° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ng-los-01", Title: "Calm Down", Artist: "Rema", Plays: 5400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/59/ec/75/59ec75eb-42b0-bf6a-38c7-48013ca1b11e/24UM1IM36412.rgb.jpg/600x600bb.jpg"},
-				{ID: "ng-los-01", Title: "City Boys", Artist: "Burna Boy", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2073,11 +1818,10 @@ func GetInitialRegions() []Region {
 			Lat: -26.2041,
 			Lng: 28.0473,
 			CoarseCoord: "26.2° S, 28.0° E",
-			ActiveListeners: 320,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "za-jnb-01", Title: "Water", Artist: "Tyla", Plays: 5900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/58/01/715801c8-2785-5eb7-e14b-fb022b46a0c5/196871501720.jpg/600x600bb.jpg"},
-				{ID: "za-jnb-01", Title: "Mnike", Artist: "Tyler ICU, Tumelo.za", Plays: 4200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2085,13 +1829,13 @@ func GetInitialRegions() []Region {
 			Name: "Cape Town, CPT",
 			Country: "South Africa",
 			CountryCode: "CPT",
-			Lat: -33.9249,
-			Lng: 18.4241,
-			CoarseCoord: "33.9° S, 18.4° E",
-			ActiveListeners: 290,
+			Lat: -33.7436,
+			Lng: 18.6843,
+			CoarseCoord: "33.7° S, 18.7° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "za-cpt-01", Title: "Water", Artist: "Tyla", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/58/01/715801c8-2785-5eb7-e14b-fb022b46a0c5/196871501720.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2102,10 +1846,10 @@ func GetInitialRegions() []Region {
 			Lat: -1.2921,
 			Lng: 36.8219,
 			CoarseCoord: "1.3° S, 36.8° E",
-			ActiveListeners: 280,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ke-nbo-01", Title: "Kuna Kuna", Artist: "Vic West ft. Fathermoh", Plays: 3400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2113,13 +1857,13 @@ func GetInitialRegions() []Region {
 			Name: "Accra, ACC",
 			Country: "Ghana",
 			CountryCode: "ACC",
-			Lat: 5.6037,
-			Lng: -0.187,
-			CoarseCoord: "5.6° N, 0.2° W",
+			Lat: 5.8017,
+			Lng: -0.3539,
+			CoarseCoord: "5.8° N, 0.4° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "gh-acc-01", Title: "Kwaku the Hustler", Artist: "Black Sherif", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2127,14 +1871,13 @@ func GetInitialRegions() []Region {
 			Name: "Sydney, SYD",
 			Country: "Australia",
 			CountryCode: "SYD",
-			Lat: -33.8688,
-			Lng: 151.2093,
-			CoarseCoord: "33.9° S, 151.2° E",
-			ActiveListeners: 340,
+			Lat: -33.8256,
+			Lng: 150.9142,
+			CoarseCoord: "33.8° S, 150.9° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "au-syd-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "au-syd-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 4200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2142,13 +1885,13 @@ func GetInitialRegions() []Region {
 			Name: "Melbourne, MEL",
 			Country: "Australia",
 			CountryCode: "MEL",
-			Lat: -37.8136,
-			Lng: 144.9631,
-			CoarseCoord: "37.8° S, 145.0° E",
-			ActiveListeners: 310,
+			Lat: -37.6684,
+			Lng: 144.809,
+			CoarseCoord: "37.7° S, 144.8° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "au-mel-01", Title: "Good Luck, Babe!", Artist: "Chappell Roan", Plays: 4100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2156,13 +1899,13 @@ func GetInitialRegions() []Region {
 			Name: "Brisbane, BNE",
 			Country: "Australia",
 			CountryCode: "BNE",
-			Lat: -27.4698,
-			Lng: 153.0251,
-			CoarseCoord: "27.5° S, 153.0° E",
+			Lat: -27.5495,
+			Lng: 152.8694,
+			CoarseCoord: "27.5° S, 152.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "au-bne-01", Title: "A Bar Song (Tipsy)", Artist: "Shaboozey", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2171,12 +1914,12 @@ func GetInitialRegions() []Region {
 			Country: "Australia",
 			CountryCode: "PER",
 			Lat: -31.9505,
-			Lng: 115.8605,
-			CoarseCoord: "32.0° S, 115.9° E",
-			ActiveListeners: 180,
+			Lng: 116.2201,
+			CoarseCoord: "32.0° S, 116.2° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "au-per-01", Title: "Million Dollar Baby", Artist: "Tommy Richman", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2185,12 +1928,12 @@ func GetInitialRegions() []Region {
 			Country: "Australia",
 			CountryCode: "ADL",
 			Lat: -34.9285,
-			Lng: 138.6007,
-			CoarseCoord: "34.9° S, 138.6° E",
+			Lng: 138.8604,
+			CoarseCoord: "34.9° S, 138.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "au-adl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2204,7 +1947,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "au-cbr-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 1400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2212,13 +1955,13 @@ func GetInitialRegions() []Region {
 			Name: "Gold Coast, OOL",
 			Country: "Australia",
 			CountryCode: "OOL",
-			Lat: -28.0167,
-			Lng: 153.4,
-			CoarseCoord: "28.0° S, 153.4° E",
+			Lat: -28.1225,
+			Lng: 153.1924,
+			CoarseCoord: "28.1° S, 153.2° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "au-ool-01", Title: "A Bar Song (Tipsy)", Artist: "Shaboozey", Plays: 1500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2226,13 +1969,13 @@ func GetInitialRegions() []Region {
 			Name: "Wellington, WLG",
 			Country: "New Zealand",
 			CountryCode: "WLG",
-			Lat: -41.2865,
-			Lng: 174.7762,
-			CoarseCoord: "41.3° S, 174.8° E",
+			Lat: -41.1426,
+			Lng: 175.3018,
+			CoarseCoord: "41.1° S, 175.3° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "nz-wlg-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 1450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2240,13 +1983,13 @@ func GetInitialRegions() []Region {
 			Name: "Christchurch, CHC",
 			Country: "New Zealand",
 			CountryCode: "CHC",
-			Lat: -43.5321,
-			Lng: 172.6362,
-			CoarseCoord: "43.5° S, 172.6° E",
+			Lat: -43.5972,
+			Lng: 172.4805,
+			CoarseCoord: "43.6° S, 172.5° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "nz-chc-01", Title: "Good Luck, Babe!", Artist: "Chappell Roan", Plays: 1200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2254,13 +1997,13 @@ func GetInitialRegions() []Region {
 			Name: "Suva, SUV",
 			Country: "Fiji",
 			CountryCode: "SUV",
-			Lat: -18.1416,
-			Lng: 178.4419,
-			CoarseCoord: "18.1° S, 178.4° E",
+			Lat: -17.9041,
+			Lng: 178.0094,
+			CoarseCoord: "17.9° S, 178.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "fj-suv-01", Title: "Island Breeze", Artist: "Pacific Vibes", Plays: 800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2268,13 +2011,13 @@ func GetInitialRegions() []Region {
 			Name: "Shenzhen, SZX",
 			Country: "China",
 			CountryCode: "SZX",
-			Lat: 22.5431,
-			Lng: 114.0579,
-			CoarseCoord: "22.5° N, 114.1° E",
-			ActiveListeners: 360,
+			Lat: 22.7666,
+			Lng: 114.1977,
+			CoarseCoord: "22.8° N, 114.2° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-szx-01", Title: "Lonely Warrior", Artist: "Eason Chan", Plays: 4800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2285,10 +2028,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.1291,
 			Lng: 113.2644,
 			CoarseCoord: "23.1° N, 113.3° E",
-			ActiveListeners: 340,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-can-01", Title: "Wu Ji", Artist: "Xiao Zhan", Plays: 4600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2302,7 +2045,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-hgh-01", Title: "Chengdu", Artist: "Zhao Lei", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2316,21 +2059,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-wuh-01", Title: "Lonely Warrior", Artist: "Eason Chan", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "cn-xiy",
-			Name: "Xi'an, XIY",
-			Country: "China",
-			CountryCode: "XIY",
-			Lat: 34.3416,
-			Lng: 108.9398,
-			CoarseCoord: "34.3° N, 108.9° E",
-			ActiveListeners: 0,
-			Tier: 2,
-			TopSongs: []Song{
-				{ID: "cn-xiy-01", Title: "Wu Ji", Artist: "Wang Yibo", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2344,7 +2073,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-ckg-01", Title: "Chengdu", Artist: "Zhao Lei", Plays: 3900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2358,7 +2087,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-yok-01", Title: "Bling-Bang-Bang-Born", Artist: "Creepy Nuts", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2372,21 +2101,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-ngo-01", Title: "Idol", Artist: "YOASOBI", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "jp-cts",
-			Name: "Sapporo, CTS",
-			Country: "Japan",
-			CountryCode: "CTS",
-			Lat: 43.0618,
-			Lng: 141.3545,
-			CoarseCoord: "43.1° N, 141.4° E",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "jp-cts-01", Title: "Specialz", Artist: "King Gnu", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2394,13 +2109,13 @@ func GetInitialRegions() []Region {
 			Name: "Fukuoka, FUK",
 			Country: "Japan",
 			CountryCode: "FUK",
-			Lat: 33.5904,
-			Lng: 130.4017,
-			CoarseCoord: "33.6° N, 130.4° E",
+			Lat: 33.3306,
+			Lng: 130.5815,
+			CoarseCoord: "33.3° N, 130.6° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "jp-fuk-01", Title: "Idol", Artist: "YOASOBI", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/80/7b/72/807b72ba-c71d-a09c-e74c-42b7811df42f/4580789560410.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2408,13 +2123,13 @@ func GetInitialRegions() []Region {
 			Name: "Incheon, ICN",
 			Country: "South Korea",
 			CountryCode: "ICN",
-			Lat: 37.4563,
-			Lng: 126.7052,
-			CoarseCoord: "37.5° N, 126.7° E",
+			Lat: 37.5435,
+			Lng: 126.8955,
+			CoarseCoord: "37.5° N, 126.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kr-icn-01", Title: "Supernova", Artist: "aespa", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2428,7 +2143,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "kr-tae-01", Title: "Magnetic", Artist: "ILLIT", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/1b/c2/b81bc260-2e45-1db3-70f7-15ae71b764bb/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2442,7 +2157,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "th-cnx-01", Title: "Rockstar", Artist: "LISA", Plays: 1900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2451,12 +2166,12 @@ func GetInitialRegions() []Region {
 			Country: "Malaysia",
 			CountryCode: "PEN",
 			Lat: 5.4141,
-			Lng: 100.3288,
-			CoarseCoord: "5.4° N, 100.3° E",
+			Lng: 100.6684,
+			CoarseCoord: "5.4° N, 100.7° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "my-pen-01", Title: "Alamak Raya Lagi!", Artist: "De Fam", Plays: 1850, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2464,13 +2179,13 @@ func GetInitialRegions() []Region {
 			Name: "Cebu City, CEB",
 			Country: "Philippines",
 			CountryCode: "CEB",
-			Lat: 10.3157,
-			Lng: 123.8854,
-			CoarseCoord: "10.3° N, 123.9° E",
+			Lat: 9.9178,
+			Lng: 123.1501,
+			CoarseCoord: "9.9° N, 123.2° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ph-ceb-01", Title: "Pantropiko", Artist: "BINI", Plays: 3400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d9/3d/bf/d93dbf5e-cfcf-db5b-ebdb-167812eb1034/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2478,13 +2193,13 @@ func GetInitialRegions() []Region {
 			Name: "Da Nang, DAD",
 			Country: "Vietnam",
 			CountryCode: "DAD",
-			Lat: 16.0544,
-			Lng: 108.2022,
-			CoarseCoord: "16.1° N, 108.2° E",
+			Lat: 15.7882,
+			Lng: 108.0424,
+			CoarseCoord: "15.8° N, 108.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "vn-dad-01", Title: "Cắt Đôi Nỗi Sầu", Artist: "Tăng Duy Tân", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8e/33/c7/8e33c7f8-bc9a-b472-88f5-6677f549925e/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2495,10 +2210,10 @@ func GetInitialRegions() []Region {
 			Lat: 52.4862,
 			Lng: -1.8904,
 			CoarseCoord: "52.5° N, 1.9° W",
-			ActiveListeners: 240,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-bhx-01", Title: "Sprinter", Artist: "Dave & Central Cee", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2509,24 +2224,10 @@ func GetInitialRegions() []Region {
 			Lat: 55.8642,
 			Lng: -4.2518,
 			CoarseCoord: "55.9° N, 4.3° W",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-gla-01", Title: "Someone You Loved", Artist: "Lewis Capaldi", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "uk-lpl",
-			Name: "Liverpool, LPL",
-			Country: "United Kingdom",
-			CountryCode: "LPL",
-			Lat: 53.4084,
-			Lng: -2.9916,
-			CoarseCoord: "53.4° N, 3.0° W",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "uk-lpl-01", Title: "Sprinter", Artist: "Dave", Plays: 1900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2540,7 +2241,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "uk-brs-01", Title: "Prada", Artist: "cassö", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2551,10 +2252,10 @@ func GetInitialRegions() []Region {
 			Lat: 50.1109,
 			Lng: 8.6821,
 			CoarseCoord: "50.1° N, 8.7° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-fra-01", Title: "Komet", Artist: "Apache 207", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2568,7 +2269,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-cgn-01", Title: "Zeit, dass sich was dreht", Artist: "$OHO BANI", Plays: 2500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6b/ff/4d/6bff4d3b-6385-d601-52fe-7f240fcb7dd9/198391090123.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2582,7 +2283,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "de-str-01", Title: "Komet", Artist: "Apache 207", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/b1/03/b8b1031c-3b95-ef25-d9fe-d183988b48b9/196871378377.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2596,7 +2297,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "fr-tls-01", Title: "Imagine", Artist: "Carbonne", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/13/27/90132717-36e6-912b-cba0-ecf4c65a045c/3617387346883.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2604,13 +2305,13 @@ func GetInitialRegions() []Region {
 			Name: "Nice, NCE",
 			Country: "France",
 			CountryCode: "NCE",
-			Lat: 43.7102,
-			Lng: 7.262,
-			CoarseCoord: "43.7° N, 7.3° E",
+			Lat: 43.8493,
+			Lng: 7.0324,
+			CoarseCoord: "43.8° N, 7.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "fr-nce-01", Title: "Bande Organisée", Artist: "Jul", Plays: 1950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/13/27/90132717-36e6-912b-cba0-ecf4c65a045c/3617387346883.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2618,13 +2319,13 @@ func GetInitialRegions() []Region {
 			Name: "Naples, NAP",
 			Country: "Italy",
 			CountryCode: "NAP",
-			Lat: 40.8518,
-			Lng: 14.2681,
-			CoarseCoord: "40.9° N, 14.3° E",
+			Lat: 41.0598,
+			Lng: 14.3167,
+			CoarseCoord: "41.1° N, 14.3° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-nap-01", Title: "Sesso e Samba", Artist: "Tony Effe, Gaia", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/09/b3/a409b307-eef4-7ca1-4f36-9a2c3a3286dc/24UM1IM29199.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2638,7 +2339,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "it-flr-01", Title: "Sesso e Samba", Artist: "Gaia", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/09/b3/a409b307-eef4-7ca1-4f36-9a2c3a3286dc/24UM1IM29199.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2646,13 +2347,13 @@ func GetInitialRegions() []Region {
 			Name: "Valencia, VLC",
 			Country: "Spain",
 			CountryCode: "VLC",
-			Lat: 39.4699,
-			Lng: -0.3763,
-			CoarseCoord: "39.5° N, 0.4° W",
+			Lat: 39.5047,
+			Lng: -0.6321,
+			CoarseCoord: "39.5° N, 0.6° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-vlc-01", Title: "Potra Salvaje", Artist: "Isabel Aaiún", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/80/f4/bf/80f4bf54-8c85-2e6b-0774-7096d29482f3/198500276664.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2666,7 +2367,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "es-svq-01", Title: "Gata Only", Artist: "Cris Mj", Plays: 2300, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2677,10 +2378,10 @@ func GetInitialRegions() []Region {
 			Lat: 50.8503,
 			Lng: 4.3517,
 			CoarseCoord: "50.9° N, 4.4° E",
-			ActiveListeners: 270,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "be-bru-01", Title: "Papaoutai", Artist: "Stromae", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2688,13 +2389,13 @@ func GetInitialRegions() []Region {
 			Name: "Geneva, GVA",
 			Country: "Switzerland",
 			CountryCode: "GVA",
-			Lat: 46.2044,
-			Lng: 6.1432,
-			CoarseCoord: "46.2° N, 6.1° E",
+			Lat: 46.6925,
+			Lng: 6.5928,
+			CoarseCoord: "46.7° N, 6.6° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ch-gva-01", Title: "Starboy", Artist: "The Weeknd", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2703,12 +2404,12 @@ func GetInitialRegions() []Region {
 			Country: "Portugal",
 			CountryCode: "OPO",
 			Lat: 41.1579,
-			Lng: -8.6291,
-			CoarseCoord: "41.2° N, 8.6° W",
+			Lng: -8.3894,
+			CoarseCoord: "41.2° N, 8.4° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "pt-opo-01", Title: "Gata Only", Artist: "FloyyMenor", Plays: 2100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2722,7 +2423,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "pl-krk-01", Title: "Chyba że z Tobą", Artist: "MODELKI", Plays: 2300, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2731,12 +2432,12 @@ func GetInitialRegions() []Region {
 			Country: "Kuwait",
 			CountryCode: "KWI",
 			Lat: 29.3759,
-			Lng: 47.9774,
-			CoarseCoord: "29.4° N, 48.0° E",
+			Lng: 47.7377,
+			CoarseCoord: "29.4° N, 47.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kw-kwi-01", Title: "Albi Ya Salva", Artist: "Mohamed Ramadan", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2744,13 +2445,13 @@ func GetInitialRegions() []Region {
 			Name: "Manama, BAH",
 			Country: "Bahrain",
 			CountryCode: "BAH",
-			Lat: 26.2285,
-			Lng: 50.586,
+			Lat: 26.2108,
+			Lng: 50.5895,
 			CoarseCoord: "26.2° N, 50.6° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "bh-bah-01", Title: "Habibi", Artist: "Ricky Rich", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/ec/94/9cec947c-8345-16d1-c6f7-0dd1d527a412/190296404016.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2758,13 +2459,13 @@ func GetInitialRegions() []Region {
 			Name: "Muscat, MCT",
 			Country: "Oman",
 			CountryCode: "MCT",
-			Lat: 23.588,
-			Lng: 58.3829,
-			CoarseCoord: "23.6° N, 58.4° E",
+			Lat: 23.2992,
+			Lng: 58.3274,
+			CoarseCoord: "23.3° N, 58.3° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "om-mct-01", Title: "Clandestina", Artist: "FILV", Plays: 1750, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2772,13 +2473,13 @@ func GetInitialRegions() []Region {
 			Name: "Beirut, BEY",
 			Country: "Lebanon",
 			CountryCode: "BEY",
-			Lat: 33.8938,
-			Lng: 35.5018,
-			CoarseCoord: "33.9° N, 35.5° E",
+			Lat: 33.8087,
+			Lng: 35.7834,
+			CoarseCoord: "33.8° N, 35.8° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "lb-bey-01", Title: "Habibi", Artist: "Ricky Rich", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9c/ec/94/9cec947c-8345-16d1-c6f7-0dd1d527a412/190296404016.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2792,7 +2493,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jo-amm-01", Title: "El Bakht", Artist: "Wegz", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2801,12 +2502,12 @@ func GetInitialRegions() []Region {
 			Country: "Azerbaijan",
 			CountryCode: "BAK",
 			Lat: 40.4093,
-			Lng: 49.8671,
-			CoarseCoord: "40.4° N, 49.9° E",
+			Lng: 49.3077,
+			CoarseCoord: "40.4° N, 49.3° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "az-bak-01", Title: "Antidepresan", Artist: "Mabel Matiz", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2820,7 +2521,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-sjc-01", Title: "Midnight City", Artist: "M83", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/7b/a9/cb7ba903-b5f1-cc21-90db-7a81b7aa0997/724596951057.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2828,13 +2529,13 @@ func GetInitialRegions() []Region {
 			Name: "San Diego, SAN",
 			Country: "United States",
 			CountryCode: "SAN",
-			Lat: 32.7157,
-			Lng: -117.1611,
-			CoarseCoord: "32.7° N, 117.2° W",
-			ActiveListeners: 220,
+			Lat: 32.91,
+			Lng: -116.8856,
+			CoarseCoord: "32.9° N, 116.9° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-san-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 2900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -2842,13 +2543,13 @@ func GetInitialRegions() []Region {
 			Name: "Jacksonville, JAX",
 			Country: "United States",
 			CountryCode: "JAX",
-			Lat: 30.3322,
-			Lng: -81.6557,
-			CoarseCoord: "30.3° N, 81.7° W",
+			Lat: 30.2791,
+			Lng: -81.8247,
+			CoarseCoord: "30.3° N, 81.8° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-jax-01", Title: "Last Night", Artist: "Morgan Wallen", Plays: 1900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2862,7 +2563,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-clt-01", Title: "A Bar Song (Tipsy)", Artist: "Shaboozey", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2876,7 +2577,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-ind-01", Title: "I Had Some Help", Artist: "Post Malone", Plays: 1850, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2890,7 +2591,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-cmh-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2904,7 +2605,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-mci-01", Title: "Stick Season", Artist: "Noah Kahan", Plays: 1650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2912,13 +2613,13 @@ func GetInitialRegions() []Region {
 			Name: "Cleveland, CLE",
 			Country: "United States",
 			CountryCode: "CLE",
-			Lat: 41.4993,
-			Lng: -81.6944,
-			CoarseCoord: "41.5° N, 81.7° W",
+			Lat: 41.2881,
+			Lng: -81.5919,
+			CoarseCoord: "41.3° N, 81.6° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-cle-01", Title: "Sunflower", Artist: "Post Malone", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2932,7 +2633,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-pit-01", Title: "Black and Yellow", Artist: "Wiz Khalifa", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2946,21 +2647,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-tpa-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 2300, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "us-mco",
-			Name: "Orlando, MCO",
-			Country: "United States",
-			CountryCode: "MCO",
-			Lat: 28.5383,
-			Lng: -81.3792,
-			CoarseCoord: "28.5° N, 81.4° W",
-			ActiveListeners: 0,
-			Tier: 2,
-			TopSongs: []Song{
-				{ID: "us-mco-01", Title: "Million Dollar Baby", Artist: "Tommy Richman", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2974,7 +2661,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-stl-01", Title: "Carnival", Artist: "Kanye West", Plays: 1700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -2982,13 +2669,13 @@ func GetInitialRegions() []Region {
 			Name: "Baltimore, BWI",
 			Country: "United States",
 			CountryCode: "BWI",
-			Lat: 39.2904,
-			Lng: -76.6122,
-			CoarseCoord: "39.3° N, 76.6° W",
+			Lat: 39.3368,
+			Lng: -76.716,
+			CoarseCoord: "39.3° N, 76.7° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-bwi-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 1950, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3002,7 +2689,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-yeg-01", Title: "One Dance", Artist: "Drake", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3016,7 +2703,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-ywg-01", Title: "Stick Season", Artist: "Noah Kahan", Plays: 1400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3025,26 +2712,12 @@ func GetInitialRegions() []Region {
 			Country: "Canada",
 			CountryCode: "YQB",
 			Lat: 46.8139,
-			Lng: -71.208,
-			CoarseCoord: "46.8° N, 71.2° W",
+			Lng: -71.5077,
+			CoarseCoord: "46.8° N, 71.5° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-yqb-01", Title: "Papaoutai", Artist: "Stromae", Plays: 1500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "mx-pbc",
-			Name: "Puebla, PBC",
-			Country: "Mexico",
-			CountryCode: "PBC",
-			Lat: 19.0414,
-			Lng: -98.2063,
-			CoarseCoord: "19.0° N, 98.2° W",
-			ActiveListeners: 0,
-			Tier: 3,
-			TopSongs: []Song{
-				{ID: "mx-pbc-01", Title: "Ella Baila Sola", Artist: "Peso Pluma", Plays: 1800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3052,13 +2725,13 @@ func GetInitialRegions() []Region {
 			Name: "Tijuana, TIJ",
 			Country: "Mexico",
 			CountryCode: "TIJ",
-			Lat: 32.5149,
-			Lng: -117.0382,
-			CoarseCoord: "32.5° N, 117.0° W",
+			Lat: 32.1862,
+			Lng: -116.5563,
+			CoarseCoord: "32.2° N, 116.6° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mx-tij-01", Title: "Gata Only", Artist: "FloyyMenor", Plays: 2500, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3072,7 +2745,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-bsb-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3080,13 +2753,13 @@ func GetInitialRegions() []Region {
 			Name: "Salvador, SSA",
 			Country: "Brazil",
 			CountryCode: "SSA",
-			Lat: -12.9777,
-			Lng: -38.5016,
-			CoarseCoord: "13.0° S, 38.5° W",
+			Lat: -12.6909,
+			Lng: -38.6714,
+			CoarseCoord: "12.7° S, 38.7° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-ssa-01", Title: "Coração Partido", Artist: "Menos É Mais", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3100,7 +2773,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-cnf-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3114,7 +2787,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-cwb-01", Title: "Coração Partido", Artist: "Menos É Mais", Plays: 2500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3128,7 +2801,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-poa-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3137,12 +2810,12 @@ func GetInitialRegions() []Region {
 			Country: "Brazil",
 			CountryCode: "REC",
 			Lat: -8.0476,
-			Lng: -34.877,
-			CoarseCoord: "8.0° S, 34.9° W",
+			Lng: -35.3365,
+			CoarseCoord: "8.0° S, 35.3° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-rec-01", Title: "Coração Partido", Artist: "Menos É Mais", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3156,7 +2829,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "br-mao-01", Title: "Maliciosa", Artist: "Ludmilla", Plays: 1900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/4b/31/b04b3127-d0fa-3d14-36a8-bf2b9f333dc5/190296765094.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3170,7 +2843,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ar-cor-01", Title: "HOLA PERDIDA", Artist: "Luck Ra", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3184,7 +2857,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ar-ros-01", Title: "Gata Only", Artist: "Cris Mj", Plays: 2300, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3198,7 +2871,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "co-clo-01", Title: "Luna", Artist: "Feid", Plays: 2900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3206,13 +2879,13 @@ func GetInitialRegions() []Region {
 			Name: "Barranquilla, BAQ",
 			Country: "Colombia",
 			CountryCode: "BAQ",
-			Lat: 10.9685,
-			Lng: -74.7813,
-			CoarseCoord: "11.0° N, 74.8° W",
+			Lat: 10.6919,
+			Lng: -74.6788,
+			CoarseCoord: "10.7° N, 74.7° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "co-baq-01", Title: "Luna", Artist: "Feid", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3226,7 +2899,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "pe-cuz-01", Title: "Gata Only", Artist: "FloyyMenor", Plays: 1500, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3240,7 +2913,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ec-uio-01", Title: "Luna", Artist: "Feid", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3248,13 +2921,13 @@ func GetInitialRegions() []Region {
 			Name: "Guayaquil, GYE",
 			Country: "Ecuador",
 			CountryCode: "GYE",
-			Lat: -2.1894,
+			Lat: -1.9099,
 			Lng: -79.8891,
-			CoarseCoord: "2.2° S, 79.9° W",
+			CoarseCoord: "1.9° S, 79.9° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ec-gye-01", Title: "Gata Only", Artist: "Cris Mj", Plays: 2350, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3262,13 +2935,13 @@ func GetInitialRegions() []Region {
 			Name: "Caracas, CCS",
 			Country: "Venezuela",
 			CountryCode: "CCS",
-			Lat: 10.4806,
-			Lng: -66.9036,
-			CoarseCoord: "10.5° N, 66.9° W",
+			Lat: 10.2405,
+			Lng: -66.8148,
+			CoarseCoord: "10.2° N, 66.8° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ve-ccs-01", Title: "Luna", Artist: "Feid", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3276,13 +2949,13 @@ func GetInitialRegions() []Region {
 			Name: "Montevideo, MVD",
 			Country: "Uruguay",
 			CountryCode: "MVD",
-			Lat: -34.9011,
+			Lat: -34.5234,
 			Lng: -56.1645,
-			CoarseCoord: "34.9° S, 56.2° W",
+			CoarseCoord: "34.5° S, 56.2° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uy-mvd-01", Title: "HOLA PERDIDA", Artist: "Luck Ra", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3290,13 +2963,13 @@ func GetInitialRegions() []Region {
 			Name: "Asunción, ASU",
 			Country: "Paraguay",
 			CountryCode: "ASU",
-			Lat: -25.2637,
-			Lng: -57.5759,
-			CoarseCoord: "25.3° S, 57.6° W",
+			Lat: -25.2019,
+			Lng: -57.3882,
+			CoarseCoord: "25.2° S, 57.4° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "py-asu-01", Title: "Gata Only", Artist: "FloyyMenor", Plays: 1700, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3310,7 +2983,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "bo-lpz-01", Title: "Gata Only", Artist: "FloyyMenor", Plays: 1800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3318,13 +2991,13 @@ func GetInitialRegions() []Region {
 			Name: "Panama City, PTY",
 			Country: "Panama",
 			CountryCode: "PTY",
-			Lat: 8.9824,
-			Lng: -79.5199,
-			CoarseCoord: "9.0° N, 79.5° W",
+			Lat: 8.8789,
+			Lng: -78.3058,
+			CoarseCoord: "8.9° N, 78.3° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pa-pty-01", Title: "Luna", Artist: "Feid", Plays: 2300, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3338,7 +3011,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "cr-sjo-01", Title: "Luna", Artist: "Feid", Plays: 1950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3346,13 +3019,13 @@ func GetInitialRegions() []Region {
 			Name: "San Juan, SJU",
 			Country: "Puerto Rico",
 			CountryCode: "SJU",
-			Lat: 18.4655,
+			Lat: 18.219,
 			Lng: -66.1057,
-			CoarseCoord: "18.5° N, 66.1° W",
+			CoarseCoord: "18.2° N, 66.1° W",
 			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "pr-sju-01", Title: "MONACO", Artist: "Bad Bunny", Plays: 4900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2b/43/45/2b43453b-e854-c923-01ee-c3cf2c9545ce/197188730994.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3360,13 +3033,13 @@ func GetInitialRegions() []Region {
 			Name: "Alexandria, ALY",
 			Country: "Egypt",
 			CountryCode: "ALY",
-			Lat: 31.2001,
-			Lng: 29.9187,
-			CoarseCoord: "31.2° N, 29.9° E",
+			Lat: 31.056,
+			Lng: 30.06,
+			CoarseCoord: "31.1° N, 30.1° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "eg-aly-01", Title: "El Bakht", Artist: "Wegz", Plays: 2700, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3374,13 +3047,13 @@ func GetInitialRegions() []Region {
 			Name: "Durban, DUR",
 			Country: "South Africa",
 			CountryCode: "DUR",
-			Lat: -29.8587,
-			Lng: 31.0218,
-			CoarseCoord: "29.9° S, 31.0° E",
+			Lat: -29.6853,
+			Lng: 30.6758,
+			CoarseCoord: "29.7° S, 30.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "za-dur-01", Title: "Water", Artist: "Tyla", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/58/01/715801c8-2785-5eb7-e14b-fb022b46a0c5/196871501720.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3394,7 +3067,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "za-pry-01", Title: "Mnike", Artist: "Tyler ICU", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3408,7 +3081,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ng-abv-01", Title: "City Boys", Artist: "Burna Boy", Plays: 2800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3417,12 +3090,12 @@ func GetInitialRegions() []Region {
 			Country: "Kenya",
 			CountryCode: "MBA",
 			Lat: -4.0435,
-			Lng: 39.6682,
-			CoarseCoord: "4.0° S, 39.7° E",
+			Lng: 39.2886,
+			CoarseCoord: "4.0° S, 39.3° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ke-mba-01", Title: "Kuna Kuna", Artist: "Vic West", Plays: 1650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3436,7 +3109,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "et-add-01", Title: "Tizita", Artist: "Teddy Afro", Plays: 2400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3450,7 +3123,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ma-rak-01", Title: "Msalem", Artist: "ElGrandeToto", Plays: 1950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3458,13 +3131,13 @@ func GetInitialRegions() []Region {
 			Name: "Tunis, TUN",
 			Country: "Tunisia",
 			CountryCode: "TUN",
-			Lat: 36.8065,
-			Lng: 10.1815,
-			CoarseCoord: "36.8° N, 10.2° E",
+			Lat: 36.5289,
+			Lng: 9.9817,
+			CoarseCoord: "36.5° N, 10.0° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tn-tun-01", Title: "Clandestina", Artist: "FILV", Plays: 2150, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3472,13 +3145,13 @@ func GetInitialRegions() []Region {
 			Name: "Algiers, ALG",
 			Country: "Algeria",
 			CountryCode: "ALG",
-			Lat: 36.7538,
-			Lng: 3.0588,
-			CoarseCoord: "36.8° N, 3.1° E",
+			Lat: 36.4524,
+			Lng: 3.1955,
+			CoarseCoord: "36.5° N, 3.2° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "dz-alg-01", Title: "Albi Ya Salva", Artist: "Mohamed Ramadan", Plays: 2200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3487,12 +3160,12 @@ func GetInitialRegions() []Region {
 			Country: "Senegal",
 			CountryCode: "DKR",
 			Lat: 14.7167,
-			Lng: -17.4677,
-			CoarseCoord: "14.7° N, 17.5° W",
+			Lng: -16.8684,
+			CoarseCoord: "14.7° N, 16.9° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "sn-dkr-01", Title: "Calm Down", Artist: "Rema", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/59/ec/75/59ec75eb-42b0-bf6a-38c7-48013ca1b11e/24UM1IM36412.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3500,13 +3173,13 @@ func GetInitialRegions() []Region {
 			Name: "Abidjan, ABJ",
 			Country: "Ivory Coast",
 			CountryCode: "ABJ",
-			Lat: 5.36,
-			Lng: -4.0083,
-			CoarseCoord: "5.4° N, 4.0° W",
+			Lat: 5.5843,
+			Lng: -4.0903,
+			CoarseCoord: "5.6° N, 4.1° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ci-abj-01", Title: "Coup du Marteau", Artist: "Tam Sir", Plays: 2500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3514,13 +3187,13 @@ func GetInitialRegions() []Region {
 			Name: "Dar es Salaam, DAR",
 			Country: "Tanzania",
 			CountryCode: "DAR",
-			Lat: -6.7924,
-			Lng: 39.2083,
-			CoarseCoord: "6.8° S, 39.2° E",
+			Lat: -7.0203,
+			Lng: 39.0157,
+			CoarseCoord: "7.0° S, 39.0° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tz-dar-01", Title: "Yatapita", Artist: "Diamond Platnumz", Plays: 2600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3528,13 +3201,13 @@ func GetInitialRegions() []Region {
 			Name: "Kampala, EBB",
 			Country: "Uganda",
 			CountryCode: "EBB",
-			Lat: 0.3476,
-			Lng: 32.5825,
-			CoarseCoord: "0.3° N, 32.6° E",
+			Lat: 0.4602,
+			Lng: 32.5415,
+			CoarseCoord: "0.5° N, 32.5° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ug-ebb-01", Title: "Kuna Kuna", Artist: "Vic West", Plays: 1900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/71/e1/0d71e195-c342-e4cb-d1c7-d9a837434a32/6281130217887.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3548,7 +3221,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "rw-kgl-01", Title: "Calm Down", Artist: "Rema", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/59/ec/75/59ec75eb-42b0-bf6a-38c7-48013ca1b11e/24UM1IM36412.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3556,13 +3229,13 @@ func GetInitialRegions() []Region {
 			Name: "Luanda, LAD",
 			Country: "Angola",
 			CountryCode: "LAD",
-			Lat: -8.839,
-			Lng: 13.2894,
-			CoarseCoord: "8.8° S, 13.3° E",
+			Lat: -8.8998,
+			Lng: 13.4584,
+			CoarseCoord: "8.9° S, 13.5° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ao-lad-01", Title: "Water", Artist: "Tyla", Plays: 2100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/58/01/715801c8-2785-5eb7-e14b-fb022b46a0c5/196871501720.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3576,7 +3249,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "zw-hre-01", Title: "Jerusalema", Artist: "Master KG", Plays: 1750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a9/8e/78/a98e782c-0524-08e5-dd69-1543ba2f1d2b/190295179199.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3587,14 +3260,10 @@ func GetInitialRegions() []Region {
 			Lat: 55.7558,
 			Lng: 37.6173,
 			CoarseCoord: "55.8° N, 37.6° E",
-			ActiveListeners: 410,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ru-mow-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 4890, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ru-mow-01", Title: "Царица", Artist: "ANNA ASTI", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "ru-mow-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 3650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
-				{ID: "ru-mow-01", Title: "Где прошла ты", Artist: "Кравц & Гио Пика", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
-				{ID: "ru-mow-01", Title: "По барам", Artist: "ANNA ASTI", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3605,13 +3274,10 @@ func GetInitialRegions() []Region {
 			Lat: 59.9343,
 			Lng: 30.3351,
 			CoarseCoord: "59.9° N, 30.3° E",
-			ActiveListeners: 340,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ru-led-01", Title: "Город под подошвой", Artist: "Oxxxymiron", Plays: 3950, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "ru-led-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 3200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
-				{ID: "ru-led-01", Title: "Minor", Artist: "Miyagi & Andy Panda", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "ru-led-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 2100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3622,11 +3288,10 @@ func GetInitialRegions() []Region {
 			Lat: 55.0084,
 			Lng: 82.9357,
 			CoarseCoord: "55.0° N, 82.9° E",
-			ActiveListeners: 195,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-ovb-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 2340, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ru-ovb-01", Title: "Царица", Artist: "ANNA ASTI", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3637,10 +3302,10 @@ func GetInitialRegions() []Region {
 			Lat: 56.8389,
 			Lng: 60.6057,
 			CoarseCoord: "56.8° N, 60.6° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-svx-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 2210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3651,10 +3316,10 @@ func GetInitialRegions() []Region {
 			Lat: 55.7887,
 			Lng: 49.1221,
 			CoarseCoord: "55.8° N, 49.1° E",
-			ActiveListeners: 165,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-kzn-01", Title: "Пыяла", Artist: "АИГЕЛ (AIGEL)", Plays: 3100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3668,7 +3333,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-goj-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 1540, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3682,7 +3347,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-kuf-01", Title: "Где прошла ты", Artist: "Кравц & Гио Пика", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3696,7 +3361,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-oms-01", Title: "Царица", Artist: "ANNA ASTI", Plays: 1380, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3710,7 +3375,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-cek-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 1410, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3721,10 +3386,10 @@ func GetInitialRegions() []Region {
 			Lat: 47.2357,
 			Lng: 39.7015,
 			CoarseCoord: "47.2° N, 39.7° E",
-			ActiveListeners: 155,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-rov-01", Title: "Сансара", Artist: "Баста", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3738,7 +3403,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-ufa-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 1390, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3752,7 +3417,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-kja-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 1290, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3760,13 +3425,13 @@ func GetInitialRegions() []Region {
 			Name: "Vladivostok, VVO",
 			Country: "Russia",
 			CountryCode: "VVO",
-			Lat: 43.1155,
-			Lng: 131.8855,
-			CoarseCoord: "43.1° N, 131.9° E",
-			ActiveListeners: 140,
+			Lat: 43.3051,
+			Lng: 131.6672,
+			CoarseCoord: "43.3° N, 131.7° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-vvo-01", Title: "Владивосток 2000", Artist: "Мумий Тролль", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3780,7 +3445,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-ikt-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 1150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3788,13 +3453,13 @@ func GetInitialRegions() []Region {
 			Name: "Khabarovsk, KHV",
 			Country: "Russia",
 			CountryCode: "KHV",
-			Lat: 48.4827,
-			Lng: 135.0838,
-			CoarseCoord: "48.5° N, 135.1° E",
+			Lat: 48.6447,
+			Lng: 135.2893,
+			CoarseCoord: "48.6° N, 135.3° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-khv-01", Title: "Царица", Artist: "ANNA ASTI", Plays: 1180, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3805,10 +3470,10 @@ func GetInitialRegions() []Region {
 			Lat: 54.7104,
 			Lng: 20.4522,
 			CoarseCoord: "54.7° N, 20.5° E",
-			ActiveListeners: 120,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ru-kgd-01", Title: "Город под подошвой", Artist: "Oxxxymiron", Plays: 1650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3816,13 +3481,13 @@ func GetInitialRegions() []Region {
 			Name: "Sochi, AER",
 			Country: "Russia",
 			CountryCode: "AER",
-			Lat: 43.6028,
-			Lng: 39.7342,
-			CoarseCoord: "43.6° N, 39.7° E",
+			Lat: 43.813,
+			Lng: 39.9782,
+			CoarseCoord: "43.8° N, 40.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-aer-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 1100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3836,7 +3501,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-vog-01", Title: "Где прошла ты", Artist: "Кравц & Гио Пика", Plays: 1050, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/ce/14/27ce14e3-18c4-6dfe-f9a5-ca6e6d1c4982/artwork.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3850,7 +3515,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-vrn-01", Title: "I Got Love", Artist: "Miyagi & Andy Panda", Plays: 1020, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3864,7 +3529,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-pee-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 980, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3878,7 +3543,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-yks-01", Title: "Северное Сияние", Artist: "Jeada", Plays: 890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -3892,7 +3557,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ru-mmk-01", Title: "ASPHALT 8", Artist: "MACAN", Plays: 840, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3903,10 +3568,10 @@ func GetInitialRegions() []Region {
 			Lat: 43.222,
 			Lng: 76.8512,
 			CoarseCoord: "43.2° N, 76.9° E",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "kz-ala-01", Title: "It is my life", Artist: "De Lacure", Plays: 2500, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3920,7 +3585,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kz-ast-01", Title: "Pikachu", Artist: "MIA BOYKA", Plays: 1800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3928,13 +3593,13 @@ func GetInitialRegions() []Region {
 			Name: "Tashkent, TAS",
 			Country: "Uzbekistan",
 			CountryCode: "TAS",
-			Lat: 41.2995,
-			Lng: 69.2401,
-			CoarseCoord: "41.3° N, 69.2° E",
-			ActiveListeners: 195,
+			Lat: 41.2094,
+			Lng: 69.4477,
+			CoarseCoord: "41.2° N, 69.4° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "uz-tas-01", Title: "Yomgʻir", Artist: "Shohruhxon", Plays: 2200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3948,7 +3613,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "uz-skd-01", Title: "Yomgʻir", Artist: "Shohruhxon", Plays: 1200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3962,7 +3627,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kg-fru-01", Title: "Суйуу балы", Artist: "Mirbek Atabekov", Plays: 1400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3973,10 +3638,10 @@ func GetInitialRegions() []Region {
 			Lat: 41.7151,
 			Lng: 44.8271,
 			CoarseCoord: "41.7° N, 44.8° E",
-			ActiveListeners: 150,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ge-tbs-01", Title: "Suliko", Artist: "Mgzavrebi", Plays: 1900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -3984,13 +3649,13 @@ func GetInitialRegions() []Region {
 			Name: "Yerevan, EVN",
 			Country: "Armenia",
 			CountryCode: "EVN",
-			Lat: 40.1792,
-			Lng: 44.4991,
-			CoarseCoord: "40.2° N, 44.5° E",
+			Lat: 40.3082,
+			Lng: 44.5606,
+			CoarseCoord: "40.3° N, 44.6° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "am-evn-01", Title: "Qele Qele", Artist: "Sirusho", Plays: 1600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4001,10 +3666,10 @@ func GetInitialRegions() []Region {
 			Lat: 53.9045,
 			Lng: 27.5615,
 			CoarseCoord: "53.9° N, 27.6° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "by-msq-01", Title: "Грустный дэнс", Artist: "Artik & Asti", Plays: 2600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4018,7 +3683,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "rs-beg-01", Title: "Dam Dam Dam", Artist: "Tea Tairovic", Plays: 2100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4027,12 +3692,12 @@ func GetInitialRegions() []Region {
 			Country: "Croatia",
 			CountryCode: "ZAG",
 			Lat: 45.815,
-			Lng: 15.9819,
-			CoarseCoord: "45.8° N, 16.0° E",
+			Lng: 16.0818,
+			CoarseCoord: "45.8° N, 16.1° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "hr-zag-01", Title: "Rim Tim Tagi Dim", Artist: "Baby Lasagna", Plays: 2900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4046,7 +3711,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "bg-sof-01", Title: "Habibi", Artist: "Azis", Plays: 2200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4054,13 +3719,13 @@ func GetInitialRegions() []Region {
 			Name: "Bratislava, BTS",
 			Country: "Slovakia",
 			CountryCode: "BTS",
-			Lat: 48.1486,
-			Lng: 17.1077,
-			CoarseCoord: "48.1° N, 17.1° E",
+			Lat: 48.294,
+			Lng: 17.3679,
+			CoarseCoord: "48.3° N, 17.4° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "sk-bts-01", Title: "Nemožem dýchať", Artist: "Separ", Plays: 1700, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4074,7 +3739,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "lt-vno-01", Title: "Luktelk", Artist: "Silvester Belt", Plays: 2300, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4082,13 +3747,13 @@ func GetInitialRegions() []Region {
 			Name: "Riga, RIX",
 			Country: "Latvia",
 			CountryCode: "RIX",
-			Lat: 56.9496,
-			Lng: 24.1052,
-			CoarseCoord: "56.9° N, 24.1° E",
+			Lat: 56.8362,
+			Lng: 24.2251,
+			CoarseCoord: "56.8° N, 24.2° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "lv-rix-01", Title: "Hollow", Artist: "Dons", Plays: 1800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4096,13 +3761,13 @@ func GetInitialRegions() []Region {
 			Name: "Tallinn, TLL",
 			Country: "Estonia",
 			CountryCode: "TLL",
-			Lat: 59.437,
-			Lng: 24.7536,
-			CoarseCoord: "59.4° N, 24.8° E",
+			Lat: 59.3048,
+			Lng: 24.9034,
+			CoarseCoord: "59.3° N, 24.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ee-tll-01", Title: "(nendest) narkootikumidest", Artist: "5MIINUST x Puuluup", Plays: 2100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4116,7 +3781,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "is-kef-01", Title: "Hoppípolla", Artist: "Sigur Rós", Plays: 1900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4124,13 +3789,13 @@ func GetInitialRegions() []Region {
 			Name: "Tel Aviv, TLV",
 			Country: "Israel",
 			CountryCode: "TLV",
-			Lat: 32.0853,
-			Lng: 34.7818,
-			CoarseCoord: "32.1° N, 34.8° E",
-			ActiveListeners: 240,
+			Lat: 31.1328,
+			Lng: 34.7556,
+			CoarseCoord: "31.1° N, 34.8° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "il-tlv-01", Title: "Hurricane", Artist: "Eden Golan", Plays: 3100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4138,13 +3803,13 @@ func GetInitialRegions() []Region {
 			Name: "Jerusalem, JRS",
 			Country: "Israel",
 			CountryCode: "JRS",
-			Lat: 31.7683,
-			Lng: 35.2137,
-			CoarseCoord: "31.8° N, 35.2° E",
+			Lat: 31.1342,
+			Lng: 34.7445,
+			CoarseCoord: "31.1° N, 34.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "il-jrs-01", Title: "Golden Boy", Artist: "Nadav Guedj", Plays: 1800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4155,10 +3820,10 @@ func GetInitialRegions() []Region {
 			Lat: 35.6892,
 			Lng: 51.389,
 			CoarseCoord: "35.7° N, 51.4° E",
-			ActiveListeners: 270,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ir-thr-01", Title: "Baraye", Artist: "Shervin Hajipour", Plays: 3600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4169,10 +3834,10 @@ func GetInitialRegions() []Region {
 			Lat: 33.3152,
 			Lng: 44.3661,
 			CoarseCoord: "33.3° N, 44.4° E",
-			ActiveListeners: 210,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "iq-bgw-01", Title: "Taal", Artist: "Ali Jassim", Plays: 2800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4186,7 +3851,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mn-uln-01", Title: "Yuve Yuve Yu", Artist: "The HU", Plays: 2600, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4200,7 +3865,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mm-rgn-01", Title: "A May Chay", Artist: "Sai Sai Kham Leng", Plays: 1900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4214,7 +3879,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "kh-pnh-01", Title: "Time to Rise", Artist: "VannDa", Plays: 2800, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4222,13 +3887,13 @@ func GetInitialRegions() []Region {
 			Name: "Santo Domingo, SDQ",
 			Country: "Dominican Republic",
 			CountryCode: "SDQ",
-			Lat: 18.4861,
-			Lng: -69.9312,
-			CoarseCoord: "18.5° N, 69.9° W",
-			ActiveListeners: 190,
+			Lat: 18.7812,
+			Lng: -70.111,
+			CoarseCoord: "18.8° N, 70.1° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "do-sdq-01", Title: "El Motorista", Artist: "El Alfa", Plays: 2700, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4242,7 +3907,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "gt-gua-01", Title: "Fuiste Tú", Artist: "Ricardo Arjona", Plays: 2200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4250,13 +3915,13 @@ func GetInitialRegions() []Region {
 			Name: "Havana, HAV",
 			Country: "Cuba",
 			CountryCode: "HAV",
-			Lat: 23.1136,
-			Lng: -82.3666,
-			CoarseCoord: "23.1° N, 82.4° W",
+			Lat: 22.7394,
+			Lng: -81.4541,
+			CoarseCoord: "22.7° N, 81.5° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cu-hav-01", Title: "Patria y Vida", Artist: "Yotuel", Plays: 2100, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4264,13 +3929,13 @@ func GetInitialRegions() []Region {
 			Name: "Kingston, KIN",
 			Country: "Jamaica",
 			CountryCode: "KIN",
-			Lat: 17.9712,
-			Lng: -76.7936,
-			CoarseCoord: "18.0° N, 76.8° W",
-			ActiveListeners: 170,
+			Lat: 18.114,
+			Lng: -76.8483,
+			CoarseCoord: "18.1° N, 76.8° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jm-kin-01", Title: "Toast", Artist: "Koffee", Plays: 2900, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4278,13 +3943,13 @@ func GetInitialRegions() []Region {
 			Name: "Kinshasa, FIH",
 			Country: "DR Congo",
 			CountryCode: "FIH",
-			Lat: -4.4419,
-			Lng: 15.2663,
-			CoarseCoord: "4.4° S, 15.3° E",
-			ActiveListeners: 240,
+			Lat: -4.6339,
+			Lng: 15.4959,
+			CoarseCoord: "4.6° S, 15.5° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cd-fih-01", Title: "Bloqué", Artist: "Fally Ipupa", Plays: 3200, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4298,7 +3963,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cm-dla-01", Title: "Coller la Petite", Artist: "Franko", Plays: 2000, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4312,7 +3977,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "zm-lun-01", Title: "Chanda Na Kay", Artist: "Bella", Plays: 1700, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4326,7 +3991,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "na-wdh-01", Title: "Water", Artist: "Tyla", Plays: 1600, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/58/01/715801c8-2785-5eb7-e14b-fb022b46a0c5/196871501720.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4340,7 +4005,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mg-tnr-01", Title: "Malaso", Artist: "Wawa", Plays: 1500, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+
 			},
 		},
 		{
@@ -4351,11 +4016,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.2183,
 			Lng: 72.9781,
 			CoarseCoord: "19.2° N, 73.0° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-tna-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tna-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4366,11 +4030,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.2403,
 			Lng: 73.1305,
 			CoarseCoord: "19.2° N, 73.1° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-kld-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kld-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4378,14 +4041,13 @@ func GetInitialRegions() []Region {
 			Name: "Vasai-Virar, VSV",
 			Country: "India",
 			CountryCode: "VSV",
-			Lat: 19.4259,
-			Lng: 72.8225,
-			CoarseCoord: "19.4° N, 72.8° E",
-			ActiveListeners: 130,
+			Lat: 19.4553,
+			Lng: 72.9996,
+			CoarseCoord: "19.5° N, 73.0° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-vsv-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-vsv-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4396,11 +4058,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.8762,
 			Lng: 75.3433,
 			CoarseCoord: "19.9° N, 75.3° E",
-			ActiveListeners: 125,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-aur-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-aur-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4411,14 +4072,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.033,
 			Lng: 73.0297,
 			CoarseCoord: "19.0° N, 73.0° E",
-			ActiveListeners: 240,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-nvm-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-nvm-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-nvm-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-nvm-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nvm-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4432,8 +4089,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-slp-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-slp-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4442,13 +4098,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "MRB",
 			Lat: 19.2813,
-			Lng: 72.8561,
-			CoarseCoord: "19.3° N, 72.9° E",
+			Lng: 73.0359,
+			CoarseCoord: "19.3° N, 73.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mrb-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mrb-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4462,11 +4117,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bwd-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bwd-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bwd-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bwd-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bwd-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4480,8 +4131,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-amr-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-amr-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4495,8 +4145,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-nde-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nde-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4507,11 +4156,10 @@ func GetInitialRegions() []Region {
 			Lat: 16.705,
 			Lng: 74.2433,
 			CoarseCoord: "16.7° N, 74.2° E",
-			ActiveListeners: 110,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-klh-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-klh-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4525,8 +4173,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-akl-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-akl-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4540,8 +4187,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-pnv-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pnv-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4555,11 +4201,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ulh-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ulh-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ulh-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ulh-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ulh-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4573,8 +4215,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-sgl-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-sgl-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4588,8 +4229,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mlg-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mlg-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4603,8 +4243,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-jlg-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jlg-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4618,8 +4257,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ltr-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ltr-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4633,8 +4271,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dhl-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dhl-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4648,8 +4285,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-anr-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-anr-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4663,26 +4299,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-chd-01", Title: "Gulabachi Kali", Artist: "Ajay-Atul", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-				{ID: "in-chd-01", Title: "Zingaat", Artist: "Ajay-Atul", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/10/d8/1b/10d81b24-b1c7-c50e-55c3-b09e25d2729a/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "in-ndl",
-			Name: "New Delhi, NDL",
-			Country: "India",
-			CountryCode: "NDL",
-			Lat: 28.6139,
-			Lng: 77.209,
-			CoarseCoord: "28.6° N, 77.2° E",
-			ActiveListeners: 360,
-			Tier: 1,
-			TopSongs: []Song{
-				{ID: "in-ndl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ndl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ndl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ndl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ndl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4693,14 +4310,10 @@ func GetInitialRegions() []Region {
 			Lat: 28.4595,
 			Lng: 77.0266,
 			CoarseCoord: "28.5° N, 77.0° E",
-			ActiveListeners: 340,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-ggn-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ggn-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ggn-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ggn-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ggn-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4711,14 +4324,10 @@ func GetInitialRegions() []Region {
 			Lat: 28.5355,
 			Lng: 77.391,
 			CoarseCoord: "28.5° N, 77.4° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-noid-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-noid-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-noid-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-noid-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-noid-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4729,14 +4338,10 @@ func GetInitialRegions() []Region {
 			Lat: 28.4089,
 			Lng: 77.3178,
 			CoarseCoord: "28.4° N, 77.3° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-fdb-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-fdb-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-fdb-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-fdb-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-fdb-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4747,14 +4352,10 @@ func GetInitialRegions() []Region {
 			Lat: 28.6692,
 			Lng: 77.4538,
 			CoarseCoord: "28.7° N, 77.5° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gzb-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gzb-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gzb-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gzb-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gzb-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4768,11 +4369,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-pnp-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pnp-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pnp-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-pnp-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-pnp-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4786,11 +4383,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-amb-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-amb-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-amb-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-amb-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-amb-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4804,11 +4397,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ymn-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ymn-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ymn-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ymn-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ymn-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4822,11 +4411,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-rtk-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-rtk-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-rtk-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-rtk-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rtk-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4840,11 +4425,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-hsr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-hsr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-hsr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-hsr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-hsr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4858,11 +4439,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-knl-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-knl-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-knl-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4876,11 +4453,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-snp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-snp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-snp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-snp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-snp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4891,14 +4464,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.6942,
 			Lng: 76.8606,
 			CoarseCoord: "30.7° N, 76.9° E",
-			ActiveListeners: 110,
+			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-pck-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pck-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pck-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-pck-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-pck-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4909,14 +4478,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.901,
 			Lng: 75.8573,
 			CoarseCoord: "30.9° N, 75.9° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ldh-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ldh-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ldh-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ldh-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ldh-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4927,14 +4492,10 @@ func GetInitialRegions() []Region {
 			Lat: 31.326,
 			Lng: 75.5762,
 			CoarseCoord: "31.3° N, 75.6° E",
-			ActiveListeners: 165,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-jln-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-jln-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-jln-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-jln-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-jln-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4948,11 +4509,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ptl-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ptl-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ptl-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ptl-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ptl-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4966,11 +4523,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bti-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-bti-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-bti-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-bti-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-bti-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -4981,14 +4534,10 @@ func GetInitialRegions() []Region {
 			Lat: 30.7046,
 			Lng: 76.7179,
 			CoarseCoord: "30.7° N, 76.7° E",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-moh-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-moh-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-moh-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-moh-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-moh-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5002,11 +4551,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-hsp-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hsp-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hsp-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-hsp-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-hsp-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5020,11 +4565,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ptk-01", Title: "Wavy", Artist: "Karan Aujla", Plays: 4210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/df/5a/cddf5a8c-464e-3958-cf4a-7fac9e490aa5/5063616597178_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ptk-01", Title: "Winning Speech", Artist: "Karan Aujla", Plays: 3670, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/7c/36/487c3668-f7a4-4b1a-e09e-c74dae124dd9/5063483578089_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ptk-01", Title: "Softly", Artist: "Karan Aujla x Ikky", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/08/bc/d308bc6a-20e1-6532-d933-35d1b429210e/5054197755538.jpg/600x600bb.jpg"},
-				{ID: "in-ptk-01", Title: "Tauba Tauba", Artist: "Karan Aujla", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/d2/01/79d201d2-e54d-5604-81fb-313f30db7219/198588533581.jpg/600x600bb.jpg"},
-				{ID: "in-ptk-01", Title: "With You", Artist: "AP Dhillon", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/ac/00/5aac005f-9403-70e4-bce0-cf452017476e/197189606472.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5035,12 +4576,10 @@ func GetInitialRegions() []Region {
 			Lat: 12.2958,
 			Lng: 76.6394,
 			CoarseCoord: "12.3° N, 76.6° E",
-			ActiveListeners: 140,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-mys-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mys-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-mys-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5051,12 +4590,10 @@ func GetInitialRegions() []Region {
 			Lat: 15.3647,
 			Lng: 75.124,
 			CoarseCoord: "15.4° N, 75.1° E",
-			ActiveListeners: 125,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-hbk-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-hbk-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-hbk-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5065,14 +4602,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "IXE",
 			Lat: 12.9141,
-			Lng: 74.856,
-			CoarseCoord: "12.9° N, 74.9° E",
-			ActiveListeners: 160,
+			Lng: 75.1157,
+			CoarseCoord: "12.9° N, 75.1° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ixe-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixe-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixe-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5086,9 +4621,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ixg-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixg-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixg-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5102,9 +4635,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-gbg-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gbg-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-gbg-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5118,9 +4649,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dvg-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dvg-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-dvg-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5134,9 +4663,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bly-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bly-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-bly-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5150,9 +4677,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-smg-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-smg-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-smg-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5166,27 +4691,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tmk-01", Title: "Singara Siriye", Artist: "Vijay Prakash", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tmk-01", Title: "Dwapaara", Artist: "Jaskaran Singh", Plays: 2750, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tmk-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-			},
-		},
-		{
-			ID: "in-ixm",
-			Name: "Madurai, IXM",
-			Country: "India",
-			CountryCode: "IXM",
-			Lat: 9.9252,
-			Lng: 78.1198,
-			CoarseCoord: "9.9° N, 78.1° E",
-			ActiveListeners: 140,
-			Tier: 2,
-			TopSongs: []Song{
-				{ID: "in-ixm-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixm-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixm-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixm-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-ixm-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5197,14 +4702,10 @@ func GetInitialRegions() []Region {
 			Lat: 10.7905,
 			Lng: 78.7047,
 			CoarseCoord: "10.8° N, 78.7° E",
-			ActiveListeners: 130,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-trz-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-trz-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-trz-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-trz-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-trz-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5215,14 +4716,10 @@ func GetInitialRegions() []Region {
 			Lat: 11.6643,
 			Lng: 78.146,
 			CoarseCoord: "11.7° N, 78.1° E",
-			ActiveListeners: 115,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-slm-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-slm-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-slm-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-slm-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-slm-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5236,11 +4733,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tpr-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpr-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpr-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpr-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-tpr-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5254,11 +4747,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-erd-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-erd-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-erd-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-erd-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-erd-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5272,11 +4761,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tnv-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tnv-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tnv-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tnv-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-tnv-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5290,11 +4775,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-vlr-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vlr-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-vlr-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vlr-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-vlr-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5303,16 +4784,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "TCR",
 			Lat: 8.7642,
-			Lng: 78.1348,
-			CoarseCoord: "8.8° N, 78.1° E",
+			Lng: 77.935,
+			CoarseCoord: "8.8° N, 77.9° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tcr-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5326,11 +4803,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dnd-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-dnd-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dnd-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-dnd-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-dnd-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5344,11 +4817,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tjr-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tjr-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tjr-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tjr-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-tjr-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5356,17 +4825,13 @@ func GetInitialRegions() []Region {
 			Name: "Puducherry, PNY",
 			Country: "India",
 			CountryCode: "PNY",
-			Lat: 11.9416,
-			Lng: 79.8083,
-			CoarseCoord: "11.9° N, 79.8° E",
-			ActiveListeners: 120,
+			Lat: 12.0018,
+			Lng: 79.6393,
+			CoarseCoord: "12.0° N, 79.6° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-pny-01", Title: "Hukum", Artist: "Anirudh Ravichander", Plays: 4120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/df/e8/cf/dfe8cfb4-a4b5-b778-e565-d603a110bb51/8903431940988_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pny-01", Title: "Aasa Kooda", Artist: "Sai Abhyankkar", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/42/ba/3942ba45-40bd-5d0a-d7ad-0595f1336f3f/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pny-01", Title: "Badass", Artist: "Anirudh Ravichander", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/be/8f/3b/be8f3b14-04ea-46b5-5555-d017b2b4e85d/8903431952875_cover.jpg/600x600bb.jpg"},
-				{ID: "in-pny-01", Title: "Naa Ready", Artist: "Anirudh Ravichander", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/bf/d4/b0bfd46c-da95-2f95-1f7d-a75aa51c2465/196871252386.jpg/600x600bb.jpg"},
-				{ID: "in-pny-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 1890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5377,14 +4842,10 @@ func GetInitialRegions() []Region {
 			Lat: 17.9689,
 			Lng: 79.5941,
 			CoarseCoord: "18.0° N, 79.6° E",
-			ActiveListeners: 120,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-wgl-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-wgl-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-wgl-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-wgl-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-wgl-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5398,11 +4859,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-nzb-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nzb-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nzb-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nzb-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nzb-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5416,11 +4873,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-krm-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-krm-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-krm-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-krm-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-krm-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5434,11 +4887,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-kmm-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kmm-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kmm-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kmm-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kmm-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5449,14 +4898,10 @@ func GetInitialRegions() []Region {
 			Lat: 16.5062,
 			Lng: 80.648,
 			CoarseCoord: "16.5° N, 80.6° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-vja-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vja-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-vja-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vja-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-vja-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5467,14 +4912,10 @@ func GetInitialRegions() []Region {
 			Lat: 16.3067,
 			Lng: 80.4365,
 			CoarseCoord: "16.3° N, 80.4° E",
-			ActiveListeners: 130,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gun-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-gun-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gun-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-gun-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-gun-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5488,11 +4929,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-nel-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nel-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nel-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nel-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-nel-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5506,11 +4943,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-knl-ap-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-ap-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-ap-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-ap-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-knl-ap-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5524,11 +4957,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-rjy-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-rjy-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rjy-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-rjy-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-rjy-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5539,14 +4968,10 @@ func GetInitialRegions() []Region {
 			Lat: 13.6288,
 			Lng: 79.4192,
 			CoarseCoord: "13.6° N, 79.4° E",
-			ActiveListeners: 145,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-tpt-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpt-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpt-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpt-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-tpt-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5554,17 +4979,13 @@ func GetInitialRegions() []Region {
 			Name: "Kakinada, KKN",
 			Country: "India",
 			CountryCode: "KKN",
-			Lat: 16.9891,
-			Lng: 82.2475,
-			CoarseCoord: "17.0° N, 82.2° E",
+			Lat: 16.9434,
+			Lng: 82.1161,
+			CoarseCoord: "16.9° N, 82.1° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-kkn-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kkn-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kkn-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kkn-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kkn-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5578,11 +4999,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-kdp-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kdp-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kdp-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kdp-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-kdp-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5596,11 +5013,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-atp-01", Title: "Fear Song", Artist: "Anirudh Ravichander", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/c6/af/1dc6af82-69e9-5341-5010-a9223fc25709/8903431001368_cover.jpg/600x600bb.jpg"},
-				{ID: "in-atp-01", Title: "Kurchi Madathapetti", Artist: "Thaman S", Plays: 3410, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/e9/12/ffe9126b-d040-f90c-2df7-6baf1d00d1e6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-atp-01", Title: "Chuttamalle", Artist: "Anirudh Ravichander", Plays: 2980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/7c/53/867c53cc-4efe-faef-a20e-8d9c896053db/8903431011411_cover.jpg/600x600bb.jpg"},
-				{ID: "in-atp-01", Title: "Sammohanuda", Artist: "Bheems Ceciroleo", Plays: 2150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/90/64/f39064e2-bb47-d751-804d-37f0490527b7/8903431949714_cover.jpg/600x600bb.jpg"},
-				{ID: "in-atp-01", Title: "Hoyna Hoyna", Artist: "Anirudh Ravichander", Plays: 1780, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/74/82/ee/7482eee5-9a94-25d0-e0a2-5c46d755ef0c/886447902318.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5611,11 +5024,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.3039,
 			Lng: 70.8022,
 			CoarseCoord: "22.3° N, 70.8° E",
-			ActiveListeners: 150,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-raj-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-raj-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5623,14 +5035,13 @@ func GetInitialRegions() []Region {
 			Name: "Bhavnagar, BVA",
 			Country: "India",
 			CountryCode: "BVA",
-			Lat: 21.7645,
-			Lng: 72.1519,
-			CoarseCoord: "21.8° N, 72.2° E",
+			Lat: 21.7419,
+			Lng: 72.0142,
+			CoarseCoord: "21.7° N, 72.0° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bva-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bva-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5638,14 +5049,13 @@ func GetInitialRegions() []Region {
 			Name: "Jamnagar, JMN",
 			Country: "India",
 			CountryCode: "JMN",
-			Lat: 22.4707,
-			Lng: 70.0577,
-			CoarseCoord: "22.5° N, 70.1° E",
+			Lat: 22.3107,
+			Lng: 70.1576,
+			CoarseCoord: "22.3° N, 70.2° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-jmn-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jmn-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5659,8 +5069,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-jnd-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jnd-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5671,11 +5080,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.2156,
 			Lng: 72.6369,
 			CoarseCoord: "23.2° N, 72.6° E",
-			ActiveListeners: 130,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gnd-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gnd-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5689,8 +5097,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-and-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-and-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5699,13 +5106,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "NVS",
 			Lat: 20.95,
-			Lng: 72.93,
-			CoarseCoord: "20.9° N, 72.9° E",
+			Lng: 73.0698,
+			CoarseCoord: "20.9° N, 73.1° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-nvs-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-nvs-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5719,8 +5125,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bhj-01", Title: "Khalasi", Artist: "Aditya Gadhvi x Achint", Plays: 3890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bhj-01", Title: "Chogada", Artist: "Darshan Raval", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ef/0e/dc/ef0edc91-2a13-ce31-e17f-7dc7a77d1ca4/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5731,14 +5136,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.4499,
 			Lng: 80.3319,
 			CoarseCoord: "26.4° N, 80.3° E",
-			ActiveListeners: 230,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "in-knp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-knp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-knp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-knp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-knp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5749,14 +5150,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.4358,
 			Lng: 81.8463,
 			CoarseCoord: "25.4° N, 81.8° E",
-			ActiveListeners: 155,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ald-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ald-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ald-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ald-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ald-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5767,14 +5164,10 @@ func GetInitialRegions() []Region {
 			Lat: 28.9845,
 			Lng: 77.7064,
 			CoarseCoord: "29.0° N, 77.7° E",
-			ActiveListeners: 140,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-mrt-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mrt-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mrt-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mrt-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mrt-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5788,11 +5181,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bly-up-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bly-up-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bly-up-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bly-up-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bly-up-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5806,11 +5195,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-alg-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-alg-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-alg-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-alg-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-alg-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5824,11 +5209,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mbd-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mbd-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mbd-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mbd-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mbd-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5839,14 +5220,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.7606,
 			Lng: 83.3732,
 			CoarseCoord: "26.8° N, 83.4° E",
-			ActiveListeners: 135,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gkp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gkp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gkp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gkp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gkp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5860,11 +5237,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-jhs-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-jhs-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-jhs-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-jhs-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jhs-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5878,11 +5251,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mza-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mza-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mza-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mza-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mza-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5896,11 +5265,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mth-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mth-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mth-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mth-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mth-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5911,14 +5276,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.7922,
 			Lng: 82.1998,
 			CoarseCoord: "26.8° N, 82.2° E",
-			ActiveListeners: 150,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ayd-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ayd-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ayd-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ayd-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ayd-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5929,14 +5290,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.2389,
 			Lng: 73.0243,
 			CoarseCoord: "26.2° N, 73.0° E",
-			ActiveListeners: 155,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-jdh-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-jdh-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-jdh-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-jdh-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jdh-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5947,14 +5304,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.2138,
 			Lng: 75.8648,
 			CoarseCoord: "25.2° N, 75.9° E",
-			ActiveListeners: 140,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-kot-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-kot-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-kot-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-kot-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kot-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5968,11 +5321,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bkn-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bkn-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bkn-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bkn-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bkn-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -5986,11 +5335,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ajm-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ajm-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ajm-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ajm-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ajm-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6001,14 +5346,10 @@ func GetInitialRegions() []Region {
 			Lat: 24.5854,
 			Lng: 73.7125,
 			CoarseCoord: "24.6° N, 73.7° E",
-			ActiveListeners: 145,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-udr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-udr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-udr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-udr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-udr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6022,11 +5363,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bhw-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bhw-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bhw-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bhw-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bhw-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6040,11 +5377,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-alw-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-alw-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-alw-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-alw-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-alw-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6055,14 +5388,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.1815,
 			Lng: 79.9864,
 			CoarseCoord: "23.2° N, 80.0° E",
-			ActiveListeners: 130,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-jbp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-jbp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-jbp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-jbp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jbp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6073,14 +5402,10 @@ func GetInitialRegions() []Region {
 			Lat: 26.2183,
 			Lng: 78.1828,
 			CoarseCoord: "26.2° N, 78.2° E",
-			ActiveListeners: 135,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-gwl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gwl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gwl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gwl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gwl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6094,11 +5419,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ujn-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ujn-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ujn-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ujn-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ujn-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6112,11 +5433,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-sgr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-sgr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-sgr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-sgr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-sgr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6130,11 +5447,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-rtm-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-rtm-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-rtm-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-rtm-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rtm-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6145,11 +5458,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.5958,
 			Lng: 88.2636,
 			CoarseCoord: "22.6° N, 88.3° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-hwr-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-hwr-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6163,8 +5475,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-asn-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-asn-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6172,14 +5483,13 @@ func GetInitialRegions() []Region {
 			Name: "Siliguri, SLG",
 			Country: "India",
 			CountryCode: "SLG",
-			Lat: 26.7271,
-			Lng: 88.3953,
-			CoarseCoord: "26.7° N, 88.4° E",
-			ActiveListeners: 130,
+			Lat: 26.8444,
+			Lng: 88.3475,
+			CoarseCoord: "26.8° N, 88.3° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-slg-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-slg-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6193,8 +5503,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dgp-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dgp-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6208,8 +5517,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-kgp-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-kgp-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6218,13 +5526,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "DJG",
 			Lat: 27.041,
-			Lng: 88.2663,
-			CoarseCoord: "27.0° N, 88.3° E",
+			Lng: 88.3662,
+			CoarseCoord: "27.0° N, 88.4° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-djg-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-djg-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6235,14 +5542,10 @@ func GetInitialRegions() []Region {
 			Lat: 20.4625,
 			Lng: 85.8828,
 			CoarseCoord: "20.5° N, 85.9° E",
-			ActiveListeners: 120,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ctk-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ctk-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ctk-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ctk-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ctk-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6256,11 +5559,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-rkl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-rkl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-rkl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-rkl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rkl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6268,17 +5567,13 @@ func GetInitialRegions() []Region {
 			Name: "Puri, PRI",
 			Country: "India",
 			CountryCode: "PRI",
-			Lat: 19.8135,
-			Lng: 85.8312,
-			CoarseCoord: "19.8° N, 85.8° E",
+			Lat: 19.8981,
+			Lng: 85.6755,
+			CoarseCoord: "19.9° N, 85.7° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-pri-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-pri-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-pri-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-pri-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pri-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6292,11 +5587,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-sbp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-sbp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-sbp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-sbp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-sbp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6310,11 +5601,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-gay-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gay-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gay-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gay-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gay-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6328,11 +5615,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bgp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bgp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bgp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bgp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bgp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6346,11 +5629,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mfp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mfp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mfp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mfp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mfp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6364,11 +5643,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-prn-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-prn-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-prn-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-prn-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-prn-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6382,11 +5657,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dbg-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-dbg-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-dbg-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-dbg-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dbg-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6397,14 +5668,10 @@ func GetInitialRegions() []Region {
 			Lat: 22.8046,
 			Lng: 86.2029,
 			CoarseCoord: "22.8° N, 86.2° E",
-			ActiveListeners: 150,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-jsr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-jsr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-jsr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-jsr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-jsr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6415,14 +5682,10 @@ func GetInitialRegions() []Region {
 			Lat: 23.7957,
 			Lng: 86.4304,
 			CoarseCoord: "23.8° N, 86.4° E",
-			ActiveListeners: 135,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-dhn-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-dhn-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-dhn-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-dhn-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dhn-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6436,11 +5699,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bkr-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bkr-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bkr-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bkr-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bkr-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6448,15 +5707,13 @@ func GetInitialRegions() []Region {
 			Name: "Kozhikode, CCJ",
 			Country: "India",
 			CountryCode: "CCJ",
-			Lat: 11.2588,
-			Lng: 75.7804,
-			CoarseCoord: "11.3° N, 75.8° E",
-			ActiveListeners: 155,
+			Lat: 11.3959,
+			Lng: 76.0226,
+			CoarseCoord: "11.4° N, 76.0° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ccj-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ccj-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ccj-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6464,15 +5721,13 @@ func GetInitialRegions() []Region {
 			Name: "Kollam, KLM",
 			Country: "India",
 			CountryCode: "KLM",
-			Lat: 8.8932,
-			Lng: 76.6141,
-			CoarseCoord: "8.9° N, 76.6° E",
+			Lat: 9.0454,
+			Lng: 76.7977,
+			CoarseCoord: "9.0° N, 76.8° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-klm-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-klm-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-klm-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6481,14 +5736,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "TCR",
 			Lat: 10.5276,
-			Lng: 76.2144,
-			CoarseCoord: "10.5° N, 76.2° E",
+			Lng: 76.3143,
+			CoarseCoord: "10.5° N, 76.3° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-tcr-kl-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-kl-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-tcr-kl-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6496,15 +5749,13 @@ func GetInitialRegions() []Region {
 			Name: "Kannur, CNN",
 			Country: "India",
 			CountryCode: "CNN",
-			Lat: 11.8745,
-			Lng: 75.3704,
-			CoarseCoord: "11.9° N, 75.4° E",
+			Lat: 12.0755,
+			Lng: 75.6153,
+			CoarseCoord: "12.1° N, 75.6° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-cnn-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-cnn-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-cnn-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6512,15 +5763,13 @@ func GetInitialRegions() []Region {
 			Name: "Alappuzha, ALP",
 			Country: "India",
 			CountryCode: "ALP",
-			Lat: 9.4981,
-			Lng: 76.3388,
-			CoarseCoord: "9.5° N, 76.3° E",
+			Lat: 9.6458,
+			Lng: 76.5983,
+			CoarseCoord: "9.6° N, 76.6° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-alp-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-alp-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-alp-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6534,9 +5783,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-pgt-01", Title: "Illuminati", Artist: "Sushin Shyam", Plays: 4320, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pgt-01", Title: "Jaada", Artist: "Sushin Shyam", Plays: 3210, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
-				{ID: "in-pgt-01", Title: "Armadham", Artist: "Sushin Shyam", Plays: 2890, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/88/4e/29/884e290c-29ed-25d5-7b25-243b89097220/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6550,11 +5797,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bli-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bli-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bli-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bli-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bli-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6568,11 +5811,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-bsp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-bsp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-bsp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-bsp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-bsp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6586,11 +5825,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-hdw-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-hdw-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-hdw-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-hdw-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-hdw-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6604,11 +5839,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-rsh-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-rsh-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-rsh-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-rsh-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-rsh-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6619,14 +5850,10 @@ func GetInitialRegions() []Region {
 			Lat: 31.1048,
 			Lng: 77.1734,
 			CoarseCoord: "31.1° N, 77.2° E",
-			ActiveListeners: 110,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-sml-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-sml-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-sml-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-sml-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-sml-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6640,11 +5867,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-dhm-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-dhm-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-dhm-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-dhm-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-dhm-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6658,11 +5881,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-mnl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-mnl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-mnl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-mnl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-mnl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6671,16 +5890,12 @@ func GetInitialRegions() []Region {
 			Country: "India",
 			CountryCode: "IXJ",
 			Lat: 32.7266,
-			Lng: 74.857,
-			CoarseCoord: "32.7° N, 74.9° E",
-			ActiveListeners: 125,
+			Lng: 74.9769,
+			CoarseCoord: "32.7° N, 75.0° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-ixj-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ixj-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ixj-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ixj-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixj-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6694,11 +5909,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-leh-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-leh-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-leh-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-leh-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-leh-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6709,14 +5920,10 @@ func GetInitialRegions() []Region {
 			Lat: 25.5788,
 			Lng: 91.8933,
 			CoarseCoord: "25.6° N, 91.9° E",
-			ActiveListeners: 120,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "in-shl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-shl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-shl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-shl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-shl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6730,11 +5937,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-imp-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-imp-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-imp-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-imp-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-imp-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6742,14 +5945,13 @@ func GetInitialRegions() []Region {
 			Name: "Agartala, AGT",
 			Country: "India",
 			CountryCode: "AGT",
-			Lat: 23.8315,
-			Lng: 91.2868,
-			CoarseCoord: "23.8° N, 91.3° E",
+			Lat: 23.7902,
+			Lng: 91.5426,
+			CoarseCoord: "23.8° N, 91.5° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-agt-01", Title: "Ami Je Tomar 3.0", Artist: "Pritam ft. Arijit Singh", Plays: 3450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/44/28/7f/44287ffb-14ec-aa7c-87b6-ec6d819dbbf6/cover.jpg/600x600bb.jpg"},
-				{ID: "in-agt-01", Title: "Boba Tunnel", Artist: "Anupam Roy", Plays: 2650, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/c4/88/33c48869-7c46-f642-e065-276f5fbf764f/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6763,11 +5965,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-azl-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-azl-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-azl-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-azl-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-azl-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6781,11 +5979,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-khm-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-khm-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-khm-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-khm-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-khm-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6799,11 +5993,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-gtk-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-gtk-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-gtk-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-gtk-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-gtk-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6811,17 +6001,13 @@ func GetInitialRegions() []Region {
 			Name: "Port Blair, IXZ",
 			Country: "India",
 			CountryCode: "IXZ",
-			Lat: 11.6234,
-			Lng: 92.7265,
+			Lat: 11.6108,
+			Lng: 92.7112,
 			CoarseCoord: "11.6° N, 92.7° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "in-ixz-01", Title: "Husn", Artist: "Anuv Jain", Plays: 3840, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
-				{ID: "in-ixz-01", Title: "Kahani Suno 2.0", Artist: "Kaifi Khalil", Plays: 3120, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9f/44/a6/9f44a6ef-4438-1794-26ac-7f73d167afbf/artwork.jpg/600x600bb.jpg"},
-				{ID: "in-ixz-01", Title: "Tu Hai Kahan", Artist: "AUR", Plays: 2450, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/58/44/66/584466db-9e8e-8690-97d1-8289cc7c4342/197877488397.jpg/600x600bb.jpg"},
-				{ID: "in-ixz-01", Title: "Faasle", Artist: "Aditya Rikhari", Plays: 1980, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d5/29/29/d5292970-e6e4-1199-baed-22c8c9f60988/cover.jpg/600x600bb.jpg"},
-				{ID: "in-ixz-01", Title: "Pehle Bhi Main", Artist: "Vishal Mishra", Plays: 1420, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2b/95/9d/2b959dc6-b99b-4497-b2db-f0f5b9d3e5aa/cover.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6832,12 +6018,10 @@ func GetInitialRegions() []Region {
 			Lat: 29.7604,
 			Lng: -95.3698,
 			CoarseCoord: "29.8° N, 95.4° W",
-			ActiveListeners: 310,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-hou-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-hou-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-hou-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6851,9 +6035,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-sat-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-sat-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-sat-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6864,12 +6046,10 @@ func GetInitialRegions() []Region {
 			Lat: 32.7767,
 			Lng: -96.797,
 			CoarseCoord: "32.8° N, 96.8° W",
-			ActiveListeners: 320,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "us-dal-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-dal-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-dal-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6877,15 +6057,13 @@ func GetInitialRegions() []Region {
 			Name: "Detroit, DET",
 			Country: "United States",
 			CountryCode: "DET",
-			Lat: 42.3314,
-			Lng: -83.0458,
-			CoarseCoord: "42.3° N, 83.0° W",
+			Lat: 42.4715,
+			Lng: -83.3745,
+			CoarseCoord: "42.5° N, 83.4° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-det-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-det-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-det-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6899,9 +6077,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-orl-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-orl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-orl-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6909,15 +6085,13 @@ func GetInitialRegions() []Region {
 			Name: "Toronto, TOR",
 			Country: "Canada",
 			CountryCode: "TOR",
-			Lat: 43.6532,
-			Lng: -79.3832,
-			CoarseCoord: "43.7° N, 79.4° W",
-			ActiveListeners: 350,
+			Lat: 43.9242,
+			Lng: -79.5199,
+			CoarseCoord: "43.9° N, 79.5° W",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "ca-tor-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ca-tor-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "ca-tor-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6925,15 +6099,13 @@ func GetInitialRegions() []Region {
 			Name: "Halifax, YHZ",
 			Country: "Canada",
 			CountryCode: "YHZ",
-			Lat: 44.6488,
-			Lng: -63.5752,
-			CoarseCoord: "44.6° N, 63.6° W",
+			Lat: 44.7766,
+			Lng: -63.7895,
+			CoarseCoord: "44.8° N, 63.8° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "ca-yhz-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ca-yhz-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "ca-yhz-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6941,15 +6113,13 @@ func GetInitialRegions() []Region {
 			Name: "Liverpool, LIV",
 			Country: "United Kingdom",
 			CountryCode: "LIV",
-			Lat: 53.4084,
-			Lng: -2.9916,
-			CoarseCoord: "53.4° N, 3.0° W",
+			Lat: 53.3011,
+			Lng: -2.7773,
+			CoarseCoord: "53.3° N, 2.8° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-liv-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "uk-liv-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "uk-liv-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6963,9 +6133,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-lds-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "uk-lds-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "uk-lds-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6973,15 +6141,13 @@ func GetInitialRegions() []Region {
 			Name: "Belfast, BFS",
 			Country: "United Kingdom",
 			CountryCode: "BFS",
-			Lat: 54.5973,
-			Lng: -5.9301,
-			CoarseCoord: "54.6° N, 5.9° W",
-			ActiveListeners: 160,
+			Lat: 54.522,
+			Lng: -6.155,
+			CoarseCoord: "54.5° N, 6.2° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-bfs-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "uk-bfs-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "uk-bfs-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -6990,14 +6156,12 @@ func GetInitialRegions() []Region {
 			Country: "United Kingdom",
 			CountryCode: "CWL",
 			Lat: 51.4816,
-			Lng: -3.1791,
-			CoarseCoord: "51.5° N, 3.2° W",
+			Lng: -3.0193,
+			CoarseCoord: "51.5° N, 3.0° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "uk-cwl-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "uk-cwl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "uk-cwl-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7011,9 +6175,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-trn-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-trn-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-trn-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7027,9 +6189,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "nl-rtm-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "nl-rtm-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "nl-rtm-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7037,15 +6197,13 @@ func GetInitialRegions() []Region {
 			Name: "Antwerp, ANR",
 			Country: "Belgium",
 			CountryCode: "ANR",
-			Lat: 51.2194,
-			Lng: 4.4025,
-			CoarseCoord: "51.2° N, 4.4° E",
+			Lat: 51.1135,
+			Lng: 4.464,
+			CoarseCoord: "51.1° N, 4.5° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "be-anr-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "be-anr-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "be-anr-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7059,9 +6217,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tr-ank-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "tr-ank-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "tr-ank-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7075,9 +6231,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-spk-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-spk-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-spk-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7088,12 +6242,10 @@ func GetInitialRegions() []Region {
 			Lat: 39.9042,
 			Lng: 116.4074,
 			CoarseCoord: "39.9° N, 116.4° E",
-			ActiveListeners: 410,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-bjs-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-bjs-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-bjs-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7101,15 +6253,13 @@ func GetInitialRegions() []Region {
 			Name: "Auckland, AKL",
 			Country: "New Zealand",
 			CountryCode: "AKL",
-			Lat: -36.8485,
-			Lng: 174.7633,
-			CoarseCoord: "36.8° S, 174.8° E",
-			ActiveListeners: 230,
+			Lat: -37.462,
+			Lng: 175.1877,
+			CoarseCoord: "37.5° S, 175.2° E",
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "nz-akl-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "nz-akl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "nz-akl-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7117,15 +6267,13 @@ func GetInitialRegions() []Region {
 			Name: "Fortaleza, FOR",
 			Country: "Brazil",
 			CountryCode: "FOR",
-			Lat: -3.7319,
-			Lng: -38.5267,
-			CoarseCoord: "3.7° S, 38.5° W",
+			Lat: -4.022,
+			Lng: -38.7707,
+			CoarseCoord: "4.0° S, 38.8° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-for-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "br-for-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "br-for-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7139,9 +6287,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-okc-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-okc-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-okc-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7149,15 +6295,13 @@ func GetInitialRegions() []Region {
 			Name: "El Paso, ELP",
 			Country: "United States",
 			CountryCode: "ELP",
-			Lat: 31.7619,
-			Lng: -106.485,
-			CoarseCoord: "31.8° N, 106.5° W",
+			Lat: 31.997,
+			Lng: -106.3252,
+			CoarseCoord: "32.0° N, 106.3° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-elp-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-elp-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-elp-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7171,9 +6315,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-sdf-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-sdf-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-sdf-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7187,9 +6329,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-mem-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-mem-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-mem-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7197,15 +6337,13 @@ func GetInitialRegions() []Region {
 			Name: "Milwaukee, MKE",
 			Country: "United States",
 			CountryCode: "MKE",
-			Lat: 43.0389,
-			Lng: -87.9065,
-			CoarseCoord: "43.0° N, 87.9° W",
+			Lat: 42.9289,
+			Lng: -88.3195,
+			CoarseCoord: "42.9° N, 88.3° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-mke-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-mke-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-mke-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7219,9 +6357,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-abq-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-abq-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-abq-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7235,9 +6371,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-tus-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-tus-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-tus-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7251,9 +6385,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-fat-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-fat-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-fat-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7264,12 +6396,10 @@ func GetInitialRegions() []Region {
 			Lat: 38.5816,
 			Lng: -121.4944,
 			CoarseCoord: "38.6° N, 121.5° W",
-			ActiveListeners: 175,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-smf-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-smf-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-smf-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7283,9 +6413,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-oma-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-oma-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-oma-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7296,12 +6424,10 @@ func GetInitialRegions() []Region {
 			Lat: 35.7796,
 			Lng: -78.6382,
 			CoarseCoord: "35.8° N, 78.6° W",
-			ActiveListeners: 185,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-rdu-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-rdu-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-rdu-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7309,15 +6435,13 @@ func GetInitialRegions() []Region {
 			Name: "Long Beach, LGB",
 			Country: "United States",
 			CountryCode: "LGB",
-			Lat: 33.7701,
-			Lng: -118.1937,
-			CoarseCoord: "33.8° N, 118.2° W",
+			Lat: 34.0151,
+			Lng: -118.1417,
+			CoarseCoord: "34.0° N, 118.1° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-lgb-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-lgb-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-lgb-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7325,15 +6449,13 @@ func GetInitialRegions() []Region {
 			Name: "Virginia Beach, VAB",
 			Country: "United States",
 			CountryCode: "VAB",
-			Lat: 36.8529,
-			Lng: -75.978,
-			CoarseCoord: "36.9° N, 76.0° W",
+			Lat: 36.6688,
+			Lng: -76.3759,
+			CoarseCoord: "36.7° N, 76.4° W",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-vab-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-vab-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-vab-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7347,9 +6469,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-oak-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-oak-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-oak-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7363,9 +6483,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "us-tul-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-tul-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-tul-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7379,9 +6497,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "us-cin-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "us-cin-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "us-cin-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7389,15 +6505,13 @@ func GetInitialRegions() []Region {
 			Name: "Kobe, UKB",
 			Country: "Japan",
 			CountryCode: "UKB",
-			Lat: 34.6901,
-			Lng: 135.1955,
-			CoarseCoord: "34.7° N, 135.2° E",
+			Lat: 34.841,
+			Lng: 135.3496,
+			CoarseCoord: "34.8° N, 135.3° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-ukb-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-ukb-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-ukb-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7408,12 +6522,10 @@ func GetInitialRegions() []Region {
 			Lat: 35.0116,
 			Lng: 135.7681,
 			CoarseCoord: "35.0° N, 135.8° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-kyt-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-kyt-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-kyt-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7427,9 +6539,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-kws-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-kws-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-kws-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7443,9 +6553,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-stm-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-stm-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-stm-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7456,12 +6564,10 @@ func GetInitialRegions() []Region {
 			Lat: 34.3853,
 			Lng: 132.4553,
 			CoarseCoord: "34.4° N, 132.5° E",
-			ActiveListeners: 175,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-hij-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-hij-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-hij-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7470,14 +6576,12 @@ func GetInitialRegions() []Region {
 			Country: "Japan",
 			CountryCode: "SDJ",
 			Lat: 38.2682,
-			Lng: 140.8694,
-			CoarseCoord: "38.3° N, 140.9° E",
+			Lng: 140.6496,
+			CoarseCoord: "38.3° N, 140.6° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-sdj-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-sdj-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-sdj-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7491,9 +6595,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "jp-chb-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "jp-chb-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "jp-chb-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7504,12 +6606,10 @@ func GetInitialRegions() []Region {
 			Lat: 34.3416,
 			Lng: 108.9398,
 			CoarseCoord: "34.3° N, 108.9° E",
-			ActiveListeners: 260,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-sia-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-sia-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-sia-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7520,12 +6620,10 @@ func GetInitialRegions() []Region {
 			Lat: 39.3434,
 			Lng: 117.3616,
 			CoarseCoord: "39.3° N, 117.4° E",
-			ActiveListeners: 290,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-tsn-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-tsn-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-tsn-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7536,12 +6634,10 @@ func GetInitialRegions() []Region {
 			Lat: 32.0603,
 			Lng: 118.7969,
 			CoarseCoord: "32.1° N, 118.8° E",
-			ActiveListeners: 270,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-nkg-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-nkg-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-nkg-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7555,9 +6651,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-cgo-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-cgo-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-cgo-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7571,9 +6665,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-csx-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-csx-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-csx-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7581,15 +6673,13 @@ func GetInitialRegions() []Region {
 			Name: "Qingdao, TAO",
 			Country: "China",
 			CountryCode: "TAO",
-			Lat: 36.0671,
-			Lng: 120.3826,
-			CoarseCoord: "36.1° N, 120.4° E",
-			ActiveListeners: 210,
+			Lat: 36.2524,
+			Lng: 120.19,
+			CoarseCoord: "36.3° N, 120.2° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-tao-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-tao-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-tao-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7603,9 +6693,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-kmg-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-kmg-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-kmg-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7613,15 +6701,13 @@ func GetInitialRegions() []Region {
 			Name: "Xiamen, XMN",
 			Country: "China",
 			CountryCode: "XMN",
-			Lat: 24.4798,
-			Lng: 118.0894,
-			CoarseCoord: "24.5° N, 118.1° E",
-			ActiveListeners: 180,
+			Lat: 24.5499,
+			Lng: 117.9976,
+			CoarseCoord: "24.5° N, 118.0° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "cn-xmn-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-xmn-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-xmn-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7632,12 +6718,10 @@ func GetInitialRegions() []Region {
 			Lat: 31.299,
 			Lng: 120.5853,
 			CoarseCoord: "31.3° N, 120.6° E",
-			ActiveListeners: 280,
+			ActiveListeners: 0,
 			Tier: 1,
 			TopSongs: []Song{
-				{ID: "cn-szh-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "cn-szh-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "cn-szh-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7648,12 +6732,10 @@ func GetInitialRegions() []Region {
 			Lat: 51.2277,
 			Lng: 6.7735,
 			CoarseCoord: "51.2° N, 6.8° E",
-			ActiveListeners: 220,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-dus-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-dus-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-dus-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7667,9 +6749,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-lej-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-lej-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-lej-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7683,9 +6763,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-dtm-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-dtm-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-dtm-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7693,15 +6771,13 @@ func GetInitialRegions() []Region {
 			Name: "Dresden, DRS",
 			Country: "Germany",
 			CountryCode: "DRS",
-			Lat: 51.0504,
-			Lng: 13.7373,
+			Lat: 51.1265,
+			Lng: 13.6674,
 			CoarseCoord: "51.1° N, 13.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-drs-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-drs-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-drs-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7715,9 +6791,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-haj-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-haj-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-haj-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7731,9 +6805,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "de-nue-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "de-nue-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "de-nue-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7747,9 +6819,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-nte-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "fr-nte-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "fr-nte-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7763,9 +6833,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-mpl-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "fr-mpl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "fr-mpl-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7773,15 +6841,13 @@ func GetInitialRegions() []Region {
 			Name: "Strasbourg, SXB",
 			Country: "France",
 			CountryCode: "SXB",
-			Lat: 48.5734,
-			Lng: 7.7521,
-			CoarseCoord: "48.6° N, 7.8° E",
+			Lat: 48.6637,
+			Lng: 7.3766,
+			CoarseCoord: "48.7° N, 7.4° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-sxb-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "fr-sxb-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "fr-sxb-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7792,12 +6858,10 @@ func GetInitialRegions() []Region {
 			Lat: 44.8378,
 			Lng: -0.5792,
 			CoarseCoord: "44.8° N, 0.6° W",
-			ActiveListeners: 185,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-bod-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "fr-bod-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "fr-bod-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7805,15 +6869,13 @@ func GetInitialRegions() []Region {
 			Name: "Lille, LIL",
 			Country: "France",
 			CountryCode: "LIL",
-			Lat: 50.6292,
-			Lng: 3.0573,
-			CoarseCoord: "50.6° N, 3.1° E",
+			Lat: 50.532,
+			Lng: 2.9289,
+			CoarseCoord: "50.5° N, 2.9° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "fr-lil-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "fr-lil-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "fr-lil-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7824,12 +6886,10 @@ func GetInitialRegions() []Region {
 			Lat: 44.4949,
 			Lng: 11.3426,
 			CoarseCoord: "44.5° N, 11.3° E",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-blq-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-blq-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-blq-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7837,15 +6897,13 @@ func GetInitialRegions() []Region {
 			Name: "Venice, VCE",
 			Country: "Italy",
 			CountryCode: "VCE",
-			Lat: 45.4408,
-			Lng: 12.3155,
-			CoarseCoord: "45.4° N, 12.3° E",
-			ActiveListeners: 240,
+			Lat: 45.5668,
+			Lng: 12.1012,
+			CoarseCoord: "45.6° N, 12.1° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-vce-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-vce-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-vce-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7853,15 +6911,13 @@ func GetInitialRegions() []Region {
 			Name: "Genoa, GOA",
 			Country: "Italy",
 			CountryCode: "GOA",
-			Lat: 44.4056,
-			Lng: 8.9463,
-			CoarseCoord: "44.4° N, 8.9° E",
+			Lat: 44.6301,
+			Lng: 9.0018,
+			CoarseCoord: "44.6° N, 9.0° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-goa-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-goa-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-goa-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7869,15 +6925,13 @@ func GetInitialRegions() []Region {
 			Name: "Palermo, PMO",
 			Country: "Italy",
 			CountryCode: "PMO",
-			Lat: 38.1157,
-			Lng: 13.3615,
-			CoarseCoord: "38.1° N, 13.4° E",
+			Lat: 37.7588,
+			Lng: 13.4413,
+			CoarseCoord: "37.8° N, 13.4° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-pmo-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-pmo-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-pmo-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7885,15 +6939,13 @@ func GetInitialRegions() []Region {
 			Name: "Bari, BRI",
 			Country: "Italy",
 			CountryCode: "BRI",
-			Lat: 41.1171,
-			Lng: 16.8719,
-			CoarseCoord: "41.1° N, 16.9° E",
+			Lat: 40.862,
+			Lng: 16.7489,
+			CoarseCoord: "40.9° N, 16.7° E",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "it-bri-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-bri-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-bri-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7907,9 +6959,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "it-vrn-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "it-vrn-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "it-vrn-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7917,15 +6967,13 @@ func GetInitialRegions() []Region {
 			Name: "Malaga, AGP",
 			Country: "Spain",
 			CountryCode: "AGP",
-			Lat: 36.7213,
-			Lng: -4.4214,
-			CoarseCoord: "36.7° N, 4.4° W",
-			ActiveListeners: 195,
+			Lat: 36.9296,
+			Lng: -4.6397,
+			CoarseCoord: "36.9° N, 4.6° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-agp-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "es-agp-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "es-agp-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7933,15 +6981,13 @@ func GetInitialRegions() []Region {
 			Name: "Bilbao, BIO",
 			Country: "Spain",
 			CountryCode: "BIO",
-			Lat: 43.263,
-			Lng: -2.935,
-			CoarseCoord: "43.3° N, 2.9° W",
+			Lat: 43.1483,
+			Lng: -2.9072,
+			CoarseCoord: "43.1° N, 2.9° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-bio-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "es-bio-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "es-bio-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7955,9 +7001,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-zaz-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "es-zaz-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "es-zaz-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7968,12 +7012,10 @@ func GetInitialRegions() []Region {
 			Lat: 39.5696,
 			Lng: 2.6502,
 			CoarseCoord: "39.6° N, 2.7° E",
-			ActiveListeners: 160,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-pmi-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "es-pmi-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "es-pmi-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7981,15 +7023,13 @@ func GetInitialRegions() []Region {
 			Name: "Alicante, ALC",
 			Country: "Spain",
 			CountryCode: "ALC",
-			Lat: 38.3452,
-			Lng: -0.481,
-			CoarseCoord: "38.3° N, 0.5° W",
+			Lat: 38.4861,
+			Lng: -0.7924,
+			CoarseCoord: "38.5° N, 0.8° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "es-alc-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "es-alc-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "es-alc-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -7997,15 +7037,13 @@ func GetInitialRegions() []Region {
 			Name: "Hobart, HBA",
 			Country: "Australia",
 			CountryCode: "HBA",
-			Lat: -42.8821,
-			Lng: 147.3272,
-			CoarseCoord: "42.9° S, 147.3° E",
+			Lat: -42.8571,
+			Lng: 147.2333,
+			CoarseCoord: "42.9° S, 147.2° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "au-hba-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "au-hba-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "au-hba-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8013,15 +7051,13 @@ func GetInitialRegions() []Region {
 			Name: "Darwin, DRW",
 			Country: "Australia",
 			CountryCode: "DRW",
-			Lat: -12.4634,
-			Lng: 130.8456,
-			CoarseCoord: "12.5° S, 130.8° E",
+			Lat: -12.7621,
+			Lng: 131.1024,
+			CoarseCoord: "12.8° S, 131.1° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "au-drw-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "au-drw-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "au-drw-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8032,12 +7068,10 @@ func GetInitialRegions() []Region {
 			Lat: 38.4237,
 			Lng: 27.1428,
 			CoarseCoord: "38.4° N, 27.1° E",
-			ActiveListeners: 190,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tr-adb-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "tr-adb-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "tr-adb-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8051,9 +7085,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tr-yei-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "tr-yei-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "tr-yei-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8061,15 +7093,13 @@ func GetInitialRegions() []Region {
 			Name: "Antalya, AYT",
 			Country: "Turkey",
 			CountryCode: "AYT",
-			Lat: 36.8969,
-			Lng: 30.7133,
-			CoarseCoord: "36.9° N, 30.7° E",
-			ActiveListeners: 180,
+			Lat: 37.0169,
+			Lng: 30.6586,
+			CoarseCoord: "37.0° N, 30.7° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "tr-ayt-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "tr-ayt-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "tr-ayt-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8083,9 +7113,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "sa-med-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "sa-med-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "sa-med-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8094,14 +7122,12 @@ func GetInitialRegions() []Region {
 			Country: "Saudi Arabia",
 			CountryCode: "DMM",
 			Lat: 26.4207,
-			Lng: 50.0888,
-			CoarseCoord: "26.4° N, 50.1° E",
-			ActiveListeners: 175,
+			Lng: 49.7692,
+			CoarseCoord: "26.4° N, 49.8° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "sa-dmm-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "sa-dmm-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "sa-dmm-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8115,9 +7141,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pk-fsd-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "pk-fsd-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "pk-fsd-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8131,9 +7155,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pk-pew-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "pk-pew-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "pk-pew-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8147,9 +7169,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pk-mux-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "pk-mux-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "pk-mux-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8157,15 +7177,13 @@ func GetInitialRegions() []Region {
 			Name: "Chittagong, CGP",
 			Country: "Bangladesh",
 			CountryCode: "CGP",
-			Lat: 22.3569,
-			Lng: 91.7832,
-			CoarseCoord: "22.4° N, 91.8° E",
-			ActiveListeners: 180,
+			Lat: 22.6256,
+			Lng: 92.0272,
+			CoarseCoord: "22.6° N, 92.0° E",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "bd-cgp-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "bd-cgp-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "bd-cgp-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8173,15 +7191,13 @@ func GetInitialRegions() []Region {
 			Name: "Sylhet, SYL",
 			Country: "Bangladesh",
 			CountryCode: "SYL",
-			Lat: 24.8949,
-			Lng: 91.8687,
-			CoarseCoord: "24.9° N, 91.9° E",
+			Lat: 24.7074,
+			Lng: 91.7935,
+			CoarseCoord: "24.7° N, 91.8° E",
 			ActiveListeners: 0,
 			Tier: 3,
 			TopSongs: []Song{
-				{ID: "bd-syl-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "bd-syl-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "bd-syl-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8195,9 +7211,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "lk-kdy-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "lk-kdy-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "lk-kdy-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8211,9 +7225,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "np-pkr-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "np-pkr-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "np-pkr-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8224,12 +7236,10 @@ func GetInitialRegions() []Region {
 			Lat: 19.0414,
 			Lng: -98.2063,
 			CoarseCoord: "19.0° N, 98.2° W",
-			ActiveListeners: 180,
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "mx-pue-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "mx-pue-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "mx-pue-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8237,15 +7247,13 @@ func GetInitialRegions() []Region {
 			Name: "Belém, BEL",
 			Country: "Brazil",
 			CountryCode: "BEL",
-			Lat: -1.4558,
-			Lng: -48.4902,
-			CoarseCoord: "1.5° S, 48.5° W",
+			Lat: -1.5769,
+			Lng: -48.4203,
+			CoarseCoord: "1.6° S, 48.4° W",
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-bel-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "br-bel-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "br-bel-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8259,9 +7267,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "br-gyn-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "br-gyn-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "br-gyn-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8275,9 +7281,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "ar-mdz-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "ar-mdz-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "ar-mdz-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8286,14 +7290,12 @@ func GetInitialRegions() []Region {
 			Country: "Colombia",
 			CountryCode: "CTG",
 			Lat: 10.391,
-			Lng: -75.4794,
-			CoarseCoord: "10.4° N, 75.5° W",
-			ActiveListeners: 195,
+			Lng: -75.1598,
+			CoarseCoord: "10.4° N, 75.2° W",
+			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "co-ctg-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "co-ctg-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "co-ctg-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 		{
@@ -8307,9 +7309,7 @@ func GetInitialRegions() []Region {
 			ActiveListeners: 0,
 			Tier: 2,
 			TopSongs: []Song{
-				{ID: "pe-aqp-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
-				{ID: "pe-aqp-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-				{ID: "pe-aqp-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 31500, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
+
 			},
 		},
 	}
@@ -8318,7 +7318,7 @@ func GetInitialRegions() []Region {
 // GetGlobalTop10Daily returns the global top 10 songs today
 func GetGlobalTop10Daily() []Song {
 	return []Song{
-		{ID: "g-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+		{ID: "g-01", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 48920, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/31/3a/3f/313a3fbc-bb8f-80c7-b5a2-e226869a38cd/24UMGIM51924.rgb.jpg/600x600bb.jpg"},
 		{ID: "g-02", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 42150, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
 		{ID: "g-03", Title: "Husn", Artist: "Anuv Jain", Plays: 39800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
 		{ID: "g-04", Title: "Bling-Bang-Bang-Born", Artist: "Creepy Nuts", Plays: 36720, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg"},
@@ -8335,7 +7335,7 @@ func GetGlobalTop10Daily() []Song {
 func GetGlobalTop10Weekly() []Song {
 	return []Song{
 		{ID: "w-01", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 312800, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
-		{ID: "w-02", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 298400, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+		{ID: "w-02", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 298400, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/31/3a/3f/313a3fbc-bb8f-80c7-b5a2-e226869a38cd/24UMGIM51924.rgb.jpg/600x600bb.jpg"},
 		{ID: "w-03", Title: "Million Dollar Baby", Artist: "Tommy Richman", Plays: 245900, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/e7/39/5ce73933-8f42-1095-e84b-0caec311f54b/24CRGIM43010.rgb.jpg/600x600bb.jpg"},
 		{ID: "w-04", Title: "Husn", Artist: "Anuv Jain", Plays: 220100, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a5/33/a5/a533a5db-c77f-6f32-a8a7-07c01e93bffe/24UM1IM11028.crop.jpg/600x600bb.jpg"},
 		{ID: "w-05", Title: "Bling-Bang-Bang-Born", Artist: "Creepy Nuts", Plays: 198200, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg"},
@@ -8351,7 +7351,7 @@ func GetGlobalTop10Weekly() []Song {
 func GetGlobalTop10Monthly() []Song {
 	return []Song{
 		{ID: "m-01", Title: "Blinding Lights", Artist: "The Weeknd", Plays: 1240000, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/61/e7/3f/61e73f94-018d-5f50-50ec-8521952bc72e/20UM1IM11629.rgb.jpg/600x600bb.jpg"},
-		{ID: "m-02", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 1150000, CoverURL: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80"},
+		{ID: "m-02", Title: "Not Like Us", Artist: "Kendrick Lamar", Plays: 1150000, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/31/3a/3f/313a3fbc-bb8f-80c7-b5a2-e226869a38cd/24UMGIM51924.rgb.jpg/600x600bb.jpg"},
 		{ID: "m-03", Title: "Espresso", Artist: "Sabrina Carpenter", Plays: 980000, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg"},
 		{ID: "m-04", Title: "Cruel Summer", Artist: "Taylor Swift", Plays: 870000, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/600x600bb.jpg"},
 		{ID: "m-05", Title: "Starboy", Artist: "The Weeknd ft. Daft Punk", Plays: 810000, CoverURL: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg"},

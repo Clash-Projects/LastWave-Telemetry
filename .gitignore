@@ -6,6 +6,7 @@
 *.dylib
 /backend/server
 /backend/server.exe
+/backend/lastwave-telemetry*
 
 # Go build and test artifacts
 *.test
