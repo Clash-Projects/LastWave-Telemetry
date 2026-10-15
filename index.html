@@ -112,9 +112,14 @@
       user-select: none;
       -webkit-user-select: none;
       cursor: grab;
+      contain: strict;
+      transform: translateZ(0);
     }
     #vectorMapContainer:active {
       cursor: grabbing;
+    }
+    #vectorMapSvg {
+      contain: strict;
     }
     .vector-country {
       fill: #15151B;
@@ -1166,6 +1171,7 @@ ENV=production PORT=8080 ./server</pre>
         this.rafPending = false;
         this.markerScalers = [];
         this.lastClusterScale = null;
+        this.clusterDebounceTimer = null;
 
         this.init();
       }
@@ -1175,8 +1181,9 @@ ENV=production PORT=8080 ./server</pre>
           <svg id="vectorMapSvg" class="w-full h-full block select-none pointer-events-auto" style="background: #08080B;">
             <defs>
               <g id="worldVectorPathsTemplate"></g>
+              <path id="dormantCitiesTemplate" vector-effect="non-scaling-stroke" stroke="#52525B" stroke-width="2.2" stroke-linecap="round" />
             </defs>
-            <g id="infiniteVectorRoot" style="will-change: transform;">
+            <g id="infiniteVectorRoot" style="will-change: transform; transform-origin: 0 0;">
               <g id="worldTilesGroup"></g>
               <g id="markersLayerGroup"></g>
             </g>
@@ -1188,6 +1195,7 @@ ENV=production PORT=8080 ./server</pre>
         this.tilesGroup = document.getElementById('worldTilesGroup');
         this.markersGroup = document.getElementById('markersLayerGroup');
         this.pathsDef = document.getElementById('worldVectorPathsTemplate');
+        this.dormantDef = document.getElementById('dormantCitiesTemplate');
 
         // Populate 176 country paths into SVG template once
         const paths = window.WORLD_VECTOR_MAP.paths;
@@ -1198,11 +1206,26 @@ ENV=production PORT=8080 ./server</pre>
         }
         this.pathsDef.innerHTML = pathsHtml;
 
+        // Populate all 538 world cities as a single ultra-fast static vector path
+        this.buildDormantCitiesPath();
+
         this.updateBaseScale();
         this.buildGrid();
         this.renderMarkers();
         this.attachEvents();
         this.applyTransform();
+      }
+
+      buildDormantCitiesPath() {
+        const cities = (window.WORLD_CITIES && window.WORLD_CITIES.length) ? window.WORLD_CITIES : (APP_DATA.regions || []);
+        if (!cities.length || !this.dormantDef) return;
+        let d = '';
+        for (let i = 0; i < cities.length; i++) {
+          const c = cities[i];
+          const pt = latLngToCoords(c.lat, c.lng);
+          d += `M${pt.x.toFixed(1)},${pt.y.toFixed(1)}l.01,0 `;
+        }
+        this.dormantDef.setAttribute('d', d);
       }
 
       updateBaseScale() {
@@ -1214,41 +1237,40 @@ ENV=production PORT=8080 ./server</pre>
       }
 
       buildGrid() {
-        // Seamless 3-column horizontal repeat (-1, 0, 1) — ZERO vertical duplicate overhead (528 paths vs 8,624)
+        // Seamless 3-column horizontal repeat (-1, 0, 1) — ZERO vertical duplicate overhead
         let tilesHtml = '';
         for (let col = -1; col <= 1; col++) {
-          tilesHtml += `<g transform="translate(${col * WORLD_W}, 0)"><use href="#worldVectorPathsTemplate" /></g>`;
+          tilesHtml += `
+            <g transform="translate(${col * WORLD_W}, 0)">
+              <use href="#worldVectorPathsTemplate" />
+              <use href="#dormantCitiesTemplate" />
+            </g>
+          `;
         }
         this.tilesGroup.innerHTML = tilesHtml;
       }
 
       getClusteredNodes(scale) {
-        // Dynamic spatial clustering threshold and Level-of-Detail (LOD)
         let clusterRadiusPx = 48;
-        let showTier3 = false;
-
         if (scale >= 3.4) {
-          clusterRadiusPx = 14;
-          showTier3 = true;
+          clusterRadiusPx = 18;
         } else if (scale >= 2.2) {
           clusterRadiusPx = 28;
-          showTier3 = true;
         } else if (scale >= 1.6) {
           clusterRadiusPx = 38;
-          showTier3 = false; // Tier 3 small cities fold into nearby regional clusters
         } else {
           clusterRadiusPx = 48;
-          showTier3 = false;
         }
 
-        // Candidates: include client IP, selected city, and Tier 1 / Tier 2 cities (or Tier 3 at zoom)
+        // Active candidates ONLY: client IP, selected city, or active listeners > 0
+        // All dormant cities are already rendered in GPU hardware via dormantCitiesTemplate!
         const pool = APP_DATA.regions.filter(r => {
           if (r.isClientIP || r.id === selectedCityId) return true;
-          if (showTier3) return true;
-          return (r.tier || 1) <= 2;
+          return (r.activeListeners || 0) > 0;
         });
 
-        // Compute projected map coordinates
+        if (!pool.length) return [];
+
         const points = pool.map(r => {
           const pt = latLngToCoords(r.lat, r.lng);
           return {
@@ -1266,8 +1288,8 @@ ENV=production PORT=8080 ./server</pre>
           assigned[i] = 1;
           const p1 = points[i];
 
-          // If this is the user client IP, selected city, or dormant (0 listeners), keep as individual dot
-          if (p1.isClientIP || p1.id === selectedCityId || (p1.activeListeners || 0) <= 0) {
+          // Never merge client IP or selected city so the user's focus is always visible
+          if (p1.isClientIP || p1.id === selectedCityId) {
             clusters.push({
               isCluster: false,
               city: p1,
@@ -1287,7 +1309,7 @@ ENV=production PORT=8080 ./server</pre>
           for (let j = i + 1; j < points.length; j++) {
             if (assigned[j]) continue;
             const p2 = points[j];
-            if (p2.isClientIP || p2.id === selectedCityId || (p2.activeListeners || 0) <= 0) continue;
+            if (p2.isClientIP || p2.id === selectedCityId) continue;
 
             let dx = Math.abs(p1.x - p2.x);
             if (dx > WORLD_W / 2) dx = WORLD_W - dx;
@@ -1355,7 +1377,6 @@ ENV=production PORT=8080 ./server</pre>
         const clusters = this.getClusteredNodes(this.scale);
 
         let html = '';
-        // 3 horizontal copies matching col -1, 0, 1 for seamless infinite horizontal wrap
         for (let col = -1; col <= 1; col++) {
           clusters.forEach(node => {
             const mx = node.x + col * WORLD_W;
@@ -1370,15 +1391,10 @@ ENV=production PORT=8080 ./server</pre>
               html += `
                 <g class="vector-cluster-node" data-lat="${node.lat.toFixed(4)}" data-lng="${node.lng.toFixed(4)}" data-tooltip="${tooltip}" transform="translate(${mx}, ${my})">
                   <g class="marker-scaler" transform="scale(${invScale})">
-                    <!-- Concentric Glow Pulse Ring -->
                     <circle cx="0" cy="0" r="15" class="cluster-pulse-ring" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.2" />
-                    <!-- Cluster Node Disc -->
                     <circle cx="0" cy="0" r="9.5" class="cluster-disc" fill="rgba(14, 16, 20, 0.94)" stroke="#FFFFFF" stroke-width="1.3" />
-                    <!-- Hit Target -->
                     <circle cx="0" cy="0" r="18" fill="transparent" class="cluster-hit-area" />
-                    <!-- Number of Merged Cities -->
                     <text x="0" y="3.2" text-anchor="middle" class="cluster-count-text select-none" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">+${node.count}</text>
-                    <!-- Hover Tooltip Pill -->
                     <g class="cluster-hover-pill" transform="translate(13, -7)">
                       <rect x="0" y="0" width="${badgeWidth}" height="15" rx="3.5" ry="3.5" fill="rgba(10, 12, 16, 0.96)" stroke="rgba(255, 255, 255, 0.6)" stroke-width="0.8" />
                       <text x="5" y="10.8" fill="#D4D4D8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="500">${primaryName} Hub <tspan fill="#FFFFFF" font-weight="700">• ${node.count} cities</tspan></text>
@@ -1387,7 +1403,6 @@ ENV=production PORT=8080 ./server</pre>
                 </g>
               `;
             } else {
-              // Individual City or User Client IP Node
               const region = node.city;
               const isSelected = selectedCityId === region.id;
               const isClient = !!region.isClientIP;
@@ -1401,22 +1416,16 @@ ENV=production PORT=8080 ./server</pre>
                 <g class="vector-marker-node ${isSelected ? 'selected' : ''} ${isClient ? 'client-ip-node' : ''}" data-city-id="${region.id}" data-tooltip="${tooltip}" transform="translate(${mx}, ${my})">
                   <g class="marker-scaler" transform="scale(${invScale})">
                     ${isClient ? `
-                      <!-- Client VIP Double Radar Wave -->
                       <circle cx="0" cy="0" r="6" class="client-beacon-wave" />
                       <circle cx="0" cy="0" r="8" class="tiny-vector-pulse" />
                       <circle cx="0" cy="0" r="2.8" class="tiny-vector-dot" />
-                    ` : (region.activeListeners > 0 ? `
-                      <!-- Live Listening City: Glowing Pulse Ring -->
+                    ` : (region.activeListeners > 0 || isSelected ? `
                       <circle cx="0" cy="0" r="5.5" class="tiny-vector-pulse" />
-                      <!-- Core White Dot -->
-                      <circle cx="0" cy="0" r="2.2" class="tiny-vector-dot" />
+                      <circle cx="0" cy="0" r="2.4" class="tiny-vector-dot" />
                     ` : `
-                      <!-- Inactive / Dormant Node: Zero Pulse Trigger -->
-                      <circle cx="0" cy="0" r="1.8" fill="#52525B" />
+                      <circle cx="0" cy="0" r="2.0" fill="#71717A" />
                     `)}
-                    <!-- Hit Area -->
                     <circle cx="0" cy="0" r="14" fill="transparent" class="marker-hit-area" />
-                    <!-- Label Pill (remains crisp and scale-invariant) -->
                     <g class="tiny-vector-label-pill" transform="translate(7, -7)">
                       <rect x="0" y="0" width="${badgeWidth}" height="15" rx="3.5" ry="3.5" fill="${isClient ? 'rgba(8, 20, 24, 0.96)' : 'rgba(10, 10, 12, 0.94)'}" stroke="${isClient ? '#00F0FF' : 'rgba(255, 255, 255, 0.2)'}" stroke-width="${isClient ? '1.1' : '0.8'}" />
                       <text x="5" y="10.8" fill="${isClient ? '#00F0FF' : '#D4D4D8'}" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="500">${cityName} <tspan fill="#FFFFFF" font-weight="700">• ${region.activeListeners}</tspan></text>
@@ -1433,12 +1442,19 @@ ENV=production PORT=8080 ./server</pre>
         this.lastClusterScale = this.scale;
       }
 
+      scheduleClusterUpdate() {
+        if (this.clusterDebounceTimer) clearTimeout(this.clusterDebounceTimer);
+        this.clusterDebounceTimer = setTimeout(() => {
+          this.renderMarkers();
+        }, 80);
+      }
+
       forceRecluster() {
         this.lastClusterScale = null;
         this.renderMarkers();
       }
 
-      applyTransform() {
+      applyTransform(recluster = false) {
         const tileW = WORLD_W * this.scale;
         const tileH = WORLD_H * this.scale;
         const cw = this.container.clientWidth || 1200;
@@ -1457,14 +1473,20 @@ ENV=production PORT=8080 ./server</pre>
           this.panY = (ch - tileH) / 2;
         }
 
-        this.rootGroup.setAttribute('transform', `translate(${this.panX}, ${this.panY}) scale(${this.scale})`);
+        const transformStr = `translate(${this.panX}, ${this.panY}) scale(${this.scale})`;
+        this.rootGroup.setAttribute('transform', transformStr);
+        this.rootGroup.style.transform = `translate3d(${this.panX}px, ${this.panY}px, 0px) scale(${this.scale})`;
+        this.rootGroup.style.transformOrigin = '0 0';
 
-        // Counter-scale markers so only the map zooms while dots maintain constant screen size
+        // Counter-scale active markers
         this.updateMarkerScale();
 
-        // Check if scale shifted enough to require re-clustering (>8% scale change)
-        if (!this.lastClusterScale || Math.abs(this.scale - this.lastClusterScale) / this.lastClusterScale > 0.08) {
+        if (recluster) {
           this.renderMarkers();
+        } else {
+          if (!this.lastClusterScale || Math.abs(this.scale - this.lastClusterScale) / this.lastClusterScale > 0.45) {
+            this.scheduleClusterUpdate();
+          }
         }
       }
 
@@ -1485,7 +1507,7 @@ ENV=production PORT=8080 ./server</pre>
         if (!this.rafPending) {
           this.rafPending = true;
           requestAnimationFrame(() => {
-            this.applyTransform();
+            this.applyTransform(false);
             this.rafPending = false;
           });
         }
@@ -1507,9 +1529,8 @@ ENV=production PORT=8080 ./server</pre>
             const lat = parseFloat(clusterNode.getAttribute('data-lat'));
             const lng = parseFloat(clusterNode.getAttribute('data-lng'));
             if (!isNaN(lat) && !isNaN(lng)) {
-              // Smoothly fly and zoom into cluster to unpack and separate cities
-              const targetScale = Math.min(8.0, Math.max(3.2, this.scale * 1.95));
-              this.flyTo(lat, lng, targetScale, 650);
+              const targetScale = Math.min(8.0, Math.max(3.2, this.scale * 1.8));
+              this.flyTo(lat, lng, targetScale, 550);
             }
             return;
           }
@@ -1556,7 +1577,6 @@ ENV=production PORT=8080 ./server</pre>
           this.panX += dx;
           this.panY += dy;
 
-          // Smoothed gesture velocity tracking
           const instVx = dx / dt;
           const instVy = dy / dt;
           this.velocityX = this.velocityX * 0.3 + instVx * 0.7;
@@ -1569,7 +1589,6 @@ ENV=production PORT=8080 ./server</pre>
           if (!this.isDragging) return;
           this.isDragging = false;
           try { this.container.releasePointerCapture(e.pointerId); } catch (_) {}
-          // If held stationary for >70ms before release, don't fling
           if (performance.now() - this.lastDragTime > 70) {
             this.velocityX = 0;
             this.velocityY = 0;
@@ -1580,7 +1599,7 @@ ENV=production PORT=8080 ./server</pre>
         this.container.addEventListener('pointerup', stopDrag);
         this.container.addEventListener('pointercancel', stopDrag);
 
-        // Snappy, continuous high-precision wheel zooming (responsive on both trackpads and mouse wheel)
+        // Silky-smooth, continuous high-precision wheel zooming (responsive on trackpads and mouse wheel)
         this.container.addEventListener('wheel', (e) => {
           e.preventDefault();
           const rect = this.container.getBoundingClientRect();
@@ -1588,13 +1607,16 @@ ENV=production PORT=8080 ./server</pre>
           const mouseY = e.clientY - rect.top;
 
           let delta = -e.deltaY;
-          if (e.deltaMode === 1) delta *= 35;
-          else if (e.deltaMode === 2) delta *= 600;
+          if (e.deltaMode === 1) delta *= 16;
+          else if (e.deltaMode === 2) delta *= 100;
+
+          // Clamp delta per event to prevent sudden massive jumps
+          delta = Math.max(-100, Math.min(100, delta));
 
           const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
           const minScale = Math.max(rect.width / WORLD_W, rect.height / WORLD_H) * 0.95;
           const maxScale = 9.0;
-          const factor = Math.abs(delta) < 35 ? 0.0075 : 0.0048;
+          const factor = 0.0035;
           const zoomRatio = Math.exp(delta * factor);
           const newTarget = Math.min(maxScale, Math.max(minScale, currentTarget * zoomRatio));
 
@@ -1616,6 +1638,7 @@ ENV=production PORT=8080 ./server</pre>
         const zoomStep = () => {
           if (this.targetScale === null) {
             this.zoomAnimId = null;
+            this.scheduleClusterUpdate();
             return;
           }
           const diff = this.targetScale - this.scale;
@@ -1626,17 +1649,18 @@ ENV=production PORT=8080 ./server</pre>
             this.scale = this.targetScale;
             this.targetScale = null;
             this.zoomAnimId = null;
-            this.applyTransform();
+            this.applyTransform(false);
+            this.scheduleClusterUpdate();
             return;
           }
 
-          // Snappy, instant smooth zoom interpolation
-          const nextScale = this.scale + diff * 0.48;
+          // Smooth exponential easing for 60-120fps fluid glide
+          const nextScale = this.scale + diff * 0.22;
           const ratio = nextScale / this.scale;
           this.panX = this.zoomAnchorX - (this.zoomAnchorX - this.panX) * ratio;
           this.panY = this.zoomAnchorY - (this.zoomAnchorY - this.panY) * ratio;
           this.scale = nextScale;
-          this.applyTransform();
+          this.applyTransform(false);
 
           this.zoomAnimId = requestAnimationFrame(zoomStep);
         };
@@ -1645,13 +1669,14 @@ ENV=production PORT=8080 ./server</pre>
 
       startInertia() {
         if (this.animFrameId) cancelAnimationFrame(this.animFrameId);
-        const friction = 0.935;
+        const friction = 0.92;
         let lastTime = performance.now();
         const step = (now) => {
           const dt = Math.min(32, now - lastTime) / 16.667;
           lastTime = now;
-          if (Math.abs(this.velocityX) < 0.015 && Math.abs(this.velocityY) < 0.015) {
+          if (Math.abs(this.velocityX) < 0.01 && Math.abs(this.velocityY) < 0.01) {
             this.animFrameId = null;
+            this.scheduleClusterUpdate();
             return;
           }
           this.panX += this.velocityX * 16 * dt;
@@ -1659,7 +1684,7 @@ ENV=production PORT=8080 ./server</pre>
           const decay = Math.pow(friction, dt);
           this.velocityX *= decay;
           this.velocityY *= decay;
-          this.applyTransform();
+          this.applyTransform(false);
           this.animFrameId = requestAnimationFrame(step);
         };
         this.animFrameId = requestAnimationFrame(step);
@@ -1669,20 +1694,20 @@ ENV=production PORT=8080 ./server</pre>
         const cw = (this.container.clientWidth || 1200) / 2;
         const ch = (this.container.clientHeight || 700) / 2;
         const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
-        const newTarget = Math.min(9.0, currentTarget * 1.35);
+        const newTarget = Math.min(9.0, currentTarget * 1.4);
         this.startSmoothZoom(newTarget, cw, ch);
       }
 
       zoomOut() {
         const cw = (this.container.clientWidth || 1200) / 2;
         const ch = (this.container.clientHeight || 700) / 2;
-        const minScale = Math.max((cw * 2) / WORLD_W, (ch * 2) / WORLD_H) * 0.95;
+        const minScale = Math.max(cw / WORLD_W, ch / WORLD_H) * 0.95;
         const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
-        const newTarget = Math.max(minScale, currentTarget * 0.74);
+        const newTarget = Math.max(minScale, currentTarget / 1.4);
         this.startSmoothZoom(newTarget, cw, ch);
       }
 
-      flyTo(lat, lng, targetScale = 3.6, duration = 650) {
+      flyTo(lat, lng, targetScale = 3.6, duration = 550) {
         if (this.zoomAnimId) {
           cancelAnimationFrame(this.zoomAnimId);
           this.zoomAnimId = null;
@@ -1724,7 +1749,7 @@ ENV=production PORT=8080 ./server</pre>
           this.panX = startPanX + (targetPanX - startPanX) * ease;
           this.panY = startPanY + (targetPanY - startPanY) * ease;
 
-          this.applyTransform();
+          this.applyTransform(false);
 
           if (t < 1) {
             this.animFrameId = requestAnimationFrame(animate);
@@ -2726,29 +2751,33 @@ ENV=production PORT=8080 ./server</pre>
           tooltipEl.style.top = `${Math.min(window.innerHeight - 44, y)}px`;
         };
 
+        let activeTooltipTarget = null;
         document.addEventListener('mouseover', (e) => {
           const target = e.target.closest('[data-tooltip]');
           if (!target) return;
+          activeTooltipTarget = target;
           const text = target.getAttribute('data-tooltip');
           if (!text) return;
           tooltipEl.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-white"></span><span>${text}</span>`;
           tooltipEl.style.opacity = '1';
           positionTooltip(e);
-        });
+        }, { passive: true });
 
         document.addEventListener('mousemove', (e) => {
-          const target = e.target.closest('[data-tooltip]');
-          if (target && tooltipEl.style.opacity === '1') {
+          if (activeTooltipTarget && tooltipEl.style.opacity === '1') {
             positionTooltip(e);
           }
-        });
+        }, { passive: true });
 
         document.addEventListener('mouseout', (e) => {
-          const target = e.target.closest('[data-tooltip]');
-          if (target) {
-            tooltipEl.style.opacity = '0';
+          if (activeTooltipTarget) {
+            const related = e.relatedTarget;
+            if (!related || !activeTooltipTarget.contains(related)) {
+              activeTooltipTarget = null;
+              tooltipEl.style.opacity = '0';
+            }
           }
-        });
+        }, { passive: true });
       }
     }
 
