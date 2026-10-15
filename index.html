@@ -115,8 +115,12 @@
       contain: strict;
       transform: translateZ(0);
     }
-    #vectorMapContainer:active {
+    #vectorMapContainer:active,
+    #vectorMapContainer.is-dragging {
       cursor: grabbing;
+    }
+    #vectorMapContainer.is-dragging .vector-country {
+      pointer-events: none;
     }
     #vectorMapSvg {
       contain: strict;
@@ -1154,7 +1158,6 @@ ENV=production PORT=8080 ./server</pre>
         if (!this.container || !window.WORLD_VECTOR_MAP) return;
 
         this.scale = 1.0;
-        this.targetScale = null;
         this.lastAppliedScale = null;
         this.panX = 0;
         this.panY = 0;
@@ -1166,28 +1169,29 @@ ENV=production PORT=8080 ./server</pre>
         this.velocityY = 0;
         this.animFrameId = null;
         this.zoomAnimId = null;
-        this.zoomAnchorX = 0;
-        this.zoomAnchorY = 0;
         this.rafPending = false;
         this.markerScalers = [];
         this.lastClusterScale = null;
         this.clusterDebounceTimer = null;
+        this.dormantCityPoints = [];
 
         this.init();
       }
 
       init() {
         this.container.innerHTML = `
-          <svg id="vectorMapSvg" class="w-full h-full block select-none pointer-events-auto" style="background: #08080B;">
-            <defs>
-              <g id="worldVectorPathsTemplate"></g>
-              <path id="dormantCitiesTemplate" vector-effect="non-scaling-stroke" stroke="#52525B" stroke-width="2.2" stroke-linecap="round" />
-            </defs>
-            <g id="infiniteVectorRoot" style="will-change: transform; transform-origin: 0 0;">
-              <g id="worldTilesGroup"></g>
-              <g id="markersLayerGroup"></g>
-            </g>
-          </svg>
+          <div class="relative w-full h-full overflow-hidden select-none">
+            <svg id="vectorMapSvg" class="w-full h-full block select-none pointer-events-auto absolute inset-0" style="background: #08080B;">
+              <defs>
+                <g id="worldVectorPathsTemplate"></g>
+              </defs>
+              <g id="infiniteVectorRoot" style="transform-origin: 0 0;">
+                <g id="worldTilesGroup"></g>
+                <g id="markersLayerGroup"></g>
+              </g>
+            </svg>
+            <canvas id="vectorMapCanvas" class="absolute inset-0 pointer-events-none z-10 block"></canvas>
+          </div>
         `;
 
         this.svg = document.getElementById('vectorMapSvg');
@@ -1195,7 +1199,6 @@ ENV=production PORT=8080 ./server</pre>
         this.tilesGroup = document.getElementById('worldTilesGroup');
         this.markersGroup = document.getElementById('markersLayerGroup');
         this.pathsDef = document.getElementById('worldVectorPathsTemplate');
-        this.dormantDef = document.getElementById('dormantCitiesTemplate');
 
         // Populate 176 country paths into SVG template once
         const paths = window.WORLD_VECTOR_MAP.paths;
@@ -1206,9 +1209,7 @@ ENV=production PORT=8080 ./server</pre>
         }
         this.pathsDef.innerHTML = pathsHtml;
 
-        // Populate all 538 world cities as a single ultra-fast static vector path
-        this.buildDormantCitiesPath();
-
+        this.initCanvas();
         this.updateBaseScale();
         this.buildGrid();
         this.renderMarkers();
@@ -1216,16 +1217,66 @@ ENV=production PORT=8080 ./server</pre>
         this.applyTransform();
       }
 
-      buildDormantCitiesPath() {
+      initCanvas() {
+        this.canvas = document.getElementById('vectorMapCanvas');
+        if (!this.canvas) return;
+        this.canvasCtx = this.canvas.getContext('2d');
         const cities = (window.WORLD_CITIES && window.WORLD_CITIES.length) ? window.WORLD_CITIES : (APP_DATA.regions || []);
-        if (!cities.length || !this.dormantDef) return;
-        let d = '';
+        this.dormantCityPoints = [];
         for (let i = 0; i < cities.length; i++) {
           const c = cities[i];
           const pt = latLngToCoords(c.lat, c.lng);
-          d += `M${pt.x.toFixed(1)},${pt.y.toFixed(1)}l.01,0 `;
+          this.dormantCityPoints.push({ x: pt.x, y: pt.y });
         }
-        this.dormantDef.setAttribute('d', d);
+      }
+
+      drawCanvas() {
+        if (!this.canvasCtx || !this.canvas) return;
+        const ctx = this.canvasCtx;
+        const cw = this.container.clientWidth || 1200;
+        const ch = this.container.clientHeight || 700;
+        if (!cw || !ch) return;
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const targetW = Math.round(cw * dpr);
+        const targetH = Math.round(ch * dpr);
+        if (this.canvas.width !== targetW || this.canvas.height !== targetH) {
+          this.canvas.width = targetW;
+          this.canvas.height = targetH;
+          this.canvas.style.width = cw + 'px';
+          this.canvas.style.height = ch + 'px';
+        }
+        ctx.resetTransform ? ctx.resetTransform() : ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, targetW, targetH);
+        ctx.scale(dpr, dpr);
+
+        const points = this.dormantCityPoints;
+        if (!points || !points.length) return;
+
+        const scale = this.scale;
+        const panX = this.panX;
+        const panY = this.panY;
+        const tileW = WORLD_W * scale;
+
+        ctx.fillStyle = '#52525B';
+        ctx.beginPath();
+        const r = 1.2;
+
+        for (let i = 0; i < points.length; i++) {
+          const pt = points[i];
+          const sy = pt.y * scale + panY;
+          if (sy < -4 || sy > ch + 4) continue;
+
+          const baseX = pt.x * scale + panX;
+          for (let col = -1; col <= 1; col++) {
+            const sx = baseX + col * tileW;
+            if (sx >= -4 && sx <= cw + 4) {
+              ctx.moveTo(sx + r, sy);
+              ctx.arc(sx, sy, r, 0, 6.2831853);
+            }
+          }
+        }
+        ctx.fill();
       }
 
       updateBaseScale() {
@@ -1243,7 +1294,6 @@ ENV=production PORT=8080 ./server</pre>
           tilesHtml += `
             <g transform="translate(${col * WORLD_W}, 0)">
               <use href="#worldVectorPathsTemplate" />
-              <use href="#dormantCitiesTemplate" />
             </g>
           `;
         }
@@ -1263,7 +1313,6 @@ ENV=production PORT=8080 ./server</pre>
         }
 
         // Active candidates ONLY: client IP, selected city, or active listeners > 0
-        // All dormant cities are already rendered in GPU hardware via dormantCitiesTemplate!
         const pool = APP_DATA.regions.filter(r => {
           if (r.isClientIP || r.id === selectedCityId) return true;
           return (r.activeListeners || 0) > 0;
@@ -1475,11 +1524,12 @@ ENV=production PORT=8080 ./server</pre>
 
         const transformStr = `translate(${this.panX}, ${this.panY}) scale(${this.scale})`;
         this.rootGroup.setAttribute('transform', transformStr);
-        this.rootGroup.style.transform = `translate3d(${this.panX}px, ${this.panY}px, 0px) scale(${this.scale})`;
-        this.rootGroup.style.transformOrigin = '0 0';
 
         // Counter-scale active markers
         this.updateMarkerScale();
+
+        // 60-120fps hardware canvas render for dormant dots
+        this.drawCanvas();
 
         if (recluster) {
           this.renderMarkers();
@@ -1530,7 +1580,7 @@ ENV=production PORT=8080 ./server</pre>
             const lng = parseFloat(clusterNode.getAttribute('data-lng'));
             if (!isNaN(lat) && !isNaN(lng)) {
               const targetScale = Math.min(8.0, Math.max(3.2, this.scale * 1.8));
-              this.flyTo(lat, lng, targetScale, 550);
+              this.flyTo(lat, lng, targetScale, 450);
             }
             return;
           }
@@ -1560,7 +1610,7 @@ ENV=production PORT=8080 ./server</pre>
             cancelAnimationFrame(this.zoomAnimId);
             this.zoomAnimId = null;
           }
-          this.targetScale = null;
+          this.container.classList.add('is-dragging');
           this.container.setPointerCapture(e.pointerId);
         });
 
@@ -1588,6 +1638,7 @@ ENV=production PORT=8080 ./server</pre>
         const stopDrag = (e) => {
           if (!this.isDragging) return;
           this.isDragging = false;
+          this.container.classList.remove('is-dragging');
           try { this.container.releasePointerCapture(e.pointerId); } catch (_) {}
           if (performance.now() - this.lastDragTime > 70) {
             this.velocityX = 0;
@@ -1599,9 +1650,18 @@ ENV=production PORT=8080 ./server</pre>
         this.container.addEventListener('pointerup', stopDrag);
         this.container.addEventListener('pointercancel', stopDrag);
 
-        // Silky-smooth, continuous high-precision wheel zooming (responsive on trackpads and mouse wheel)
+        // Instantaneous 1:1 wheel zoom (zero-lag Leaflet/Mapbox/D3 pattern)
         this.container.addEventListener('wheel', (e) => {
           e.preventDefault();
+          if (this.zoomAnimId) {
+            cancelAnimationFrame(this.zoomAnimId);
+            this.zoomAnimId = null;
+          }
+          if (this.animFrameId) {
+            cancelAnimationFrame(this.animFrameId);
+            this.animFrameId = null;
+          }
+
           const rect = this.container.getBoundingClientRect();
           const mouseX = e.clientX - rect.left;
           const mouseY = e.clientY - rect.top;
@@ -1610,17 +1670,22 @@ ENV=production PORT=8080 ./server</pre>
           if (e.deltaMode === 1) delta *= 16;
           else if (e.deltaMode === 2) delta *= 100;
 
-          // Clamp delta per event to prevent sudden massive jumps
-          delta = Math.max(-100, Math.min(100, delta));
+          // Clamp delta per event to prevent sudden jumps
+          delta = Math.max(-120, Math.min(120, delta));
 
-          const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
           const minScale = Math.max(rect.width / WORLD_W, rect.height / WORLD_H) * 0.95;
           const maxScale = 9.0;
-          const factor = 0.0035;
-          const zoomRatio = Math.exp(delta * factor);
-          const newTarget = Math.min(maxScale, Math.max(minScale, currentTarget * zoomRatio));
 
-          this.startSmoothZoom(newTarget, mouseX, mouseY);
+          const zoomRatio = Math.exp(delta * 0.0018);
+          const newScale = Math.min(maxScale, Math.max(minScale, this.scale * zoomRatio));
+          if (newScale === this.scale) return;
+
+          const ratio = newScale / this.scale;
+          this.panX = mouseX - (mouseX - this.panX) * ratio;
+          this.panY = mouseY - (mouseY - this.panY) * ratio;
+          this.scale = newScale;
+
+          this.scheduleRender();
         }, { passive: false });
 
         window.addEventListener('resize', () => {
@@ -1628,43 +1693,44 @@ ENV=production PORT=8080 ./server</pre>
         });
       }
 
-      startSmoothZoom(targetScale, anchorX, anchorY) {
-        this.targetScale = targetScale;
-        this.zoomAnchorX = anchorX;
-        this.zoomAnchorY = anchorY;
+      smoothZoomTo(targetScale, anchorX, anchorY, duration = 180) {
+        if (this.zoomAnimId) {
+          cancelAnimationFrame(this.zoomAnimId);
+          this.zoomAnimId = null;
+        }
+        if (this.animFrameId) {
+          cancelAnimationFrame(this.animFrameId);
+          this.animFrameId = null;
+        }
 
-        if (this.zoomAnimId) return;
+        const startScale = this.scale;
+        const startPanX = this.panX;
+        const startPanY = this.panY;
+        const startTime = performance.now();
 
-        const zoomStep = () => {
-          if (this.targetScale === null) {
-            this.zoomAnimId = null;
-            this.scheduleClusterUpdate();
-            return;
-          }
-          const diff = this.targetScale - this.scale;
-          if (Math.abs(diff) < 0.002) {
-            const ratio = this.targetScale / this.scale;
-            this.panX = this.zoomAnchorX - (this.zoomAnchorX - this.panX) * ratio;
-            this.panY = this.zoomAnchorY - (this.zoomAnchorY - this.panY) * ratio;
-            this.scale = this.targetScale;
-            this.targetScale = null;
-            this.zoomAnimId = null;
-            this.applyTransform(false);
-            this.scheduleClusterUpdate();
-            return;
-          }
+        const finalRatio = targetScale / startScale;
+        const targetPanX = anchorX - (anchorX - startPanX) * finalRatio;
+        const targetPanY = anchorY - (anchorY - startPanY) * finalRatio;
 
-          // Smooth exponential easing for 60-120fps fluid glide
-          const nextScale = this.scale + diff * 0.22;
-          const ratio = nextScale / this.scale;
-          this.panX = this.zoomAnchorX - (this.zoomAnchorX - this.panX) * ratio;
-          this.panY = this.zoomAnchorY - (this.zoomAnchorY - this.panY) * ratio;
-          this.scale = nextScale;
+        const animate = (now) => {
+          const t = Math.min(1, (now - startTime) / duration);
+          const ease = 1 - Math.pow(1 - t, 3); // cubic ease out
+
+          this.scale = startScale + (targetScale - startScale) * ease;
+          this.panX = startPanX + (targetPanX - startPanX) * ease;
+          this.panY = startPanY + (targetPanY - startPanY) * ease;
+
           this.applyTransform(false);
 
-          this.zoomAnimId = requestAnimationFrame(zoomStep);
+          if (t < 1) {
+            this.zoomAnimId = requestAnimationFrame(animate);
+          } else {
+            this.zoomAnimId = null;
+            this.scheduleClusterUpdate();
+          }
         };
-        this.zoomAnimId = requestAnimationFrame(zoomStep);
+
+        this.zoomAnimId = requestAnimationFrame(animate);
       }
 
       startInertia() {
@@ -1693,26 +1759,27 @@ ENV=production PORT=8080 ./server</pre>
       zoomIn() {
         const cw = (this.container.clientWidth || 1200) / 2;
         const ch = (this.container.clientHeight || 700) / 2;
-        const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
-        const newTarget = Math.min(9.0, currentTarget * 1.4);
-        this.startSmoothZoom(newTarget, cw, ch);
+        const newTarget = Math.min(9.0, this.scale * 1.4);
+        this.smoothZoomTo(newTarget, cw, ch, 180);
       }
 
       zoomOut() {
         const cw = (this.container.clientWidth || 1200) / 2;
         const ch = (this.container.clientHeight || 700) / 2;
         const minScale = Math.max(cw / WORLD_W, ch / WORLD_H) * 0.95;
-        const currentTarget = this.targetScale !== null ? this.targetScale : this.scale;
-        const newTarget = Math.max(minScale, currentTarget / 1.4);
-        this.startSmoothZoom(newTarget, cw, ch);
+        const newTarget = Math.max(minScale, this.scale / 1.4);
+        this.smoothZoomTo(newTarget, cw, ch, 180);
       }
 
-      flyTo(lat, lng, targetScale = 3.6, duration = 550) {
+      flyTo(lat, lng, targetScale = 3.6, duration = 450) {
         if (this.zoomAnimId) {
           cancelAnimationFrame(this.zoomAnimId);
           this.zoomAnimId = null;
         }
-        this.targetScale = null;
+        if (this.animFrameId) {
+          cancelAnimationFrame(this.animFrameId);
+          this.animFrameId = null;
+        }
 
         const pt = latLngToCoords(lat, lng);
         const cw = this.container.clientWidth / 2;
@@ -1739,7 +1806,6 @@ ENV=production PORT=8080 ./server</pre>
 
         const targetPanY = baseTargetPanY;
         const startTime = performance.now();
-        if (this.animFrameId) cancelAnimationFrame(this.animFrameId);
 
         const animate = (now) => {
           const t = Math.min(1, (now - startTime) / duration);
@@ -1770,7 +1836,6 @@ ENV=production PORT=8080 ./server</pre>
           cancelAnimationFrame(this.zoomAnimId);
           this.zoomAnimId = null;
         }
-        this.targetScale = null;
         this.updateBaseScale();
         this.applyTransform();
         this.forceRecluster();
