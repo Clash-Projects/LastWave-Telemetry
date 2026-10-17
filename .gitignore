@@ -25,6 +25,7 @@ pnpm-debug.log*
 .env
 .env.*
 *.log
+/backend/data/
 
 # OS & IDE caches
 .DS_Store

@@ -5,32 +5,29 @@ import (
 	"math"
 	"math/rand"
 	"os"
+	"sort"
 	"strings"
 	"sync"
 	"time"
 )
 
-// Bucket is an in-memory ephemeral aggregation storage.
+// Bucket manages real-time regional listening state and coordinates with Store for persistent analytics.
 // CRITICAL PRIVACY ARCHITECTURE:
 // 1. IP addresses are completely discarded at the handler boundary.
-// 2. Data is held in RAM only — never written to disk or database.
-// 3. Rolling window aggregates listeners per coarse regional centroid.
+// 2. Only song play events (song_id, title, artist, cover) are stored. Zero user identifiers or IPs are persisted.
+// 3. Rolling window aggregates live concurrent listeners per coarse regional centroid.
 type Bucket struct {
 	mu             sync.RWMutex
 	windowDuration time.Duration
 	lastSync       time.Time
 	regions        []Region
-	streamsToday   int
-	peakConcurrent int
-	dailyTop10     []Song
-	weeklyTop10    []Song
-	monthlyTop10   []Song
+	store          *Store
 	rng            *rand.Rand
 }
 
-// NewBucket initializes a new ephemeral RAM bucket.
-// When ENV=production, all test data, mock streams, and simulated listeners are completely omitted.
-func NewBucket(window time.Duration) *Bucket {
+// NewBucket initializes a new telemetry bucket.
+// When ENV=production, all simulated listeners and fake streams are completely omitted.
+func NewBucket(window time.Duration, storeOpt ...*Store) *Bucket {
 	if window <= 0 {
 		window = 60 * time.Second
 	}
@@ -38,22 +35,45 @@ func NewBucket(window time.Duration) *Bucket {
 	isProduction := os.Getenv("ENV") == "production"
 	regions := GetInitialRegions()
 
+	var store *Store
+	if len(storeOpt) > 0 && storeOpt[0] != nil {
+		store = storeOpt[0]
+	} else {
+		dataDir := os.Getenv("DATA_DIR")
+		if dataDir == "" {
+			// If running under go test, default to memory mode for hermetic isolation
+			if strings.HasSuffix(os.Args[0], ".test") || strings.HasSuffix(os.Args[0], ".test.exe") {
+				dataDir = ":memory:"
+			} else {
+				dataDir = "./data"
+			}
+		}
+		var err error
+		store, err = NewStore(dataDir)
+		if err != nil {
+			store, _ = NewStore(":memory:")
+		}
+	}
+
 	if isProduction {
-		// Clean production state: 0 fake listeners, 0 fake streams, 0 mock songs
+		// Clean production state: 0 fake listeners, 0 mock songs
 		for i := range regions {
 			regions[i].ActiveListeners = 0
 			regions[i].TopSongs = []Song{}
 		}
-		return &Bucket{
-			windowDuration: window,
-			lastSync:       time.Now(),
-			regions:        regions,
-			streamsToday:   0,
-			peakConcurrent: 0,
-			dailyTop10:     []Song{},
-			weeklyTop10:    []Song{},
-			monthlyTop10:   []Song{},
-			rng:            rand.New(rand.NewSource(time.Now().UnixNano())),
+	} else {
+		// Seed a few primary hub nodes in dev mode for UI demoing
+		for i := range regions {
+			switch regions[i].ID {
+			case "in-bom", "in-del", "in-blr", "us-nyc", "gb-lon", "jp-tyo":
+				regions[i].ActiveListeners = 120
+			}
+		}
+		if store != nil && store.GetStreamsToday() == 0 {
+			store.mu.Lock()
+			store.streamsToday = 48910
+			store.peakConcurrent = 2104
+			store.mu.Unlock()
 		}
 	}
 
@@ -61,11 +81,7 @@ func NewBucket(window time.Duration) *Bucket {
 		windowDuration: window,
 		lastSync:       time.Now(),
 		regions:        regions,
-		streamsToday:   48910,
-		peakConcurrent: 2104,
-		dailyTop10:     GetGlobalTop10Daily(),
-		weeklyTop10:    GetGlobalTop10Weekly(),
-		monthlyTop10:   GetGlobalTop10Monthly(),
+		store:          store,
 		rng:            rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
 }
@@ -84,6 +100,11 @@ func (b *Bucket) ResetWindow() {
 		}
 	}
 	b.regions = cleanRegions
+
+	// Persist state periodically
+	if b.store != nil {
+		_ = b.store.SaveState()
+	}
 }
 
 // RecordPing accepts an anonymous stream pulse.
@@ -91,33 +112,22 @@ func (b *Bucket) RecordPing(songID, title, artist, regionID, coverURL string) {
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
-	b.streamsToday++
+	// 1. Record play persistently in zero-IP store
+	if b.store != nil {
+		b.store.RecordPlay(songID, title, artist, coverURL)
+	}
 
-	// Check if this matches a region
+	// 2. Check if this matches a region
 	for i := range b.regions {
 		if b.regions[i].ID == regionID {
 			b.regions[i].ActiveListeners++
-			// Check if song exists in top songs
-			found := false
-			for j := range b.regions[i].TopSongs {
-				if b.regions[i].TopSongs[j].ID == songID {
-					b.regions[i].TopSongs[j].Plays++
-					found = true
-					break
-				}
-			}
-			if !found && len(b.regions[i].TopSongs) < 5 {
-				b.regions[i].TopSongs = append(b.regions[i].TopSongs, Song{
-					ID:       songID,
-					Title:    title,
-					Artist:   artist,
-					Plays:    1,
-					CoverURL: coverURL,
-				})
-			}
+			updateRegionTopSongs(&b.regions[i], songID, title, artist, coverURL)
 			break
 		}
 	}
+
+	// 3. Update peak concurrent listeners
+	b.recalculatePeakLocked()
 }
 
 // RecordDynamicIPPing accepts a dynamic IP or location ping and spawns/updates map nodes in RAM
@@ -125,34 +135,41 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
-	b.streamsToday++
+	// 1. Record play persistently in zero-IP store
+	if b.store != nil {
+		b.store.RecordPlay(songID, title, artist, coverURL)
+	}
 
-	// Check if this matches a region by coordinates or name
+	// 2. Check if this matches a region by coordinates or name
 	for i := range b.regions {
 		matchLat := lat != 0 && math.Abs(b.regions[i].Lat-lat) < 0.28
 		matchLng := lng != 0 && math.Abs(b.regions[i].Lng-lng) < 0.28
 		matchName := cityName != "" && strings.EqualFold(b.regions[i].Name, cityName)
 		if (matchLat && matchLng) || matchName {
 			b.regions[i].ActiveListeners++
+			updateRegionTopSongs(&b.regions[i], songID, title, artist, coverURL)
 			if ip != "" {
 				b.regions[i].IsClientIP = true
 				b.regions[i].IP = ip
 			}
+			b.recalculatePeakLocked()
 			return
 		}
 	}
 
-	// Dynamically register new city from IP
+	// 3. Dynamically register new city from IP
 	if cityName != "" || (lat != 0 && lng != 0) {
 		name := cityName
 		if name == "" {
 			name = fmt.Sprintf("Node %.1f, %.1f", lat, lng)
 		}
-		if songID == "" {
-			songID = "trk-dyn"
-			title = "Live Stream"
-			artist = "Active Listener"
+		var initialSongs []Song
+		if songID != "" || title != "" {
+			initialSongs = []Song{
+				{ID: songID, Title: title, Artist: artist, Plays: 1, CoverURL: coverURL},
+			}
 		}
+
 		newReg := Region{
 			ID:              fmt.Sprintf("ip-%d", time.Now().UnixNano()%100000),
 			Name:            name,
@@ -163,9 +180,7 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 			Tier:            1,
 			IsClientIP:      true,
 			IP:              ip,
-			TopSongs: []Song{
-				{ID: songID, Title: title, Artist: artist, Plays: 1, CoverURL: coverURL},
-			},
+			TopSongs:        initialSongs,
 		}
 
 		// Cap dynamic IP nodes to max 50 to strictly bound memory
@@ -184,6 +199,51 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 		}
 
 		b.regions = append(b.regions, newReg)
+	}
+
+	b.recalculatePeakLocked()
+}
+
+func (b *Bucket) recalculatePeakLocked() {
+	if b.store == nil {
+		return
+	}
+	totalActive := 0
+	for _, r := range b.regions {
+		totalActive += r.ActiveListeners
+	}
+	b.store.UpdateActiveListeners(totalActive)
+}
+
+func updateRegionTopSongs(r *Region, songID, title, artist, coverURL string) {
+	if songID == "" && title == "" {
+		return
+	}
+	found := false
+	for j := range r.TopSongs {
+		if r.TopSongs[j].ID == songID || (songID == "" && r.TopSongs[j].Title == title) {
+			r.TopSongs[j].Plays++
+			if r.TopSongs[j].CoverURL == "" && coverURL != "" {
+				r.TopSongs[j].CoverURL = coverURL
+			}
+			found = true
+			break
+		}
+	}
+	if !found {
+		r.TopSongs = append(r.TopSongs, Song{
+			ID:       songID,
+			Title:    title,
+			Artist:   artist,
+			Plays:    1,
+			CoverURL: coverURL,
+		})
+	}
+	sort.Slice(r.TopSongs, func(i, j int) bool {
+		return r.TopSongs[i].Plays > r.TopSongs[j].Plays
+	})
+	if len(r.TopSongs) > 5 {
+		r.TopSongs = r.TopSongs[:5]
 	}
 }
 
@@ -209,9 +269,8 @@ func (b *Bucket) SimulateTick() {
 		totalActive += b.regions[i].ActiveListeners
 	}
 
-	b.streamsToday += totalActive / 8
-	if totalActive > b.peakConcurrent {
-		b.peakConcurrent = totalActive
+	if b.store != nil {
+		b.store.UpdateActiveListeners(totalActive)
 	}
 }
 
@@ -240,18 +299,60 @@ func (b *Bucket) GetSnapshot() TelemetryPayload {
 	regionsCopy := make([]Region, len(b.regions))
 	copy(regionsCopy, b.regions)
 
+	streamsToday := 0
+	peakConcurrent := 0
+	var dailyTop10 []Song
+	var weeklyTop10 []Song
+	var monthlyTop10 []Song
+
+	if b.store != nil {
+		streamsToday = b.store.GetStreamsToday()
+		peakConcurrent = b.store.GetPeakConcurrent()
+		dailyTop10 = b.store.GetTopSongs(24*time.Hour, 10)
+		weeklyTop10 = b.store.GetTopSongs(7*24*time.Hour, 10)
+		monthlyTop10 = b.store.GetTopSongs(30*24*time.Hour, 10)
+	}
+
+	isProduction := os.Getenv("ENV") == "production"
+	// In dev mode with empty store, fallback to mock demo data
+	if !isProduction && len(dailyTop10) == 0 {
+		dailyTop10 = GetGlobalTop10Daily()
+		weeklyTop10 = GetGlobalTop10Weekly()
+		monthlyTop10 = GetGlobalTop10Monthly()
+	}
+
+	if dailyTop10 == nil {
+		dailyTop10 = []Song{}
+	}
+	if weeklyTop10 == nil {
+		weeklyTop10 = []Song{}
+	}
+	if monthlyTop10 == nil {
+		monthlyTop10 = []Song{}
+	}
+
 	return TelemetryPayload{
 		SyncedAt:        b.lastSync,
 		NextSyncSeconds: remaining,
 		GlobalKPIs: GlobalKPIs{
 			ActiveListeners: totalActive,
-			StreamsToday:    b.streamsToday,
-			PeakConcurrent:  b.peakConcurrent,
+			StreamsToday:    streamsToday,
+			PeakConcurrent:  peakConcurrent,
 			ActiveRegions:   activeCount,
 		},
 		Regions:      regionsCopy,
-		DailyTop10:   b.dailyTop10,
-		WeeklyTop10:  b.weeklyTop10,
-		MonthlyTop10: b.monthlyTop10,
+		DailyTop10:   dailyTop10,
+		WeeklyTop10:  weeklyTop10,
+		MonthlyTop10: monthlyTop10,
 	}
+}
+
+// Close flushes persistent store state to disk cleanly.
+func (b *Bucket) Close() error {
+	b.mu.Lock()
+	defer b.mu.Unlock()
+	if b.store != nil {
+		return b.store.Close()
+	}
+	return nil
 }

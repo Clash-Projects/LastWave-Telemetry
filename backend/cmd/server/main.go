@@ -267,6 +267,7 @@ func main() {
 		<-sigint
 		log.Println("[LastWave Live] Shutting down telemetry server...")
 		close(stopTicker)
+		_ = bucket.Close()
 		_ = server.Close()
 	}()
 
