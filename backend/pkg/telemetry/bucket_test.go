@@ -165,3 +165,49 @@ func TestBucketProductionPersistence(t *testing.T) {
 	}
 }
 
+func TestHeartbeatDeduplication(t *testing.T) {
+	t.Setenv("ENV", "production")
+	store, _ := NewStore(":memory:")
+	bucket := NewBucket(60*time.Second, store)
+
+	// 1. Initial stream start: Starboy from user IP 192.168.1.50
+	bucket.RecordDynamicIPPing("192.168.1.50", "Mumbai", "India", 19.076, 73.0775, "trk-starboy", "Starboy", "The Weeknd", "")
+
+	snap1 := bucket.GetSnapshot()
+	if snap1.GlobalKPIs.StreamsToday != 1 {
+		t.Errorf("expected 1 stream today, got %d", snap1.GlobalKPIs.StreamsToday)
+	}
+	if snap1.GlobalKPIs.ActiveListeners != 1 {
+		t.Errorf("expected 1 active listener, got %d", snap1.GlobalKPIs.ActiveListeners)
+	}
+
+	// 2. Heartbeat 45s later: same IP, same song
+	bucket.RecordDynamicIPPing("192.168.1.50", "Mumbai", "India", 19.076, 73.0775, "trk-starboy", "Starboy", "The Weeknd", "")
+
+	snap2 := bucket.GetSnapshot()
+	if snap2.GlobalKPIs.StreamsToday != 1 {
+		t.Errorf("heartbeat should NOT increment streams today; expected 1, got %d", snap2.GlobalKPIs.StreamsToday)
+	}
+	if snap2.GlobalKPIs.ActiveListeners != 1 {
+		t.Errorf("heartbeat should NOT increment active listeners; expected 1, got %d", snap2.GlobalKPIs.ActiveListeners)
+	}
+	if len(snap2.DailyTop10) != 1 || snap2.DailyTop10[0].Plays != 1 {
+		t.Errorf("expected Starboy with 1 play, got %+v", snap2.DailyTop10)
+	}
+
+	// 3. User switches to a different song: "Not Like Us"
+	bucket.RecordDynamicIPPing("192.168.1.50", "Mumbai", "India", 19.076, 73.0775, "trk-not-like-us", "Not Like Us", "Kendrick Lamar", "")
+
+	snap3 := bucket.GetSnapshot()
+	if snap3.GlobalKPIs.StreamsToday != 2 {
+		t.Errorf("new track should increment streams today; expected 2, got %d", snap3.GlobalKPIs.StreamsToday)
+	}
+	if snap3.GlobalKPIs.ActiveListeners != 1 {
+		t.Errorf("same user playing new track should still be 1 active listener, got %d", snap3.GlobalKPIs.ActiveListeners)
+	}
+	if len(snap3.DailyTop10) != 2 {
+		t.Errorf("expected 2 tracks in DailyTop10, got %d", len(snap3.DailyTop10))
+	}
+}
+
+

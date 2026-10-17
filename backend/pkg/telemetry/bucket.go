@@ -2,6 +2,7 @@ package telemetry
 
 import (
 	"fmt"
+	"hash/crc32"
 	"math"
 	"math/rand"
 	"os"
@@ -14,14 +15,16 @@ import (
 // Bucket manages real-time regional listening state and coordinates with Store for persistent analytics.
 // CRITICAL PRIVACY ARCHITECTURE:
 // 1. IP addresses are completely discarded at the handler boundary.
-// 2. Only song play events (song_id, title, artist, cover) are stored. Zero user identifiers or IPs are persisted.
-// 3. Rolling window aggregates live concurrent listeners per coarse regional centroid.
+// 2. Only song play events (song_id, title, artist, cover) are stored. Zero user identifiers or IPs are persisted to disk.
+// 3. Ephemeral RAM maps deduplicate active listeners and heartbeat pings per 60s/150s window.
 type Bucket struct {
 	mu             sync.RWMutex
 	windowDuration time.Duration
 	lastSync       time.Time
 	regions        []Region
 	store          *Store
+	regionSessions map[string]map[string]time.Time // regionID -> (sessionKey -> lastPingTime)
+	recentPlays    map[string]time.Time            // (sessionKey + "::" + songKey) -> lastPlayedAt
 	rng            *rand.Rand
 }
 
@@ -82,20 +85,52 @@ func NewBucket(window time.Duration, storeOpt ...*Store) *Bucket {
 		lastSync:       time.Now(),
 		regions:        regions,
 		store:          store,
+		regionSessions: make(map[string]map[string]time.Time),
+		recentPlays:    make(map[string]time.Time),
 		rng:            rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
 }
 
-// ResetWindow rolls the ephemeral 60s window in production, clearing expired listeners
+// ResetWindow rolls the ephemeral 60s window in production, clearing expired listeners and heartbeats
 func (b *Bucket) ResetWindow() {
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
-	b.lastSync = time.Now()
+	now := time.Now()
+	b.lastSync = now
+	cutoff := now.Add(-b.windowDuration)
+
+	// 1. Evict expired sessions for all regions
+	for regID, sessions := range b.regionSessions {
+		for sessKey, lastSeen := range sessions {
+			if lastSeen.Before(cutoff) {
+				delete(sessions, sessKey)
+			}
+		}
+		if len(sessions) == 0 {
+			delete(b.regionSessions, regID)
+		}
+	}
+
+	// 2. Clean old entries from recentPlays (older than 5 minutes)
+	playCutoff := now.Add(-5 * time.Minute)
+	for playKey, playedAt := range b.recentPlays {
+		if playedAt.Before(playCutoff) {
+			delete(b.recentPlays, playKey)
+		}
+	}
+
+	// 3. Update region active listeners and prune expired dynamic IP nodes
 	cleanRegions := make([]Region, 0, len(b.regions))
 	for i := range b.regions {
-		b.regions[i].ActiveListeners = 0
+		activeCount := len(b.regionSessions[b.regions[i].ID])
+		b.regions[i].ActiveListeners = activeCount
+
 		if !b.regions[i].IsClientIP {
+			// Static predefined world regions are NEVER dropped
+			cleanRegions = append(cleanRegions, b.regions[i])
+		} else if activeCount > 0 {
+			// Dynamic IP nodes are kept only if they have active listeners in this window
 			cleanRegions = append(cleanRegions, b.regions[i])
 		}
 	}
@@ -107,26 +142,32 @@ func (b *Bucket) ResetWindow() {
 	}
 }
 
-// RecordPing accepts an anonymous stream pulse.
+// RecordPing accepts an anonymous stream pulse for a specific region ID.
 func (b *Bucket) RecordPing(songID, title, artist, regionID, coverURL string) {
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
-	// 1. Record play persistently in zero-IP store
+	now := time.Now()
+
+	// 1. Record play in store (always record for region pings unless identical rapid burst)
 	if b.store != nil {
 		b.store.RecordPlay(songID, title, artist, coverURL)
 	}
 
-	// 2. Check if this matches a region
+	// 2. Update region top songs and mark active listener session
 	for i := range b.regions {
 		if b.regions[i].ID == regionID {
-			b.regions[i].ActiveListeners++
 			updateRegionTopSongs(&b.regions[i], songID, title, artist, coverURL)
+			if b.regionSessions[regionID] == nil {
+				b.regionSessions[regionID] = make(map[string]time.Time)
+			}
+			listenerID := fmt.Sprintf("anon-%d", time.Now().UnixNano()%1000000)
+			b.regionSessions[regionID][listenerID] = now
+			b.regions[i].ActiveListeners = len(b.regionSessions[regionID])
 			break
 		}
 	}
 
-	// 3. Update peak concurrent listeners
 	b.recalculatePeakLocked()
 }
 
@@ -135,30 +176,71 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
-	// 1. Record play persistently in zero-IP store
-	if b.store != nil {
+	now := time.Now()
+
+	// 1. Deduplicate song playback: don't count heartbeats from the same listener for the same song within 150s
+	sessionKey := ip
+	if sessionKey == "" {
+		if cityName != "" {
+			sessionKey = cityName
+		}
+	}
+
+	songKey := songID
+	if songKey == "" {
+		songKey = strings.TrimSpace(title) + "|" + strings.TrimSpace(artist)
+	}
+
+	shouldRecordPlay := true
+	if sessionKey != "" && songKey != "" {
+		dedupKey := sessionKey + "::" + songKey
+		if lastTime, exists := b.recentPlays[dedupKey]; exists {
+			if now.Sub(lastTime) < 150*time.Second {
+				// Heartbeat ping within 150s for the same song — keep listener active but don't duplicate stream count
+				shouldRecordPlay = false
+			}
+		}
+		if shouldRecordPlay {
+			b.recentPlays[dedupKey] = now
+		}
+	}
+
+	if shouldRecordPlay && b.store != nil {
 		b.store.RecordPlay(songID, title, artist, coverURL)
 	}
 
-	// 2. Check if this matches a region by coordinates or name
+	// 2. Locate matching region or create dynamic IP node
+	matchedRegionIdx := -1
+
 	for i := range b.regions {
 		matchLat := lat != 0 && math.Abs(b.regions[i].Lat-lat) < 0.28
 		matchLng := lng != 0 && math.Abs(b.regions[i].Lng-lng) < 0.28
 		matchName := cityName != "" && strings.EqualFold(b.regions[i].Name, cityName)
 		if (matchLat && matchLng) || matchName {
-			b.regions[i].ActiveListeners++
-			updateRegionTopSongs(&b.regions[i], songID, title, artist, coverURL)
-			if ip != "" {
-				b.regions[i].IsClientIP = true
-				b.regions[i].IP = ip
-			}
-			b.recalculatePeakLocked()
-			return
+			matchedRegionIdx = i
+			break
 		}
 	}
 
-	// 3. Dynamically register new city from IP
-	if cityName != "" || (lat != 0 && lng != 0) {
+	if matchedRegionIdx != -1 {
+		reg := &b.regions[matchedRegionIdx]
+		updateRegionTopSongs(reg, songID, title, artist, coverURL)
+
+		if b.regionSessions[reg.ID] == nil {
+			b.regionSessions[reg.ID] = make(map[string]time.Time)
+		}
+		listenerID := sessionKey
+		if listenerID == "" {
+			listenerID = fmt.Sprintf("anon-%d", time.Now().UnixNano()%1000000)
+		}
+		b.regionSessions[reg.ID][listenerID] = now
+		reg.ActiveListeners = len(b.regionSessions[reg.ID])
+
+		// CRITICAL: Do NOT set IsClientIP = true on static predefined regions!
+		if reg.IsClientIP && ip != "" {
+			reg.IP = ip
+		}
+	} else if cityName != "" || (lat != 0 && lng != 0) {
 		name := cityName
 		if name == "" {
 			name = fmt.Sprintf("Node %.1f, %.1f", lat, lng)
@@ -170,8 +252,14 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 			}
 		}
 
+		// Deterministic node ID per IP/session so heartbeats don't spawn duplicate nodes
+		newID := fmt.Sprintf("ip-%d", time.Now().UnixNano()%100000)
+		if sessionKey != "" {
+			newID = fmt.Sprintf("ip-%x", crc32.ChecksumIEEE([]byte(sessionKey)))
+		}
+
 		newReg := Region{
-			ID:              fmt.Sprintf("ip-%d", time.Now().UnixNano()%100000),
+			ID:              newID,
 			Name:            name,
 			Country:         country,
 			Lat:             lat,
@@ -182,6 +270,15 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 			IP:              ip,
 			TopSongs:        initialSongs,
 		}
+
+		if b.regionSessions[newID] == nil {
+			b.regionSessions[newID] = make(map[string]time.Time)
+		}
+		listenerID := sessionKey
+		if listenerID == "" {
+			listenerID = "anon"
+		}
+		b.regionSessions[newID][listenerID] = now
 
 		// Cap dynamic IP nodes to max 50 to strictly bound memory
 		dynamicCount := 0
@@ -195,6 +292,8 @@ func (b *Bucket) RecordDynamicIPPing(ip, cityName, country string, lat, lng floa
 			}
 		}
 		if dynamicCount >= 50 && firstDynamicIdx != -1 {
+			evictedID := b.regions[firstDynamicIdx].ID
+			delete(b.regionSessions, evictedID)
 			b.regions = append(b.regions[:firstDynamicIdx], b.regions[firstDynamicIdx+1:]...)
 		}
 

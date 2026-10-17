@@ -2701,26 +2701,32 @@ ENV=production PORT=8080 ./server</pre>
             }));
           }
           if (data.regions && Array.isArray(data.regions)) {
-            // Reset all static regions first so dormant cities drop to 0
-            APP_DATA.regions.forEach(r => {
-              if (!r.isClientIP) {
-                r.activeListeners = 0;
-                r.topSongs = [];
-              }
+            // 1. Purge expired dynamic nodes that server is no longer reporting
+            APP_DATA.regions = APP_DATA.regions.filter(r => {
+              if (!r.isClientIP) return true; // keep permanent world cities
+              if (r.id && r.id.startsWith('client-ip-')) return true; // keep local browser detected node
+              return data.regions.some(sr => sr.id === r.id);
             });
 
+            // 2. Reset active listeners and top songs across all retained nodes
+            APP_DATA.regions.forEach(r => {
+              r.activeListeners = 0;
+              r.topSongs = [];
+            });
+
+            // 3. Update from authoritative server payload
             data.regions.forEach(srvReg => {
               const reg = APP_DATA.regions.find(r => r.id === srvReg.id);
+              const listeners = srvReg.active_listeners ?? srvReg.activeListeners ?? 0;
+              const topSongs = (srvReg.top_songs || []).map(ts => ({
+                ...ts,
+                cover: getSafeCover(ts.cover_url || ts.cover)
+              }));
+
               if (reg) {
-                reg.activeListeners = srvReg.active_listeners ?? srvReg.activeListeners ?? 0;
-                if (srvReg.top_songs && Array.isArray(srvReg.top_songs)) {
-                  reg.topSongs = srvReg.top_songs.map(ts => ({
-                    ...ts,
-                    cover: getSafeCover(ts.cover_url || ts.cover)
-                  }));
-                }
-              } else if (srvReg.lat && srvReg.lng && ((srvReg.active_listeners || 0) > 0 || (srvReg.activeListeners || 0) > 0)) {
-                // Dynamic IP or new regional node from backend telemetry
+                reg.activeListeners = listeners;
+                reg.topSongs = topSongs;
+              } else if (srvReg.lat && srvReg.lng && listeners > 0) {
                 APP_DATA.regions.push({
                   id: srvReg.id,
                   name: srvReg.name || 'Dynamic Node',
@@ -2728,13 +2734,10 @@ ENV=production PORT=8080 ./server</pre>
                   lat: srvReg.lat,
                   lng: srvReg.lng,
                   tier: srvReg.tier || 2,
-                  isClientIP: srvReg.is_client_ip ?? srvReg.isClientIP ?? false,
+                  isClientIP: true,
                   ip: srvReg.ip || '',
-                  activeListeners: srvReg.active_listeners ?? srvReg.activeListeners ?? 0,
-                  topSongs: (srvReg.top_songs || []).map(ts => ({
-                    ...ts,
-                    cover: getSafeCover(ts.cover_url || ts.cover)
-                  }))
+                  activeListeners: listeners,
+                  topSongs: topSongs
                 });
               }
             });
