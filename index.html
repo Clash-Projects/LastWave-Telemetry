@@ -1122,6 +1122,9 @@ ENV=production PORT=8080 ./server</pre>
 
       if (targetView === 'charts') {
         renderFullTopCharts(currentChartsTab);
+        if (!APP_DATA.globalTop10.daily || APP_DATA.globalTop10.daily.length === 0) {
+          syncData();
+        }
       } else if (targetView === 'map' && infiniteVectorMap) {
         setTimeout(() => {
           infiniteVectorMap.updateBaseScale();
@@ -2861,6 +2864,7 @@ ENV=production PORT=8080 ./server</pre>
       startTimer();
       attachTooltips();
       detectAndPlotClientIP();
+      syncData();
 
       // Zoom Controls HUD
       document.getElementById('zoomInBtn')?.addEventListener('click', () => {
